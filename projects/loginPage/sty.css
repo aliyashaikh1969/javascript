@@ -1,0 +1,186 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(to right , white,#069a69);
+}
+.container{
+    width: 780px;
+    max-width: 100%;
+    background-color: #fff;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+    min-height: 480px;
+}
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #fff;
+    height: 100%;
+}
+.form-container{
+    position: absolute;
+    top: 0;
+    /* left: 0; */
+    height: 100%;
+    transition: all .6s ease-in-out;
+    width: 50%;
+    overflow: hidden;
+}
+.sign-in{
+    left: 0;
+    opacity: 1;
+    z-index: 2;
+}
+.sign-up{
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+}
+.container p{
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    margin: 20px 0;
+}
+form h1{
+    text-transform: uppercase;
+    color: #069a69;
+} 
+.icons a {
+    border: 1px solid #000;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0;
+    height: 40px;
+    width: 40px;
+    text-decoration: none;
+}
+.icons i{
+    color: #444;
+}
+span{
+    font-size: 12px;
+    color: #888;
+    margin: 10px 0;
+    text-align: center;
+}
+input{
+    padding: 10px 35px;
+    border: none;
+    outline: none;
+    background-color: #e2f4ea;
+    border-radius: 2px;
+    width: 100%;
+    margin: 10px 0;
+    width: 100%;
+    cursor: pointer;
+}
+.forms-input{
+    position: relative;
+}
+.icon{
+    position: absolute;
+    font-size: 14px;
+    top: 20px;
+    left: 10px;
+    cursor: pointer;
+    color: #999;
+    transition: .5s ease;
+}
+input:active ~ .icon,
+input:focus ~ .icon{
+    color: #069a69;
+}
+input:active ,
+input:focus {
+    border: 1px solid #069a69;
+}
+button{
+   padding: 5px 20px;
+   margin: 10px 0;
+   border-radius: 5px;
+   border: 1px solid green;
+   background-color: #069a69;
+   color: #fff;
+   font-size: 14px;
+   text-transform: uppercase;
+   cursor: pointer;
+}
+
+.container.active .sign-in{
+    transform: translateX(100%);
+}
+.container.active .sign-up{
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+}
+
+.toggle-container{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transform: translateX(0);
+    transition: all .6s ease-in-out;
+    z-index: 1000;
+}
+.container.active .toggle-container{
+    transform: translateX(-100%);
+}
+.toggle{
+    position: relative;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: #069a69;
+    transform: translateX(0);
+    transition: all .6s ease-in-out;
+}
+.container.active .toggle{
+    transform: translateX(50%);
+}
+.toggle-panel{
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 30px;
+    width: 50%;
+    height: 100%;
+    color: #fff;
+}
+
+.toggle-right{
+    right: 0;
+    transform: translateX(0);
+}
+.toggle-left{
+    transform: translateX(-200%);
+}
+
+.container.active .toggle-left{
+    transform: translateX(0);
+}
+
+.container.active .toggle-right{
+    transform: translateX(200%);
+}
