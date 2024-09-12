@@ -11,15 +11,17 @@ button.addEventListener("click", () => {
   let city = input.value;
   fetchingdata(city);
 });
+fetchingdata("mumbai");
 
 async function fetchingdata(city) {
-  const api_key = "7d5e74e7b112e34001dc87b79a2fc7c3";
-  const url = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=${city}&appid=${api_key}`;
-
   try {
+    const api_key = "7d5e74e7b112e34001dc87b79a2fc7c3";
+    const url = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=${city}&appid=${api_key}`;
+
     const weather_data = await fetch(url);
-    if (weather_data.ok) {
+    if (weather_data.status === 200) {
       let data = await weather_data.json();
+      console.log(data);
       container.classList.add("active");
       let temp = Math.round(data.main.temp);
       cityName.innerText = data.name;
