@@ -14,15 +14,24 @@
 
 <body>
     <header>
+        <h1 class="logo">SpaceX</h1>
         <nav>
-            <h1 class="logo">SpaceX</h1>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Home</a></li>
+            <ul class="links-container">
+                <li class="links-item"><a href="#" class="link active">Home</a></li>
+                <li class="links-item"><a href="#" class="link">Home</a></li>
+                <li class="links-item"><a href="#" class="link">Home</a></li>
+                <li class="links-item"><a href="#" class="link">Home</a></li>
+                <li class="links-item"><a href="#" class="link">Home</a></li>
             </ul>
+            <div class="user-intrection">
+                <div class="cart">
+                    <span class="material-symbols-outlined cart-icon">shopping_cart</span>
+                    <span class="cart-item-count">00</span>
+                </div>
+                <div class="user">
+                    <span class="material-symbols-outlined user-icon">account_circle</span>
+                </div>
+            </div>
         </nav>
     </header>
     <main>
@@ -90,10 +99,10 @@
 
         <section class="about-us">
             <div class="col video-col">
-                <video class="video" src="/videos/plantvideo.mp4" muted loop ></video>
+                <video class="video" src="/videos/plantvideo.mp4" muted loop></video>
                 <div class="controls">
                     <button class="btn" id="video-btn">
-                        <span class="material-symbols-outlined play" style="font-size: 6rem;">play_arrow</span>
+                        <span class="material-symbols-outlined play" style="font-size: 6rem;"> play_arrow</span>
                     </button>
                     <h2 class="video-text">Decover our PLANT</h2>
                 </div>
@@ -109,8 +118,170 @@
                 </div>
             </div>
         </section>
-        
+        <section class="featured-product">
+            <div class="container">
+                <div class="products">
+                    <h1 class="heading">feature product</h1>
+                    <div class="pro-list">
+                        <div class="list-item">
+                            <div class="info">
+                                <img src="/images/p-2.jpg" alt="">
+                                <p class="para">name of the product</p>
+                                <span class="prize">$7.25</span>
+                            </div>
+                            <span class="tag">new</span>
+                            <button class="squ-btn">add to cart</button>
+                        </div>
+                        <div class="list-item">
+                            <div class="info">
+                                <img src="/images/p-3.jpg" alt="">
+                                <p class="para">name of the product</p>
+                                <span class="prize">$7.25</span>
+                            </div>
+                            <span class="tag">new</span>
+                            <button class="squ-btn">add to cart</button>
+                        </div>
+                        <div class="list-item">
+                            <div class="info">
+                                <img src="/images/p-4.jpg" alt="">
+                                <p class="para">name of the product</p>
+                                <span class="prize">$7.25</span>
+                            </div>
+                            <span class="tag">new</span>
+                            <button class="squ-btn">add to cart</button>
+                        </div>
+                        <div class="list-item">
+                            <div class="info">
+                                <img src="/images/p-5.jpg" alt="">
+                                <p class="para">name of the product</p>
+                                <span class="prize">$7.25</span>
+                            </div>
+                            <span class="tag">new</span>
+                            <button class="squ-btn">add to cart</button>
+                        </div>
+                        <div class="list-item">
+                            <div class="info">
+                                <img src="/images/p-6.jpg" alt="">
+                                <p class="para">name of the product</p>
+                                <span class="prize">$7.25</span>
+                            </div>
+                            <span class="tag">new</span>
+                            <button class="squ-btn">add to cart</button>
+                        </div>
+                        <div class="list-item">
+                            <div class="info">
+                                <img src="/images/p-7.jpg" alt="">
+                                <p class="para">name of the product</p>
+                                <span class="prize">$7.25</span>
+                            </div>
+                            <span class="tag">new</span>
+                            <button class="squ-btn">add to cart</button>
+                        </div>
+                        <div class="list-item">
+                            <div class="info">
+                                <img src="/images/p-8.jpg" alt="">
+                                <p class="para">name of the product</p>
+                                <span class="prize">$7.25</span>
+                            </div>
+                            <span class="tag">new</span>
+                            <button class="squ-btn">add to cart</button>
+                        </div>
+                        <div class="list-item">
+                            <div class="info">
+                                <img src="/images/p-9.jpg" alt="">
+                                <p class="para">name of the product</p>
+                                <span class="prize">$7.25</span>
+                            </div>
+                            <span class="tag">new</span>
+                            <button class="squ-btn">add to cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="latest-news">
+            <div class="container">
+                <div class="news-section">
+                    <h1 class="heading">Latest news</h1>
+                    <div class="section">
+                        <div class="col">
+                            <div class="img-section">
+                                <img src="/images/news1.jpg" alt="">
+                                <button class="squ-btn">1 day ago.. </button>
+                            </div>
+                            <div class="info-section">
+                                <h4 class="news-heading">Lorem ipsum dolor sit amet consectetur adipisicing.</h4>
+                                <div class="para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati,
+                                    laudantium.</div>
+                                <div class="para">Lorem ipsum dolor sit amet.</div>
+                                <p>see more...</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="img-section">
+                                <img src="/images/news2.jpg" alt="">
+                                <button class="squ-btn">1 day ago.. </button>
+                            </div>
+                            <div class="info-section">
+                                <h4 class="news-heading">Lorem ipsum dolor sit amet consectetur adipisicing.</h4>
+                                <div class="para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati,
+                                    laudantium.</div>
+                                <div class="para">Lorem ipsum dolor sit amet.</div>
+                                <p>see more...</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="img-section">
+                                <img src="/images/news3.jpg" alt="">
+                                <button class="squ-btn">1 day ago.. </button>
+                            </div>
+                            <div class="info-section">
+                                <h4 class="news-heading">Lorem ipsum dolor sit amet consectetur adipisicing.</h4>
+                                <div class="para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati,
+                                    laudantium.</div>
+                                <div class="para">Lorem ipsum dolor sit amet.</div>
+                                <p>see more...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="news-letter">
+            <div class="container">
+                <div class="center">
+                    <h1 class="heading">newsletter signup</h1>
+                    <p class="para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod autem sunt quas esse
+                        nam voluptate neque vero itaque deleniti iste.</p>
+                    <div class="para">Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+                    <form>
+                        <input type="text" placeholder="enter email for signup">
+                        <button class="squ-btn">submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
+    <footer>
+        <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, laudantium.
+        </div>
+        <div class="icon">
+            <span class="material-symbols-outlined">
+                nest_protect
+            </span>
+            <span class="material-symbols-outlined">
+                nest_protect
+            </span>
+            <span class="material-symbols-outlined">
+                nest_protect
+            </span>
+            <span class="material-symbols-outlined">
+                nest_protect
+            </span>
+        </div>
+    </footer>
 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
