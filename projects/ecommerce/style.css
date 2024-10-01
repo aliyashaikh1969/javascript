@@ -291,6 +291,7 @@ img{
     cursor: pointer;
     border: none;
     outline: none;
+    text-transform: uppercase;
 }
 .list-item .squ-btn{
     opacity: 0;
@@ -361,10 +362,10 @@ form{
     flex-direction: column;
     padding: 2rem;
 }
-form input{
+form input ,form textarea{
     width: 100%;
     padding: 1rem .5rem;
-    margin-bottom: 2rem;
+    margin: .7rem 0;
     letter-spacing: 1px;
 }
 footer{

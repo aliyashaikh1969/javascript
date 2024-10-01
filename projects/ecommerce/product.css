@@ -1,0 +1,180 @@
+.product-details{
+    /* background-color: red; */
+    padding: 8rem 0 1rem;
+}
+.product-details .heading{
+    padding: 2rem;
+}
+.product-details .row , .img-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.row .col{
+    width: 50%;
+    height: 55.5rem;
+    /* border: 1px solid #999; */
+}
+.main-img{
+    width: 100%;
+    height: 40rem;
+}
+.img-list img{
+    width: 10rem;
+    height: 15rem;
+    flex-grow: 1;
+}
+.para{
+    font-size: 1.4rem;
+}
+
+.details-col{
+    padding: 1rem;
+}
+.back{
+    display: block;
+    padding: 10px 0;
+    font-size: 10px;
+}
+.pro-heading    {
+    font-size: 1.8rem;
+    padding-bottom: 10px;
+}
+.stock{
+    color: #999;
+}
+.information{
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+    padding: 1rem 0;
+}
+.ratings{
+    padding: 10px 0;
+}
+
+.fae-heading{
+    padding: 10px 0;
+    font-size: 1.4rem;
+}
+.fea-list{
+    list-style-type: '\2713';
+    padding: 10px;
+}
+.fea-list-item{
+    padding:  0 10px ;
+    font-size: 1.4rem;
+}
+
+.size,.quentity{
+    display: flex;
+    /* gap: 1rem; */
+}
+.size,.quentity{
+    flex-direction: column;
+    width: 50%;
+}
+.size select,.quentity input{
+   padding: 10px;
+   border: 1px solid #999;
+   outline: none;
+   color: #999;
+}
+label{
+    font-size: 1.4rem;
+    margin: 0 0 1rem;
+}
+.prize ,.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    gap :10px;
+}
+.prize h1{
+    font-size: 4rem;
+}
+.prize button{
+    padding: 15px 30px;
+}
+
+.additional-info p{
+   font-size: 1rem;
+   color: #999;
+}
+.additional-info p span{
+    color: #000;
+}
+
+.add-info .container{
+    padding-top:1rem ;
+    justify-content: flex-start;
+}
+.details-section{
+    padding: 10px;
+}
+.details-section summary{
+    font-size: 1.4rem;
+    color: #044e31;
+    cursor: pointer;
+}                                                                                                   
+.details-section .para{
+    line-height: 1.8rem;
+    color: #999;
+    padding: 10px;
+}
+.add-review{
+    padding: 2rem 0;
+}
+.review-form{
+    width: 700px;
+    margin: auto;
+}
+.review-form .flex{
+    width: 100%;
+    padding: 0;
+}
+.review-form .form-item{
+    width: 100%;
+    margin-top: 10px;
+}
+
+.form-item textarea{
+    width: 100%;
+    resize: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:860px) {
+  .product-details{
+    padding: 10rem 0 1rem;
+   }   
+  .img-list img{
+    width: 7rem;
+   }
+   .para{
+    font-size: 1.2rem;
+   }
+   .fea-list-item{
+    font-size: 1.2rem;
+   }
+}
+
+@media (max-width:450px) {
+    .product-details .row{
+        flex-direction: column;
+    }
+    .row .col{
+        width: 100%;
+    }
+}
