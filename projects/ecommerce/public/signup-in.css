@@ -29,7 +29,7 @@ label{
     text-transform: capitalize;
 }
 .squ-btn{
-    margin: 10px;
+    margin: 10px 0;
 }
 input::-webkit-inner-spin-button{
     -webkit-appearance: none;
@@ -64,4 +64,11 @@ form .error{
     height: 70px;
     mix-blend-mode: darken;
     display: none;
+}
+
+.log-container .row{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    background-image: url(./images/news3.jpg);
 }

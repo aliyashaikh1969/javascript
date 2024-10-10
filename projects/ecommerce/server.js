@@ -44,9 +44,6 @@ app.get("/product", (req, res) => {
   res.sendFile("product.html", { root: "public" });
 });
 
-app.get("/login", (req, res) => {
-  res.sendFile("login.html", { root: "public" });
-});
 app.get("/sign", (req, res) => {
   res.sendFile("signup.html", { root: "public" });
 });
@@ -93,6 +90,37 @@ app.post("/sign", (req, res) => {
   }
 });
 
+app.get("/login", (req, res) => {
+  res.sendFile("login.html", { root: "public" });
+});
+
+app.post("/login", (req, res) => {
+  const { email, password } = req.body;
+  if (!email.length || !password.length) {
+    return res.json({ alert: "fill both the inputs" });
+  }
+
+  const users = collection(db, "users");
+
+  getDoc(doc(users, email)).then((user) => {
+    if (!user.exists()) {
+      return res.json({ alert: "email.dos not exists" });
+    } else {
+      bcrypt.compare(password, user.data().password, (err, result) => {
+        if (result) {
+          let data = user.data();
+          return res.json({
+            name: data.name,
+            email: data.email,
+            seller: data.seller,
+          });
+        } else {
+          res.json({ alert: "password is incorrect" });
+        }
+      });
+    }
+  });
+});
 app.listen(3000, () => {
   console.log("okay");
 });
