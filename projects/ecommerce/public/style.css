@@ -83,11 +83,12 @@ a{
 .user-icon-popup{
     background-color: #044e31;
     position: absolute;
-    padding: 1rem;
+    padding: 1.5rem;
+    border-radius: 5px;
     top: 200%;
     right: 0;
     display: none;
-    width: 125px;
+    width: 150px;
 }
 .user.show .user-icon-popup{
     display: block;

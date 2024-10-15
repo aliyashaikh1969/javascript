@@ -1,0 +1,27 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #01013b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container{
+    padding: 10px;
+    min-width: 600px;
+}
+
+.status-container{
+    border: 3px solid #32026c;
+    width: 100%;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+}
