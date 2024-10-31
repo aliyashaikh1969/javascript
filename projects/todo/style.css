@@ -57,7 +57,7 @@ body{
     height: 100%;
     border-radius: 10px;
 }
-.input-container{
+form{
     margin-top: 50px;
     display: flex;
     align-items: center;
