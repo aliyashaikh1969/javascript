@@ -72,6 +72,7 @@ form{
     border: 3px solid #ac69fd;
     border-radius: 10px;
     outline: none;
+    cursor: pointer;
 }
 .input-container input::placeholder{
     color: #999;
@@ -98,12 +99,31 @@ form{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: 15px;
 }
-.item .text label{
+/* .item .text{
+    flex: 1;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+} */
+.item label{
     color: #fff;
     text-transform: capitalize;
     font-size: 18px;
+    flex: 1;
     padding:  0 10px;
+    /* background-color: rebeccapurple; */
+    margin: 0 10px;
+    cursor: pointer;
+}
+.item .controls span{
+    cursor: pointer;
+}
+.list-item .item.complete label{
+    text-decoration: line-through;
+    color: #999;
 }
 .item .controls span i{
     width: 30px;
@@ -111,4 +131,15 @@ form{
     font-size: 20px;
     line-height: 30px;
     text-align: center;
+}
+
+.container .edit i{
+    color: #71e4f3;
+}
+.container .delete i{
+    color: red;
+}
+
+.item .text input:checked > .text label{
+    text-decoration: line-through;
 }
