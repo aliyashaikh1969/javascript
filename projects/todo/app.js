@@ -2,10 +2,38 @@ console.log("todo");
 const submitBtn = document.querySelector(".submit");
 const input = document.querySelector("input");
 const listContainer = document.querySelector(".list-item");
-
+const progressBar=document.querySelector('.progress-bar');
+const progress=document.querySelector('.progress');
+const numbers=document.querySelector('.number');
+      
 let listData = JSON.parse(localStorage.getItem("task"))||[];
 
 let complete = false
+
+const editItem = (id)=>{
+  input.value = listData[id].task
+  listData.splice(id,1)
+  updating()
+}
+
+
+const deleteItem =(id)=>{
+  listData.splice(id,1)
+  updating()
+}
+
+
+const taskstatus=()=>{
+  let completedtasks=listData.filter(item=>item.status).length
+  let numberOfTask = listData.length
+
+  let progressPercentage = (completedtasks/numberOfTask)*100;
+
+  progress.style.width=`${progressPercentage}%`;
+
+  numbers.innerHTML=`${completedtasks}/${numberOfTask}`
+
+}
 
 const completedItem =(id)=>{
   // console.log("first")/
@@ -38,6 +66,8 @@ let updating = () => {
     listContainer.innerHTML=""
   }
   localStorage.setItem('task',JSON.stringify(listData))
+
+  taskstatus()
 };
 
 submitBtn.addEventListener("click", (e) => {
@@ -61,15 +91,3 @@ submitBtn.addEventListener("click", (e) => {
 
 updating()
 
-
-const editItem = (id)=>{
-  input.value = listData[id].task
-  listData.splice(id,1)
-  updating()
-}
-
-
-const deleteItem =(id)=>{
-  listData.splice(id,1)
-  updating()
-}
