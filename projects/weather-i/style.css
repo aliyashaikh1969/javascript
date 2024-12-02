@@ -1,0 +1,63 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+span{
+    font-size: 12px;
+    color: #2886f1;
+}
+.lnum{
+    font-size: 2.2rem;
+    color: #489af7;
+}
+body{
+    font-family: sans-serif;
+    background: url(../images/sky.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100vw;
+}
+.sidebar{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 30vw;
+    height: 100%;
+    background: #012d5f;
+    border-right: 1px solid #052140;
+}
+.sidebar .list{
+    padding: 20px;
+}
+
+.item{
+   /* background: rebeccapurple; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #0254b2;
+    padding: 10px 5px;
+    border-radius: 5px;
+}
+.item:hover{
+    background-color: #98c1f03c;
+}
+.item:hover .lnum{
+    color: #d2e3f6;
+    transition: all .1s ease-in;
+}
+.item .place p{
+    font-size: 16px;
+    color: #d2e3f6;
+    text-transform: capitalize;
+    font-weight: 600;
+    letter-spacing: 1.3px;
+}
+.place span{
+    color: #489af7;
+}
+.tem-col{
+    text-align: center;
+}

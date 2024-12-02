@@ -1,0 +1,32 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #E5E1DA;
+    font-family: sans-serif;
+}
+header{
+    width: 100vw;
+    background-color: #F1F0E8;
+}
+
+nav{
+    margin: auto;
+    max-width: 92%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rebeccapurple;
+    padding: 0 20px;
+}
+nav h4{
+    padding: 15px 0;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+nav span i{
+    font-size: 16px;
+}

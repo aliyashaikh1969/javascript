@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@mixin flexprob{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+body{
+    display: grid;
+    place-items: center;
+    background: #222;
+    min-height: 100vh;
+    font-family: 'Roboto',sans-serif;
+    .container{
+        background: rgb(75,245,124);
+        margin: auto; 
+        width: 450px;
+        padding: 30px 25px;
+        background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);        max-width: 100%;
+        border-radius: 10px;
+        text-align: center;
+
+        transition: all .6s ease-in-out;
+        .search{
+        @include flexprob();
+        
+            input{
+            flex:1;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 10px;
+            outline: none;
+            font-size: 18px;
+        }
+        button{
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            border: none;
+            @include flexprob();
+            margin-left: 10px;
+
+           span{
+            color: #555;
+           }
+        }
+    }
+        .details{
+            display: none;
+            transition: all .6s ease-in-out;
+            color: #fff;
+            .image{
+                font-size: 10rem;
+                width: 200px;
+                height: 200px;
+                margin-top: 30px;
+            }
+            .temp{
+                font-size: 5rem;
+            }
+            .city-name{
+                font-size: 30px;
+                text-transform: capitalize
+            }
+            .informatin{
+                @include flexprob();
+                width: 100%;
+                margin-top: 20px;
+                .box{
+                    @include flexprob();
+                    flex: 1;
+                    .icon{
+                        font-size: 3.2rem;
+                    }
+                    div{
+                        margin-left: 20px;
+                    }
+                    p{                              
+                        font-size: 30px;
+                        span{
+                            font-size: 16px;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+
+.container.active .details {
+    display: block;
+}
