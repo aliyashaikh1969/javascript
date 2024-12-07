@@ -52,12 +52,12 @@
             Hey There <br />how can i help you today?
           </div>
         </div>
-        <div class="message uer-message">
+        <div class="message user-message">
           <div class="message-text">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit
           </div>
         </div>
-        <div class="message bot-message">
+        <div class="message bot-message thinking">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="chat-icon"
@@ -80,14 +80,16 @@
       </div>
       <div class="chat-footer">
         <form class="chat-form">
-          <textarea class="message-input" placeholder="Message..."></textarea>
+          <textarea class="message-input" placeholder="Message..." required></textarea>
           <div class="chat-controls">
             <button type="button" class="material-symbols-rounded">sentiment_satisfied</button>
             <button type="button" class="material-symbols-rounded">attach_file</button>
-            <button type="submit" class="material-symbols-rounded">arrow_upward</button>
+            <button type="submit" id="submit-btn" class="material-symbols-rounded sub-btn">arrow_upward</button>
           </div>
         </form>
       </div>
     </div>
+
+    <script src="app.js"></script>
   </body>
 </html>
