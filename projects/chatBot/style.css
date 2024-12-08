@@ -66,6 +66,7 @@ body{
     height: 460px;
     overflow-y: auto;
     padding: 25px 22px;
+    margin-bottom: 82px;
 }
 .chat-body .chat-icon{
     background-color: #3454d3;

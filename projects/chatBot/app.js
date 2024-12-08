@@ -3,18 +3,41 @@ console.log("chatbot")
 const messageInput = document.querySelector(".message-input");
 const chatBody = document.querySelector(".chat-body");
 const submitButton = document.querySelector("#submit-btn");
+//  const apikey ="AIzaSyDbCaaReBObY8VwbXFMvjrFKWjMniEm4bo";
+const API_KEY =`AIzaSyAM9WZLvE1z0_TLsH2zKTl-rLSr8yPw0AQ`;
+const API_URL =`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`
+
 
 let userData = {
     message: null
 }
 
-const createMessageElement = (content, classes) => {
+const createMessageElement = (content, ...classes) => {
     let div = document.createElement("div")
-    div.classList.add("message", classes)
+    div.classList.add("message", ...classes)
     div.innerHTML = content
     return div;
 }
 
+const generatingBotResponse =async()=>{
+   const requestOptions ={
+    methode :'POST',
+    header:{
+        'Content-Type': 'application/json' 
+    },body:JSON.stringify({
+        contents: [{
+        parts:[{text:userData.message}]
+        }]
+    })
+
+
+   }
+   try{
+    let resoponse = await fetch (API_URL,requestOptions)
+   }catch(error){
+
+   }
+}
 
 const handleOutgoingMessage = (e) => {
     e.preventDefault()
@@ -25,7 +48,10 @@ const handleOutgoingMessage = (e) => {
     let outgingMessageDiv = (createMessageElement(messageContent, "user-message"))
     outgingMessageDiv.querySelector(".message-text").textContent = userData.message
     chatBody.appendChild(outgingMessageDiv)
+
     setTimeout(() => {
+
+        console.log("boot")
         let messageContent = ` <svg
             xmlns="http://www.w3.org/2000/svg"
             class="chat-icon"
@@ -44,10 +70,11 @@ const handleOutgoingMessage = (e) => {
             <div class="dot"></div>
            </div>
           </div>`
-        let inCommingMessageDiv = (createMessageElement(messageContent, "bot-message"))
-        chatBody.appendChild(inCommingMessageDiv)
+        let inComingMessageDiv = (createMessageElement(messageContent, "bot-message" , "thinking"))
+        chatBody.appendChild(inComingMessageDiv)
 
-    }, 600)
+        generatingBotResponse()
+    }, 600);
 }
 
 messageInput.addEventListener("keydown", (e) => {
