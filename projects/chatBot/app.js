@@ -4,8 +4,8 @@ const messageInput = document.querySelector(".message-input");
 const chatBody = document.querySelector(".chat-body");
 const submitButton = document.querySelector("#submit-btn");
 //  const apikey ="AIzaSyDbCaaReBObY8VwbXFMvjrFKWjMniEm4bo";
-const API_KEY =`AIzaSyAM9WZLvE1z0_TLsH2zKTl-rLSr8yPw0AQ`;
-const API_URL =`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`
+const API_KEY = `AIzaSyAM9WZLvE1z0_TLsH2zKTl-rLSr8yPw0AQ`;
+const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`
 
 
 let userData = {
@@ -19,25 +19,47 @@ const createMessageElement = (content, ...classes) => {
     return div;
 }
 
-const generatingBotResponse =async()=>{
-   const requestOptions ={
-    methode :'POST',
-    header:{
-        'Content-Type': 'application/json' 
-    },body:JSON.stringify({
-        contents: [{
-        parts:[{text:userData.message}]
-        }]
-    })
+const generatingBotResponse = async (inComingMessageDiv) => {
+    console.log(inComingMessageDiv);
+    const messageElement =inComingMessageDiv.querySelector(".message-text")
+    console.log(messageElement)
+    const requestOptions = {
+        method: "POST",
+        headers: {
+             "Content-Type": 'application/json'
+             },
+        body: JSON.stringify({
+            contents: [{
+                parts: [{ text: userData.message }]
+            }]
+        })
 
+        // method: 'POST',
+        // headers: {
+        //   'Content-Type': 'application/json'
+        // },
+        // body: JSON.stringify({ key: 'value' })
+    }
+    try {
+        const response = await fetch(API_URL,requestOptions);
+        const data = await response.json()
+        if (!response.ok) throw new Error(data.error.message);
+        const responseText =data.candidates[0].content.parts[0].text.replace(/\*\*(.*?)\*\*/g,"$1").trim();
+        console.log(responseText)
 
-   }
-   try{
-    let resoponse = await fetch (API_URL,requestOptions)
-   }catch(error){
+        messageElement.innerText =responseText
 
-   }
+        console.log(data)
+    } catch (error) {
+        console.log(error)
+        messageElement.innerText =error.message
+        messageElement.style.color="#ff0000"
+    }finally{
+        inComingMessageDiv.classList.remove('thinking')
+        chatBody.scrollTo({top:chatBody.scrollHeight,behavior:"smooth"});
+    }
 }
+
 
 const handleOutgoingMessage = (e) => {
     e.preventDefault()
@@ -48,6 +70,7 @@ const handleOutgoingMessage = (e) => {
     let outgingMessageDiv = (createMessageElement(messageContent, "user-message"))
     outgingMessageDiv.querySelector(".message-text").textContent = userData.message
     chatBody.appendChild(outgingMessageDiv)
+    chatBody.scrollTo({top:chatBody.scrollHeight,behavior:"smooth"});
 
     setTimeout(() => {
 
@@ -70,10 +93,10 @@ const handleOutgoingMessage = (e) => {
             <div class="dot"></div>
            </div>
           </div>`
-        let inComingMessageDiv = (createMessageElement(messageContent, "bot-message" , "thinking"))
+        let inComingMessageDiv = (createMessageElement(messageContent, "bot-message", "thinking"))
         chatBody.appendChild(inComingMessageDiv)
-
-        generatingBotResponse()
+        generatingBotResponse(inComingMessageDiv)
+        // inComingMessageDiv.querySelector(".message-text").innerHTML =candidates[0].content.part[0].text
     }, 600);
 }
 
