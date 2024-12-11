@@ -3,13 +3,20 @@ console.log("chatbot")
 const messageInput = document.querySelector(".message-input");
 const chatBody = document.querySelector(".chat-body");
 const submitButton = document.querySelector("#submit-btn");
+const fileInput =document.querySelector("#file-input")
+
+
 //  const apikey ="AIzaSyDbCaaReBObY8VwbXFMvjrFKWjMniEm4bo";
 const API_KEY = `AIzaSyAM9WZLvE1z0_TLsH2zKTl-rLSr8yPw0AQ`;
 const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`
 
 
 let userData = {
-    message: null
+    message: null,
+    file:{
+        data:null,
+        mime_type:null
+    }
 }
 
 const createMessageElement = (content, ...classes) => {
@@ -30,7 +37,7 @@ const generatingBotResponse = async (inComingMessageDiv) => {
              },
         body: JSON.stringify({
             contents: [{
-                parts: [{ text: userData.message }]
+                parts: [{ text: userData.message },...(userData.file.data ? [{inline_data: userData.file}]:[])]
             }]
         })
 
@@ -55,6 +62,7 @@ const generatingBotResponse = async (inComingMessageDiv) => {
         messageElement.innerText =error.message
         messageElement.style.color="#ff0000"
     }finally{
+        userData.file ={}
         inComingMessageDiv.classList.remove('thinking')
         chatBody.scrollTo({top:chatBody.scrollHeight,behavior:"smooth"});
     }
@@ -66,7 +74,9 @@ const handleOutgoingMessage = (e) => {
     userData.message = messageInput.value.trim()
     messageInput.value = ""
 
-    let messageContent = `<div class="message-text"></div>`
+    let messageContent = `<div class="message-text"></div>
+                        ${userData.file.data? `<img src="data:${userData.file.mime_type};base64,${userData.file.data}" class="attachment"/>`:""}`
+                            
     let outgingMessageDiv = (createMessageElement(messageContent, "user-message"))
     outgingMessageDiv.querySelector(".message-text").textContent = userData.message
     chatBody.appendChild(outgingMessageDiv)
@@ -108,6 +118,24 @@ messageInput.addEventListener("keydown", (e) => {
 })
 
 
-submitButton.addEventListener("click", (e) => {
-    handleOutgoingMessage(e)
+submitButton.addEventListener("click", (e) => handleOutgoingMessage(e))
+
+fileInput.addEventListener("change",(e)=>{
+    let file =e.target.files[0]
+    if(!file) return;
+
+    let reader =new FileReader()
+
+   reader.onload=(e)=>{
+    let base64String = e.target.result.split(",")[1];
+
+    userData.file={
+        data:base64String,
+        mime_type:file.type
+    }
+    fileInput.value=""
+   }
+    reader.readAsDataURL(file)
 })
+
+document.querySelector("#file-upload").addEventListener("click",()=>fileInput.click())
