@@ -114,6 +114,35 @@ body{
     gap: 3px;
     padding-block: 15px;
 }
+.chat-footer .file-upload-wrapper{
+    width: 35px;
+    height: 35px;
+    position: relative;
+}
+.chat-footer .file-upload-wrapper :where(img,button){
+    position: absolute;
+}
+.chat-footer .file-upload-wrapper #cancle{
+    color: red;
+    background-color: #fff;
+}
+.chat-footer .file-upload-wrapper img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    /* display: none; */
+    border-radius: 50%;
+}
+.chat-footer .file-upload-wrapper :where(img,#cancle),
+.chat-footer .file-upload-wrapper.file-uploaded #file-upload{
+    display: none;
+}
+
+
+.chat-footer .file-upload-wrapper.file-uploaded img,
+.chat-footer .file-upload-wrapper.file-uploaded:hover #cancle{
+    display: block;
+}
 .chat-body .message .bot-thinking .dot{
    animation: blinkit .6s ease-in-out infinite;
    width: 7px;
