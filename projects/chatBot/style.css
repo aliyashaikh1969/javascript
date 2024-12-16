@@ -184,6 +184,7 @@ body{
     padding: 15px 22px 20px;
 }
 .chat-footer .chat-form{
+    position: relative;
     display: flex;
     align-items: center;
     border-radius: 32px;
@@ -229,4 +230,20 @@ body{
 }
 .chat-form:valid .sub-btn{
     display: block;
+}
+
+
+em-emoji-picker{
+   position: absolute;
+   width: 100%;
+   max-width: 350px;
+   max-height: 330px;
+   left: 50%;
+   transform: translateX(-50%);
+   top: -337px;
+   visibility: hidden;
+}
+
+body.show-emoji-picker em-emoji-picker{
+    visibility: visible;
 }

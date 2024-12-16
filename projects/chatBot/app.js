@@ -143,7 +143,22 @@ fileInput.addEventListener("change", (e) => {
     }
     reader.readAsDataURL(file)
 })
+const picker = new EmojiMart.Picker({
+    theme : "light",
+    previewPosition	:"none",
+    skinTonePosition :"none",
 
+    onClickOutside(e){
+        if(e.target.id === "emoji-picker"){
+            document.body.classList.toggle("show-emoji-picker")
+        }else{
+            document.body.classList.remove("show-emoji-picker")
+        }
+
+    }
+})
+
+document.querySelector('.chat-form').appendChild(picker)
 document.querySelector("#file-upload").addEventListener("click", () => fileInput.click())
 
 
