@@ -148,6 +148,15 @@ const picker = new EmojiMart.Picker({
     previewPosition	:"none",
     skinTonePosition :"none",
 
+    onEmojiSelect (emoji){
+
+        const {selectionStart : start,selectionEnd : end} =messageInput
+        messageInput.setRangeText(emoji.native,start,end,"end");
+        messageInput.focus()
+        console.log(emoji.native)
+        console.log(start,end)
+    },
+
     onClickOutside(e){
         if(e.target.id === "emoji-picker"){
             document.body.classList.toggle("show-emoji-picker")
