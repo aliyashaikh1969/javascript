@@ -15,8 +15,14 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
+
   </head>
   <body>
+    <button class="chat-popup-btn">
+      <span class="material-symbols-outlined">chat_bubble</span>
+      <span class="material-symbols-outlined">close</span>
+       </button>
     <div class="chatbot-popup">
       <div class="chat-header">
         <div class="header-info">
@@ -33,7 +39,7 @@
           </svg>
           <h2 class="logo-text">Chatbot</h2>
         </div>
-        <button class="material-symbols-rounded down-icon">keyboard_arrow_down</button>
+        <button id="chat-closed" class="material-symbols-rounded down-icon">keyboard_arrow_down</button>
       </div>
       <div class="chat-body">
         <div class="message bot-message">

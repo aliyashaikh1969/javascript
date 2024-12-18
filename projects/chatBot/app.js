@@ -120,6 +120,14 @@ messageInput.addEventListener("keydown", (e) => {
         handleOutgoingMessage(e)
     }
 })
+const initailheight =messageInput.scrollHeight
+messageInput.addEventListener("input",()=>{
+    if(messageInput.scrollHeight>initailheight){
+        messageInput.style.height =`${messageInput.scrollHeight}px`
+        document.querySelector(".chat-form").style.borderRadius =`32px`
+    }
+   
+})
 
 
 submitButton.addEventListener("click", (e) => handleOutgoingMessage(e))
@@ -153,8 +161,6 @@ const picker = new EmojiMart.Picker({
         const {selectionStart : start,selectionEnd : end} =messageInput
         messageInput.setRangeText(emoji.native,start,end,"end");
         messageInput.focus()
-        console.log(emoji.native)
-        console.log(start,end)
     },
 
     onClickOutside(e){
@@ -174,6 +180,15 @@ document.querySelector("#file-upload").addEventListener("click", () => fileInput
 fileCancle.addEventListener("click",()=>{
     userData.file={}
     fileUploadewrapper.classList.remove("file-uploaded");
+})
 
+document.querySelector(".chat-popup-btn").addEventListener("click",()=>{
+    document.body.classList.toggle("show-chatbot")
+})
+
+document.querySelector("#chat-closed").addEventListener("click",()=>{
+    document.body.classList.remove("show-chatbot")
 
 })
+
+console.log(messageInput.scrollHeight)
