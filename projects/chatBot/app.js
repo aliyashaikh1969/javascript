@@ -12,7 +12,7 @@ const fileCancle =document.querySelector("#cancle");
 const API_KEY = `AIzaSyAM9WZLvE1z0_TLsH2zKTl-rLSr8yPw0AQ`;
 const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`
 
-
+const chatHistory =[];
 let userData = {
     message: null,
     file: {
@@ -32,15 +32,22 @@ const generatingBotResponse = async (inComingMessageDiv) => {
     // console.log(inComingMessageDiv);
     const messageElement = inComingMessageDiv.querySelector(".message-text")
     // console.log(messageElement)
+
+    chatHistory.push({
+        role:"user",
+        parts: [{ text: userData.message }, ...(userData.file.data ? [{ inline_data: userData.file }] : [])]
+    })
     const requestOptions = {
         method: "POST",
         headers: {
             "Content-Type": 'application/json'
         },
         body: JSON.stringify({
-            contents: [{
-                parts: [{ text: userData.message }, ...(userData.file.data ? [{ inline_data: userData.file }] : [])]
-            }]
+            contents:
+            //  [{
+                // parts: [{ text: userData.message }, ...(userData.file.data ? [{ inline_data: userData.file }] : [])]
+                chatHistory
+            // }]
         })
 
         // method: 'POST',
@@ -55,8 +62,14 @@ const generatingBotResponse = async (inComingMessageDiv) => {
         if (!response.ok) throw new Error(data.error.message);
         const responseText = data.candidates[0].content.parts[0].text.replace(/\*\*(.*?)\*\*/g, "$1").trim();
         // console.log(responseText)
+        chatHistory.push({
+            role:"model",
+            parts: [{ text: responseText }]
+        })
 
+        console.log(chatHistory)
         messageElement.innerText = responseText
+
 
         // console.log(data)
     } catch (error) {
@@ -77,6 +90,7 @@ const handleOutgoingMessage = (e) => {
     userData.message = messageInput.value.trim()
     messageInput.value = ""
     fileUploadewrapper.classList.remove("file-uploaded")
+    messageInput.dispatchEvent(new Event("input"));
 
     let messageContent = `<div class="message-text"></div>
                         ${userData.file.data ? `<img src="data:${userData.file.mime_type};base64,${userData.file.data}" class="attachment"/>` : ""}`
@@ -116,7 +130,7 @@ const handleOutgoingMessage = (e) => {
 
 messageInput.addEventListener("keydown", (e) => {
     let message = e.target.value.trim();
-    if (e.key == "Enter" && message) {
+    if (e.key == "Enter" && message && message && !e.shiftkey && window.innerWidth>768) {
         handleOutgoingMessage(e)
     }
 })
@@ -128,7 +142,6 @@ messageInput.addEventListener("input",()=>{
     }
    
 })
-
 
 submitButton.addEventListener("click", (e) => handleOutgoingMessage(e))
 
@@ -190,5 +203,3 @@ document.querySelector("#chat-closed").addEventListener("click",()=>{
     document.body.classList.remove("show-chatbot")
 
 })
-
-console.log(messageInput.scrollHeight)
