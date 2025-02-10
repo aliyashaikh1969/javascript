@@ -1,18 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>add to cart</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header>
-        <nav>
-            <h4>cart page</h4>
-            <span><i class="fa-solid fa-cart-shopping"></i></span>
-        </nav>
+      <nav>
+        <h4>cart page</h4>
+        <span class="cart-btn"><i class="fa-solid fa-cart-shopping icons"></i></span>
+      </nav>
     </header>
-</body>
+
+    <div class="cart-page">
+      <h1 class="heading">Shopping cart</h1>
+      <span class="cart-close"><i class="fas fa-close"></i></span>
+      <div class="container">
+        <div class="product-details">
+          <table>
+            <tr>
+              <th>Product Code</th>
+              <th>Quantity</th>
+              <th>Total</th>
+              <th>Action</th>
+            </tr>
+            <tr>
+              <td>
+                <div class="product">
+                  <img src="/images/watch-1.jpg " class="pImage" alt="" />
+                  <div class="img-det">
+                    <p>Product name</p>
+                    <span>st:colors os product</span>
+                  </div>
+                </div>
+              </td>
+
+              <td>
+                <div class="quen">
+                  <button class="add">+</button>
+                  <span>1</span>
+                  <button class="min">-</button>
+                </div>
+              </td>
+              <td>
+                <p class="prize">$23</p>
+              </td>
+
+              <td>
+                <button class="actions">
+                  <i class="fas fa solid fa-trash"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="product">
+                  <img src="/images/watch-1.jpg " class="pImage" alt="" />
+                  <div class="img-det">
+                    <p>Product name</p>
+                    <span>st:colors os product</span>
+                  </div>
+                </div>
+              </td>
+
+              <td>
+                <div class="quen">
+                  <button class="add">+</button>
+                  <span>1</span>
+                  <button class="min">-</button>
+                </div>
+              </td>
+              <td>
+                <p class="prize">$23</p>
+              </td>
+
+              <td>
+                <button class="actions">
+                  <i class="fas fa solid fa-trash"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="product">
+                  <img src="/images/watch-1.jpg " class="pImage" alt="" />
+                  <div class="img-det">
+                    <p>Product name</p>
+                    <span>st:colors os product</span>
+                  </div>
+                </div>
+              </td>
+
+              <td>
+                <div class="quen">
+                  <button class="add">+</button>
+                  <span>1</span>
+                  <button class="min">-</button>
+                </div>
+              </td>
+              <td>
+                <p class="prize">$23</p>
+              </td>
+
+              <td>
+                <button class="actions">
+                  <i class="fas fa solid fa-trash"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="product">
+                  <img src="/images/watch-1.jpg " class="pImage" alt="" />
+                  <div class="img-det">
+                    <p>Product name</p>
+                    <span>st:colors os product</span>
+                  </div>
+                </div>
+              </td>
+
+              <td>
+                <div class="quen">
+                  <button class="add">+</button>
+                  <span>1</span>
+                  <button class="min">-</button>
+                </div>
+              </td>
+              <td>
+                <p class="prize">$23</p>
+              </td>
+
+              <td>
+                <button class="actions">
+                  <i class="fas fa solid fa-trash"></i>
+                </button>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="order-summary">
+          <div class="summary">
+            <p class="sum-head">Order summary</p>
+            <div class="discount-form">
+              <input type="text" placeholder="Discount Voucher" />
+              <button>Apply</button>
+            </div>
+            <div class="prize-details">
+              <div class="p-item">
+                <p>Sub Total</p>
+                <span>2000 USD</span>
+              </div>
+              <div class="p-item">
+                <p>Discount (10%)</p>
+                <span>-1000USD</span>
+              </div>
+              <div class="p-item">
+                <p>Delivery free</p>
+                <span>50.00 USD</span>
+              </div>
+            </div>
+            <div class="p-total">
+              <p>Total</p>
+              <span>$1850 USD</span>
+            </div>
+            <button class="check-out btn">Checkout Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="app.js"></script>
+  </body>
 </html>

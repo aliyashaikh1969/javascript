@@ -3,6 +3,7 @@ console.log("booking");
 const input = document.querySelector(".input");
 const submitBtn = document.querySelector("form button");
 const rows = document.querySelectorAll(".seats .row")
+const preview = document.querySelector(".preview");
 
 let rowNumber = 0
 
@@ -27,12 +28,11 @@ const selectingRows =()=>{
 }
 
 const bookingStatus = (invalue,numberOfRow)=>{
-    console.log(invalue,numberOfRow)
-
 
     for(let i = 0 ;i<invalue;i++){
         rows[numberOfRow].children[i].classList.add("booked");
     }
+
 
 }
 
