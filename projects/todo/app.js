@@ -6,13 +6,14 @@ const progressBar=document.querySelector('.progress-bar');
 const progress=document.querySelector('.progress');
 const numbers=document.querySelector('.number');
       
-let listData = JSON.parse(localStorage.getItem("task"))||[];
+let listData = JSON.parse(localStorage.getItem("task"));
 
 let complete = false
 
 const editItem = (id)=>{
   input.value = listData[id].task
-  listData.splice(id,1)
+  listData.splice(id,1);
+  input.focus();
   updating()
 }
 
@@ -75,6 +76,7 @@ submitBtn.addEventListener("click", (e) => {
 
   let inputValue = input.value.trim();
   if (inputValue) {
+    listData = !listData ? [] : listData 
     let data = {
       task: inputValue,
       status: false,

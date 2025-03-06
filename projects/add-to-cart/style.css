@@ -193,3 +193,30 @@ nav span i{
     width: 100%;
     cursor: pointer;
 }
+
+
+main .container{
+    background: url( "/images/watch-3.jpg") top no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+
+.product-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 35px;
+}
+.product-item{
+    margin: 25px;
+}
+.product-item img{  
+    width: 320px;
+    height: 400px;
+    object-fit: cover;
+}
+.product-item:nth-child(odd){
+    transform: scale(.8);
+}
