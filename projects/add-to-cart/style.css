@@ -3,7 +3,17 @@
     margin: 0;
     box-sizing: border-box;
 }
+button{
+    border: none;
+    background:none;
+    font-size: 16px;
+    padding: 5px 10px;
+    text-align: center;
+    cursor: pointer;
+}
 body{
+    position: relative;
+    font-family: sans-serif;
     background-color: #E5E1DA;
     font-family: sans-serif;
 }
@@ -18,7 +28,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rebeccapurple;
+    /* background-color: rebeccapurple; */
     padding: 0 20px;
 }
 nav h4{
@@ -29,4 +39,157 @@ nav h4{
 }
 nav span i{
     font-size: 16px;
+}
+.cart-btn{
+    cursor: pointer;
+    transition: all .6s ease;
+}
+.container{
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+.icons{
+    font-size: 25px;
+}
+
+.cart-page{
+    position: absolute;
+    top: 0;
+    display: none;
+    background-color: #fff;
+    transition: all .6s ease;
+    width: 100vw;
+    height: 100vh;
+}
+.cart-page.show { 
+    display: block;
+}
+
+.cart-close { 
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    font-size: 24px;
+    cursor: pointer;
+}
+.heading{
+    padding: 30px 20px;
+}
+.product-details ,.order-summary{
+    width: 100%;
+    border: 1px solid #999;
+    border-radius: 15px;
+    padding:15px 20px 5px;
+}
+.product-details table{
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+.product-details th ,.product-details td{
+    border-bottom: 1px solid #999;
+    padding: 10px;
+}
+.product-details tr:last-child td{
+    border-bottom: none;
+}
+
+
+.product-details .product{
+    display: flex;
+    align-items: center;
+}
+.product-details  .pImage{
+    width: 80px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.product-details p, .order-summary .sum-head{
+    font-weight: 600;
+}
+.product-details .prize{
+    font-size: 24px;
+}
+
+.product-details .product .img-det{
+    padding: 10px;
+}
+.product-details .product .img-det p{
+    font-weight: 600;
+}
+.product-details .product .img-det span{
+    font-size: 12px;
+    color: #888;
+}
+
+.quen{
+    border: 1px solid #000;
+    padding:  0 15px;
+    border-radius: 15px;
+    display: inline-block;
+}
+
+.order-summary {
+    width: 560px;
+}
+
+.order-summary .sum-head{
+    padding: 10px 0;
+}
+.order-summary .discount-form ,.prize-details .p-item,.p-total{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:  5px 0;
+}
+
+.order-summary .discount-form input{
+    /* gap: 10px; */
+    margin-right: 10px;
+    width: 100%;
+}
+
+.order-summary .discount-form input,.discount-form button{
+    border: 1px solid #000;
+    padding: 10px 15px;
+    border-radius: 25px;
+}
+.order-summary .prize-details{
+    padding: 15px 0;
+    border-bottom: 1px solid;
+}
+.prize-details .p-item p{
+    font-size: 14px;
+}
+.prize-details .p-item span,.p-total p{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.p-total{
+    padding: 15px 0;
+}
+
+.p-total span{
+    font-size: 24px;
+}
+
+.btn{
+    padding: 12px 25px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 25px;
+}
+.summary{
+    position: relative;
+    height: 100%;
+}
+.check-out{
+    bottom: 20px;
+    position: absolute;
+    width: 100%;
+    cursor: pointer;
 }
