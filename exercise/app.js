@@ -99,7 +99,7 @@ const missingNumber =(array)=>{
 // console.log(missingNumber([1,3,5,2,8]))
 // missingNumber([3,0,1])
 
-let url = "https://randomuser.me/api/"
+// let url = "https://randomuser.me/api/"
 function apiPractice (){
     let test =fetch(url).then(res=>res.json()).then(result=>console.log(result))
     return test
@@ -111,7 +111,7 @@ async function pract() {
     let result = await response.json()
     return result
 }
-let test = pract()
+// let test = pract()
 // test.then(data=>console.log(data))
 // console.log(test)
 
@@ -140,4 +140,43 @@ return `#${result}`
 
 // console.log(generateHash("making a hash tag"));
 
+const countChar =(str,char)=>
+    str.split("").filter(item=> item.toUpperCase()==char.toUpperCase()).length;
 
+// console.log(countChar("javascraipt" , "v"))
+
+
+
+const checkTriangleType =(a,b,c)=>{
+ if(a == b && a == c){
+    return "equilateral"
+ }else if(a == b  || b == c || a == c){
+    return "isosceles"
+ }else {
+    return "scalene"
+ }
+}
+
+// console.log(checkTriangleType(3,3,3))  //equilateral
+// console.log(checkTriangleType(4,4,2))  //isosceles
+// console.log(checkTriangleType(3,4,5))  //scalene
+
+
+const sortAscendingOrder=(array)=>{
+let arr = array
+for(let i=0;i<arr.length;i++){
+    for(let j=0;j<arr.length; j++){
+        if(arr[j]>arr[j+1]){
+            let tem = arr[j]
+            arr[j]=arr[j+1]
+            arr[j+1]=tem
+        }
+    }
+}
+return arr
+
+}
+
+
+console.log(sortAscendingOrder([1,10,2,4]))
+console.log(sortAscendingOrder([10,22,3,4,1]))
