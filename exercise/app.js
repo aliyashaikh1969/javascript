@@ -104,7 +104,7 @@ function apiPractice (){
     let test =fetch(url).then(res=>res.json()).then(result=>console.log(result))
     return test
 }
-apiPractice()
+// apiPractice()
 
 async function pract() {
     let response = await fetch(url)
@@ -112,5 +112,32 @@ async function pract() {
     return result
 }
 let test = pract()
-test.then(data=>console.log(data))
-console.log(test)
+// test.then(data=>console.log(data))
+// console.log(test)
+
+
+
+const largeString =(str)=>{
+    let arr = str.split(" ")
+    let sorting = arr.sort((a,b)=>b.length-a.length); //using sort function
+    let reducing = arr.reduce((accum ,current)=>(accum.length > current.length ? accum : current),"") //using reduce function
+    console.log(reducing)
+    return sorting[0]
+}
+
+
+// console.log(largeString("hello I am writing A javascript language"))
+
+// console.log(largeString("hello i am writing a"))
+
+
+
+const generateHash =(str)=>{
+ let result = str.split(" ").map(item => item.charAt(0).toUpperCase()+ item.slice(1).toLowerCase()).join("")
+
+return `#${result}`
+}
+
+// console.log(generateHash("making a hash tag"));
+
+
