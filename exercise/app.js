@@ -178,5 +178,24 @@ return arr
 }
 
 
-console.log(sortAscendingOrder([1,10,2,4]))
-console.log(sortAscendingOrder([10,22,3,4,1]))
+// console.log(sortAscendingOrder([1,10,2,4]))
+// console.log(sortAscendingOrder([10,22,3,4,1]))
+
+
+
+const isPalindrome=(str)=>{
+    str = str.toLowerCase().replace(/\W/g,"") //regular expression (/\W/g) to remove all non-word characters from the string
+    let revstr = str.split("").reverse().join("")
+
+    // console.log(revstr)
+    return str==revstr 
+}
+
+
+
+
+
+// console.log(isPalindrome("A man, a plan, a canal, panama"))
+// console.log(isPalindrome("rsiar"))
+// console.log(isPalindrome("hello"))
+
