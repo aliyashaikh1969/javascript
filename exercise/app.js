@@ -199,3 +199,153 @@ const isPalindrome=(str)=>{
 // console.log(isPalindrome("rsiar"))
 // console.log(isPalindrome("hello"))
 
+
+
+// let randomValue = {name:"dimple"}
+
+// randomValue = 23
+
+// if(!typeof randomValue === "string"){
+//     console.log("its not a string" )
+// }else{
+//     console.log("its a string")
+// }
+// console.log(typeof randomValue)
+
+
+
+// const user ={
+//     email : "my@email.com",
+//     updateEmail : email =>{
+//             this.email = email
+//     }
+// }
+// user.updateEmail("new@email.com")
+
+// console.log(user.email)
+
+
+// const alpha =["A","B","C"];
+// alpha.slice(0,1)
+
+// alpha.splice(0,1)
+// alpha.unshift("E")
+
+// console.log(alpha)
+
+
+
+// class Clac {
+//     constructor(){
+//         this.count = 0
+//     }
+//     increase(){
+//         console.log("hi")
+//         this.count++
+//     }
+// }
+
+// const calc = new Clac()
+// new Clac().increase()
+
+// console.log(calc.count)
+
+
+// let count = 0;
+// const nums =[0,1,2,3];
+
+// nums.forEach(num=>{
+//     if(num){
+//         console.log("hu")
+//         count += 1
+//     }
+//     console.log(num)
+
+// })
+// console.log(count)
+
+
+
+// class Bird {
+//     constructor(){
+//         console.log("i am a bird")
+//     }
+// }
+
+// class Flamimgo extends Bird{
+//     constructor() {
+//         console.log("i am a flaming")
+//         super()
+//     }
+// }
+
+// const pet = new Flamimgo()
+
+
+
+
+// const person ={
+//     name :"dimpleKumrai",
+//     hobbies :['coding'],
+// }
+
+// function addHobby(hobby , hobbies = person.hobbies){
+//     hobbies.push(hobby);
+//     return hobbies
+// };
+
+// addHobby('running',[])
+// addHobby('dancing')
+// addHobby("backing",person.hobbies)
+// console.log(person.hobbies)
+// console.log(addHobby("runnni",[]))
+
+
+
+
+// class Counter{
+//     #number = 10
+
+//     increment(){
+//         this.#number++
+//     }
+
+//     getNum(){
+//         return this.#number
+//     }
+// }
+
+// const counter = new Counter()
+// counter.increment()
+
+// console.log(counter.getNum())
+
+
+
+
+
+// const add =x => x+x
+
+// function myFunc(num = 2 , value =add(num)){
+
+//     console.log(num ,value)
+// }
+
+// myFunc()
+// myFunc(3)
+// console.log(add(2))
+
+
+
+
+// const handle = {
+//     set : ()=>console.log("adding a new property"),
+//     get : ()=>console.log("accessed property")
+// }
+
+// const person = new Proxy({},handle)
+// person.name="dimple";
+// person.name;
+
+
+
