@@ -349,3 +349,56 @@ const isPalindrome=(str)=>{
 
 
 
+
+class Counter{
+    constructor(){
+        this.count =0
+    }
+
+    increment(){
+        this.count++
+    }
+}
+
+
+
+let countOne = new Counter()
+countOne.increment()
+countOne.increment()
+
+let countTwo = countOne
+countTwo.increment()
+
+
+// console.log(countOne.count)
+
+
+
+// const myPromise = Promise.resolve("wahh data")
+
+// (async()=>{
+//         try{
+//             console.log(await myPromise);
+//         }catch{
+//             throw new Error("oops didnt work")
+
+//         }finally{
+//             console.log('oh finnaly')
+//         }
+//     }
+// )();
+
+
+
+
+
+
+const dom = document.querySelector(".dom")
+const high = document.querySelector(".high")
+
+
+let str = dom.innerHTML.split(" ").map(item => item.length>8 ? `<span class="highlight">${item}</span>` : item).join(" ")
+high.insertAdjacentHTML("afterend",str)
+// console.log(str)
+
+// console.log(high.innerHTML)
