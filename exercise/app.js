@@ -4,49 +4,49 @@ const alphabeticalOrder = (str) =>
 
 // console.log(alphabeticalOrder("javascrpt"));
 
-const countsVowels =(str, vowels = ["a","e","i","o","u"])=>
-    str.split("").filter((s)=> vowels.indexOf(s)>-1).length;
-    
+const countsVowels = (str, vowels = ["a", "e", "i", "o", "u"]) =>
+    str.split("").filter((s) => vowels.indexOf(s) > -1).length;
+
 
 // console.log(countsVowels("javascrpit"))
 
 
-let array = [20,60,54,65,90]
+let array = [20, 60, 54, 65, 90]
 
-let newEle = 30; 
-let posi= 2; 
+let newEle = 30;
+let posi = 2;
 
-for(let i = array.length -1 ; i>=0 ;i--){
-    if(i>= posi){
+for (let i = array.length - 1; i >= 0; i--) {
+    if (i >= posi) {
         array[i + 1] = array[i]
-        if(i==posi){
-            array[i]= newEle
+        if (i == posi) {
+            array[i] = newEle
         }
     }
 }
 
-array.splice(3,0,10)
+array.splice(3, 0, 10)
 // console.log(array)
 
-for (let i = 5; i < array.length-1; i++) {//removing(65) item from array 
-    array[i] = array[i+1]
+for (let i = 5; i < array.length - 1; i++) {//removing(65) item from array 
+    array[i] = array[i + 1]
 }
-array.length = array.length-1
-    // console.log(array)
+array.length = array.length - 1
+// console.log(array)
 
-array.splice(1,1)
+array.splice(1, 1)
 // console.log(array)
 
 
-const duplicate =(array)=>{
+const duplicate = (array) => {
     let result = []
-    let dupli =[]
-    for(let i = 0;i<=array.length-1; i++){
-       if(result.includes(array[i])){
-        dupli.push(array[i])
-       }else{
-        result.push(array[i])
-       }
+    let dupli = []
+    for (let i = 0; i <= array.length - 1; i++) {
+        if (result.includes(array[i])) {
+            dupli.push(array[i])
+        } else {
+            result.push(array[i])
+        }
     }
     console.log(result)
     console.log(dupli)
@@ -55,27 +55,27 @@ const duplicate =(array)=>{
 
 // duplicate([1,2,4,4,2,3,3])`
 
-const primeNumber = (num)=>
-// console.log(num%2)    // num/2== 0
-    num%2 !== 0
+const primeNumber = (num) =>
+    // console.log(num%2)    // num/2== 0
+    num % 2 !== 0
 
 
 // console.log(primeNumber(1))
 
 
-const sumOfEvenNumber = (array) =>{
-    let result = array.filter(num=>num%2==0).reduce((a,b)=> a+b)
+const sumOfEvenNumber = (array) => {
+    let result = array.filter(num => num % 2 == 0).reduce((a, b) => a + b)
 
-     return result
+    return result
 }
 
 // console.log(sumOfEvenNumber([2,4,3,4,5,6,2]))
 
 
-const factorailOfNumber =(num)=>{
+const factorailOfNumber = (num) => {
     let result = 1
-    for(let i =1 ; i<=num ;i++){
-        result *=i
+    for (let i = 1; i <= num; i++) {
+        result *= i
     }
     return result
 }
@@ -83,25 +83,25 @@ const factorailOfNumber =(num)=>{
 // console.log(factorailOfNumber(7))
 
 
-const missingNumber =(array)=>{
+const missingNumber = (array) => {
     // let seen = array.sort()
-    let sort = array.sort()[array.length-1]
+    let sort = array.sort()[array.length - 1]
     let number = []
-    for(let i=1 ; i<=sort ; i++){
-        if(!array.includes(i)){
+    for (let i = 1; i <= sort; i++) {
+        if (!array.includes(i)) {
             number.push(i)
         }
     }
     console.log(number)
 }
- 
+
 
 // console.log(missingNumber([1,3,5,2,8]))
 // missingNumber([3,0,1])
 
 // let url = "https://randomuser.me/api/"
-function apiPractice (){
-    let test =fetch(url).then(res=>res.json()).then(result=>console.log(result))
+function apiPractice() {
+    let test = fetch(url).then(res => res.json()).then(result => console.log(result))
     return test
 }
 // apiPractice()
@@ -117,10 +117,10 @@ async function pract() {
 
 
 
-const largeString =(str)=>{
+const largeString = (str) => {
     let arr = str.split(" ")
-    let sorting = arr.sort((a,b)=>b.length-a.length); //using sort function
-    let reducing = arr.reduce((accum ,current)=>(accum.length > current.length ? accum : current),"") //using reduce function
+    let sorting = arr.sort((a, b) => b.length - a.length); //using sort function
+    let reducing = arr.reduce((accum, current) => (accum.length > current.length ? accum : current), "") //using reduce function
     console.log(reducing)
     return sorting[0]
 }
@@ -132,48 +132,48 @@ const largeString =(str)=>{
 
 
 
-const generateHash =(str)=>{
- let result = str.split(" ").map(item => item.charAt(0).toUpperCase()+ item.slice(1).toLowerCase()).join("")
+const generateHash = (str) => {
+    let result = str.split(" ").map(item => item.charAt(0).toUpperCase() + item.slice(1).toLowerCase()).join("")
 
-return `#${result}`
+    return `#${result}`
 }
 
 // console.log(generateHash("making a hash tag"));
 
-const countChar =(str,char)=>
-    str.split("").filter(item=> item.toUpperCase()==char.toUpperCase()).length;
+const countChar = (str, char) =>
+    str.split("").filter(item => item.toUpperCase() == char.toUpperCase()).length;
 
 // console.log(countChar("javascraipt" , "v"))
 
 
 
-const checkTriangleType =(a,b,c)=>{
- if(a == b && a == c){
-    return "equilateral"
- }else if(a == b  || b == c || a == c){
-    return "isosceles"
- }else {
-    return "scalene"
- }
+const checkTriangleType = (a, b, c) => {
+    if (a == b && a == c) {
+        return "equilateral"
+    } else if (a == b || b == c || a == c) {
+        return "isosceles"
+    } else {
+        return "scalene"
+    }
 }
-
 // console.log(checkTriangleType(3,3,3))  //equilateral
+
 // console.log(checkTriangleType(4,4,2))  //isosceles
 // console.log(checkTriangleType(3,4,5))  //scalene
 
 
-const sortAscendingOrder=(array)=>{
-let arr = array
-for(let i=0;i<arr.length;i++){
-    for(let j=0;j<arr.length; j++){
-        if(arr[j]>arr[j+1]){
-            let tem = arr[j]
-            arr[j]=arr[j+1]
-            arr[j+1]=tem
+const sortAscendingOrder = (array) => {
+    let arr = array
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr.length; j++) {
+            if (arr[j] > arr[j + 1]) {
+                let tem = arr[j]
+                arr[j] = arr[j + 1]
+                arr[j + 1] = tem
+            }
         }
     }
-}
-return arr
+    return arr
 
 }
 
@@ -183,12 +183,12 @@ return arr
 
 
 
-const isPalindrome=(str)=>{
-    str = str.toLowerCase().replace(/\W/g,"") //regular expression (/\W/g) to remove all non-word characters from the string
+const isPalindrome = (str) => {
+    str = str.toLowerCase().replace(/\W/g, "") //regular expression (/\W/g) to remove all non-word characters from the string
     let revstr = str.split("").reverse().join("")
 
     // console.log(revstr)
-    return str==revstr 
+    return str == revstr
 }
 
 
@@ -350,12 +350,12 @@ const isPalindrome=(str)=>{
 
 
 
-class Counter{
-    constructor(){
-        this.count =0
+class Counter {
+    constructor() {
+        this.count = 0
     }
 
-    increment(){
+    increment() {
         this.count++
     }
 }
@@ -391,14 +391,135 @@ countTwo.increment()
 
 
 
+const findMax = (arr) => {
+    let result = arr.sort((a, b) => a - b)[arr.length - 1]
+    return result
+}
+
+// console.log(findMax([2, 4, 1, 12]))
+// console.log(findMax([-10,-5,-3,-9,-2]));
+// console.log(findMax([5]))
 
 
-const dom = document.querySelector(".dom")
-const high = document.querySelector(".high")
+
+// let arr = [2,6,22,1,56]
+// let re = Math.max(...arr)
+
+// console.log(re)
 
 
-let str = dom.innerHTML.split(" ").map(item => item.length>8 ? `<span class="highlight">${item}</span>` : item).join(" ")
-high.insertAdjacentHTML("afterend",str)
-// console.log(str)
+// const calculateAverage = (arr)=>arr.reduce((a,b)=>a+b)/arr.length
+// console.log(calculateAverage([5,10,2,8]))
+
+
+const arraysAreEqual = (arr1,arr2)=>{
+    
+    if(arr1.length !== arr2.length) return false
+    
+    let result = arr1.every((elem,index)=> elem === arr2[index])
+   return result
+}
+
+// console.log(arraysAreEqual([1,2,3],[1,2,3,4]));
+
+// console.log(arraysAreEqual([1,2,3],[1,2,3]));
+// console.log(arraysAreEqual([],[]));
+
+
+
+
+// const sumOfDigit = (num) =>{
+//     let last = []
+
+//     last.unshift(num%10)
+
+//     console.log(last)
+//     return last
+// }
+
+
+// console.log(sumOfDigit(123455));
+
+
+// flat
+
+let arr = [1,2,3,[4,5,6,[2,3,4,[4,5],{name:"al",
+    arr:[2,3,4]
+}]]]
+
+// console.log(arr.flat(Infinity)
+
+
+const names = ["Alice" , "bob", "charlie"]
+
+names.forEach(item=>console.log(item))
+
+const number = [1,2,3,4]
+const result = []
+
+number.forEach(num=>
+    result.push(num+10)
+)
+console.log(result)
+
+
+
+const nums = [2,5,6,8,9]
+let countEven = []
+nums.forEach(num=>{
+
+    if(num%2 ==0){
+ countEven.push(num)       
+    }
+}
+)
+
+console.log(countEven)
+
+const animals = ['cat','dog','bird']
+const upperCase = []
+animals.forEach(name=>upperCase.push(name.toUpperCase())
+)
+
+
+console.log(upperCase)
+
+
+const cities = ['Paris','London','Berline']
+const initial = [];
+cities.forEach(city=>{
+   initial.push( city[0])
+})
+
+
+console.log(initial)
+
+
+
+const product = [
+    {name:"laptop",prize:'1000'},
+    {name:"phone",prize:'500'}
+]
+
+const formatted = []
+
+product.forEach(item=>{
+    formatted.push(`${item.name} : $${item.prize}`)
+})
+
+console.log(formatted)
+
+
+
+
+
+
+// const dom = document.querySelector(".dom")
+// const high = document.querySelector(".high")
+
+
+// let str = dom.innerHTML.split(" ").map(item => item.length > 8 ? `<span class="highlight">${item}</span>` : item).join(" ")
+// high.insertAdjacentHTML("afterend", str)
+// // console.log(str)
 
 // console.log(high.innerHTML)
