@@ -452,7 +452,7 @@ let arr = [1,2,3,[4,5,6,[2,3,4,[4,5],{name:"al",
 
 const names = ["Alice" , "bob", "charlie"]
 
-names.forEach(item=>console.log(item))
+// names.forEach(item=>console.log(item))
 
 const number = [1,2,3,4]
 const result = []
@@ -460,7 +460,7 @@ const result = []
 number.forEach(num=>
     result.push(num+10)
 )
-console.log(result)
+// console.log(result)
 
 
 
@@ -474,7 +474,7 @@ nums.forEach(num=>{
 }
 )
 
-console.log(countEven)
+// console.log(countEven)
 
 const animals = ['cat','dog','bird']
 const upperCase = []
@@ -482,7 +482,7 @@ animals.forEach(name=>upperCase.push(name.toUpperCase())
 )
 
 
-console.log(upperCase)
+// console.log(upperCase)
 
 
 const cities = ['Paris','London','Berline']
@@ -492,7 +492,7 @@ cities.forEach(city=>{
 })
 
 
-console.log(initial)
+// console.log(initial)
 
 
 
@@ -507,7 +507,7 @@ product.forEach(item=>{
     formatted.push(`${item.name} : $${item.prize}`)
 })
 
-console.log(formatted)
+// console.log(formatted)
 
 
 
@@ -523,3 +523,40 @@ console.log(formatted)
 // // console.log(str)
 
 // console.log(high.innerHTML)
+
+
+
+
+
+
+
+
+
+
+
+
+// debouncing practice
+
+
+const debounceInput = document.querySelector(".debounce-input")
+
+function debounce (fun , delay){
+    let timerId ;
+    return function (...args){
+        clearTimeout(timerId)
+        timerId = setTimeout(()=>{
+            fun(...args)
+        },delay)
+    }
+}
+
+const search = (query) =>{
+    console.log("Searching for ",query)
+}
+
+const searchingWithDebunce = debounce(search ,1000)
+
+debounceInput.addEventListener("input",()=>{
+    searchingWithDebunce( debounceInput.value)
+})
+
