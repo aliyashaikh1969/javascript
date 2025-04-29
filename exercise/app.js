@@ -560,3 +560,25 @@ debounceInput.addEventListener("input",()=>{
     searchingWithDebunce( debounceInput.value)
 })
 
+
+
+//Throttle practice
+
+const throttleInput = document.querySelector(".throttle-input")
+function throttle (fun,delay){
+
+    let couurentId = 0
+    return function(...args){
+        
+    }
+}
+
+
+const searchTrottle = (query)=>{
+    console.log("searching in trottle ", query)
+}
+const searchingWithTrhottel = throttle(searchTrottle , 1000)
+
+throttleInput.addEventListener('input',()=>{
+
+})

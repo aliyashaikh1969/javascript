@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OTP</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background: rgb(167, 88, 240);
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+      }
+      .container {
+        margin: auto;
+        width: 450px;
+        text-align: center;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        height: 300px;
+      }
+      .inputs-container {
+        padding: 30px 15px;
+      }
+      .inputs-container .inp-box {
+        width: 50px;
+        height: 50px;
+        font-size: 25px;
+        text-align: center;
+        background-color: #e0dddd;
+        border: 1px solid #d1cccc;
+        pointer-events: none;
+        opacity: .9;
+      }
+      .container.verify .inp-box{
+        background-color: #fff;
+        pointer-events: auto;
+        opacity: 1;
+      }
+
+      h2 {
+        padding: 10px 0;
+      }
+      button {
+        padding: 10px 25px;
+        background-color: blueviolet;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+      }
+      .submit{
+        opacity: .8;
+        pointer-events: none;
+      }
+      .container.verify .submit{
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>OTP Verification</h2>
+      <div class="inputs-container">
+        <input type="text" class="inp-box" maxlength="1" />
+        <input type="text" class="inp-box" maxlength="1" />
+        <input type="text" class="inp-box" maxlength="1" />
+        <input type="text" class="inp-box" maxlength="1" />
+        <!-- <input type="text" class="inp-box" maxlength="1" /> -->
+      </div>
+      <button class="submit" onclick="checkingOtp()">verify OTP</button>
+      <button class="send" onclick="otpGenerator()">Send OTP</button>
+
+    </div>
+    <script>
+      const inputs = document.querySelectorAll(".inp-box");
+      const inputsContainer = document.querySelector('.container')
+      const sendBtn = document.querySelector('.send')
+
+      console.log(inputsContainer)
+      let otpValue = [];
+
+      inputs.forEach((input, index) => {
+        input.addEventListener("keydown", (e) => {
+          if (e.key == "Backspace" && index > 0 && input.value == "") {
+            inputs[index - 1].focus();
+          }
+        });
+
+        input.addEventListener("input", (e) => {
+          const value = e.target.value;
+          e.target.value = value.replace(/[^0-9]/g, "");
+
+          if (input.value.startsWith(" ")) {
+            input.value = input.value.trimStart();
+          }
+          if (input.value.trim() !== "" && index < inputs.length - 1) {
+            inputs[index + 1].focus();
+          }
+        });
+      });
+
+
+      function otpGenerator (){
+        reset()
+        let otp = []
+        for(let i = 0; i<4 ; i++){
+          let result = Math.floor(Math.random()*10)
+          otp += result
+        }
+        otpValue  = otp
+      
+        alert(otp)
+        inputsContainer.classList.add('verify')
+        sendBtn.innerText = "Resend OTP"
+        inputs[0].focus()
+      }
+
+      function reset (){
+        inputs.forEach(input =>{
+          input.value = ""
+        })
+        otp =[]
+        inputsContainer.classList.remove('verify');
+        sendBtn.innerText = 'Send OTP'
+      }
+
+      function checkingOtp (){
+
+        console.log(otpValue)
+        let value =""
+        inputs.forEach(elem=>{
+        value += elem.value
+       })
+
+       otpValue == value ? alert("otp verify successfuly"): alert("wrong otp")
+       reset()
+      }
+
+      // checkingOtp()
+    </script>
+  </body>
+</html>
