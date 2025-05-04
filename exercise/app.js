@@ -1,3 +1,4 @@
+// import _ from 'lodash'
 
 const alphabeticalOrder = (str) =>
     str.split("").sort().join("")
@@ -556,6 +557,7 @@ const search = (query) =>{
 
 const searchingWithDebunce = debounce(search ,1000)
 
+
 debounceInput.addEventListener("input",()=>{
     searchingWithDebunce( debounceInput.value)
 })
@@ -567,18 +569,110 @@ debounceInput.addEventListener("input",()=>{
 const throttleInput = document.querySelector(".throttle-input")
 function throttle (fun,delay){
 
-    let couurentId = 0
+    let lastCall = 0
     return function(...args){
+        let now = new Date();
+        if(now - lastCall < delay){
+            return
+        }
+        lastCall = now;
+        return fun(...args)
         
     }
 }
 
 
 const searchTrottle = (query)=>{
+
     console.log("searching in trottle ", query)
 }
-const searchingWithTrhottel = throttle(searchTrottle , 1000)
+const searchingWithTrhottel = throttle(searchTrottle , 2000)
+
 
 throttleInput.addEventListener('input',()=>{
-
+    searchingWithTrhottel(throttleInput.value)
+    
 })
+
+
+
+
+const obj  = {
+    name:"test",
+    address:{
+        street:"test",
+        city:"pune",
+        wold : ()=>{
+            console.log("test")
+        }
+    },
+    greet : ()=>{
+        console.log(street)
+    },
+    clear : undefined,
+    subClear : null
+}
+
+// shallow copy
+
+let obj2 = Object.assign({},obj)
+
+let obj21 = {...obj}
+
+// deep copy 
+
+let obj3 = JSON.parse(JSON.stringify(obj))
+
+
+// using lodash to deep copy object 
+
+// or
+
+
+
+// let obj4 = structuredClone(obj)
+// obj2.name ="changed"
+// obj2.address.street= "changed"
+
+// console.log(obj2.address.street)
+// console.log(obj.address.street)
+
+console.log("obj original",obj)
+console.log("shallow copy",obj2)
+
+
+console.log("deep copy",obj3)
+
+
+// older style type 
+
+// const objlodash = _.cloneDeep(obj)
+
+const deepCopy = _.cloneDeep(obj);
+
+deepCopy.name ="changed"
+
+console.log(deepCopy)
+
+
+
+const data = {
+    date: new Date(),
+    map: new Map([["a", 1]]),
+    set: new Set([1, 2, 3])
+  };
+  
+  const cloned = structuredClone(data);
+  
+  console.log(cloned.date); // ✅ true
+  console.log(cloned.map);   // ✅ true
+  console.log(cloned.set);   // ✅ true
+  
+
+
+
+  let a =1;
+  let b =a;
+
+  console.log("a",a)
+  console.log("b",b)
