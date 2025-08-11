@@ -140,7 +140,6 @@ const generateHash = (str) => {
 }
 
 // console.log(generateHash("making a hash tag"));
-
 const countChar = (str, char) =>
     str.split("").filter(item => item.toUpperCase() == char.toUpperCase()).length;
 
@@ -413,12 +412,12 @@ const findMax = (arr) => {
 // console.log(calculateAverage([5,10,2,8]))
 
 
-const arraysAreEqual = (arr1,arr2)=>{
-    
-    if(arr1.length !== arr2.length) return false
-    
-    let result = arr1.every((elem,index)=> elem === arr2[index])
-   return result
+const arraysAreEqual = (arr1, arr2) => {
+
+    if (arr1.length !== arr2.length) return false
+
+    let result = arr1.every((elem, index) => elem === arr2[index])
+    return result
 }
 
 // console.log(arraysAreEqual([1,2,3],[1,2,3,4]));
@@ -444,52 +443,53 @@ const arraysAreEqual = (arr1,arr2)=>{
 
 // flat
 
-let arr = [1,2,3,[4,5,6,[2,3,4,[4,5],{name:"al",
-    arr:[2,3,4]
+let arr = [1, 2, 3, [4, 5, 6, [2, 3, 4, [4, 5], {
+    name: "al",
+    arr: [2, 3, 4]
 }]]]
 
-// console.log(arr.flat(Infinity)
+// console.log(arr.flat(Infinity))
 
 
-const names = ["Alice" , "bob", "charlie"]
+const names = ["Alice", "bob", "charlie"]
 
 // names.forEach(item=>console.log(item))
 
-const number = [1,2,3,4]
+const number = [1, 2, 3, 4]
 const result = []
 
-number.forEach(num=>
-    result.push(num+10)
+number.forEach(num =>
+    result.push(num + 10)
 )
 // console.log(result)
 
 
 
-const nums = [2,5,6,8,9]
+const nums = [2, 5, 6, 8, 9]
 let countEven = []
-nums.forEach(num=>{
+nums.forEach(num => {
 
-    if(num%2 ==0){
- countEven.push(num)       
+    if (num % 2 == 0) {
+        countEven.push(num)
     }
 }
 )
 
 // console.log(countEven)
 
-const animals = ['cat','dog','bird']
+const animals = ['cat', 'dog', 'bird']
 const upperCase = []
-animals.forEach(name=>upperCase.push(name.toUpperCase())
+animals.forEach(name => upperCase.push(name.toUpperCase())
 )
 
 
 // console.log(upperCase)
 
 
-const cities = ['Paris','London','Berline']
+const cities = ['Paris', 'London', 'Berline']
 const initial = [];
-cities.forEach(city=>{
-   initial.push( city[0])
+cities.forEach(city => {
+    initial.push(city[0])
 })
 
 
@@ -498,13 +498,13 @@ cities.forEach(city=>{
 
 
 const product = [
-    {name:"laptop",prize:'1000'},
-    {name:"phone",prize:'500'}
+    { name: "laptop", prize: '1000' },
+    { name: "phone", prize: '500' }
 ]
 
 const formatted = []
 
-product.forEach(item=>{
+product.forEach(item => {
     formatted.push(`${item.name} : $${item.prize}`)
 })
 
@@ -541,25 +541,25 @@ product.forEach(item=>{
 
 const debounceInput = document.querySelector(".debounce-input")
 
-function debounce (fun , delay){
-    let timerId ;
-    return function (...args){
+function debounce(fun, delay) {
+    let timerId;
+    return function (...args) {
         clearTimeout(timerId)
-        timerId = setTimeout(()=>{
+        timerId = setTimeout(() => {
             fun(...args)
-        },delay)
+        }, delay)
     }
 }
 
-const search = (query) =>{
-    console.log("Searching for ",query)
+const search = (query) => {
+    console.log("Searching for ", query)
 }
 
-const searchingWithDebunce = debounce(search ,1000)
+const searchingWithDebunce = debounce(search, 1000)
 
 
-debounceInput.addEventListener("input",()=>{
-    searchingWithDebunce( debounceInput.value)
+debounceInput.addEventListener("input", () => {
+    searchingWithDebunce(debounceInput.value)
 })
 
 
@@ -567,57 +567,57 @@ debounceInput.addEventListener("input",()=>{
 //Throttle practice
 
 const throttleInput = document.querySelector(".throttle-input")
-function throttle (fun,delay){
+function throttle(fun, delay) {
 
     let lastCall = 0
-    return function(...args){
+    return function (...args) {
         let now = new Date();
-        if(now - lastCall < delay){
+        if (now - lastCall < delay) {
             return
         }
         lastCall = now;
         return fun(...args)
-        
+
     }
 }
 
 
-const searchTrottle = (query)=>{
+const searchTrottle = (query) => {
 
     console.log("searching in trottle ", query)
 }
-const searchingWithTrhottel = throttle(searchTrottle , 2000)
+const searchingWithTrhottel = throttle(searchTrottle, 2000)
 
 
-throttleInput.addEventListener('input',()=>{
+throttleInput.addEventListener('input', () => {
     searchingWithTrhottel(throttleInput.value)
-    
+
 })
 
 
 
 
-const obj  = {
-    name:"test",
-    address:{
-        street:"test",
-        city:"pune",
-        wold : ()=>{
+const obj = {
+    name: "test",
+    address: {
+        street: "test",
+        city: "pune",
+        wold: () => {
             console.log("test")
         }
     },
-    greet : ()=>{
+    greet: () => {
         console.log(street)
     },
-    clear : undefined,
-    subClear : null
+    clear: undefined,
+    subClear: null
 }
 
 // shallow copy
 
-let obj2 = Object.assign({},obj)
+let obj2 = Object.assign({}, obj)
 
-let obj21 = {...obj}
+let obj21 = { ...obj }
 
 // deep copy 
 
@@ -637,11 +637,11 @@ let obj3 = JSON.parse(JSON.stringify(obj))
 // console.log(obj2.address.street)
 // console.log(obj.address.street)
 
-console.log("obj original",obj)
-console.log("shallow copy",obj2)
+// console.log("obj original",obj)
+// console.log("shallow copy",obj2)
 
 
-console.log("deep copy",obj3)
+// console.log("deep copy",obj3)
 
 
 // older style type 
@@ -650,9 +650,9 @@ console.log("deep copy",obj3)
 
 const deepCopy = _.cloneDeep(obj);
 
-deepCopy.name ="changed"
+deepCopy.name = "changed"
 
-console.log(deepCopy)
+// console.log(deepCopy)
 
 
 
@@ -660,19 +660,312 @@ const data = {
     date: new Date(),
     map: new Map([["a", 1]]),
     set: new Set([1, 2, 3])
-  };
-  
-  const cloned = structuredClone(data);
-  
-  console.log(cloned.date); // ✅ true
-  console.log(cloned.map);   // ✅ true
-  console.log(cloned.set);   // ✅ true
-  
+};
+
+const cloned = structuredClone(data);
+
+//   console.log(cloned.date); // ✅ true
+//   console.log(cloned.map);   // ✅ true
+//   console.log(cloned.set);   // ✅ true
 
 
 
-  let a =1;
-  let b =a;
 
-  console.log("a",a)
-  console.log("b",b)
+let a = 1;
+let b = a;
+
+//   console.log("a",a)
+//   console.log("b",b)
+
+
+
+
+
+// mindTree react js and javascript interview
+
+// console.log(1)
+// setTimeout(() => {
+//     console.log(2)
+// }, 0);
+// setTimeout(() => {
+//     console.log(3)
+// }, 3000)
+// setTimeout(() => {
+//     console.log(4)
+// }, 1000)
+// setTimeout(() => {
+//     console.log(5)
+// }, 0)
+// console.log(6)
+
+
+
+function x() {
+    setTimeout(() => {
+        console.log(i)
+    }, 1000);
+    var i = 1;
+}
+// x()
+
+
+
+let qthree = [
+    {
+        'name': 'menu1',
+        'subItem': [{
+            'name': 'menu2',
+        }
+        ]
+    }, {
+        'name': 'menu3',
+        'subItem': [{
+            'name': 'menu4',
+            'subItem': [{
+                'name': 'menu5',
+            },
+            {
+                'name': 'menu6',
+            },
+            {
+                'name': 'menu7',
+            },
+            {
+                'name': 'menu8',
+            }
+
+            ]
+        }
+        ]
+    }
+]
+
+
+function extractNames(items) {
+    let result = [];
+
+    function traverse(node) {
+        if (node.name) {
+            result.push(node.name);
+        }
+        if (node.subItem && Array.isArray(node.subItem)) {
+            node.subItem.forEach(traverse);
+        }
+    }
+
+    items.forEach(traverse);
+
+    return result;
+}
+
+const qthreee = [
+    {
+        'name': 'menu1',
+        'subItem': [{
+            'name': 'menu2',
+        }]
+    }, {
+        'name': 'menu3',
+        'subItem': [{
+            'name': 'menu4',
+            'subItem': [{
+                'name': 'menu5',
+            },
+            {
+                'name': 'menu6',
+            },
+            {
+                'name': 'menu7',
+            },
+            {
+                'name': 'menu8',
+            }]
+        }]
+    }
+];
+
+const namesof = extractNames(qthreee);
+// console.log(namesof);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function calculate(expression) {
+    const tokens = expression.trim().split(/\s+/);
+    let index = 0;
+
+    function evaluate() {
+        const token = tokens[index++];
+        // If token is a number, return it as float
+        if (!isNaN(token)) {
+            return parseFloat(token);
+        }
+
+        // Otherwise, it must be an operator (+, -, *, /)
+        const a = evaluate();
+        const b = evaluate();
+
+        switch (token) {
+            case '+': return a + b;
+            case '-': return a - b;
+            case '*': return a * b;
+            case '/': return a / b;
+            default:
+                throw new Error(`Unsupported operator: ${token}`);
+        }
+    }
+
+    return evaluate();
+}
+
+// module.exports = { calculate };
+
+
+// calculate("+ 3 4")
+
+
+// console.log(calculate("+ 3 4"))
+// console.log(calculate("- 3 * 4 5"))
+// console.log(calculate(""))
+// console.log(calculate("/ - 3 4 + 5 2"))
+
+
+
+let array1 = ["a", "b", "c"];
+
+array1.splice(1, 1, "q")
+// console.log(array1)
+
+
+
+
+
+// REVERSE A STRING
+
+
+function stringReverse(str) {
+    let result = str.split("").reverse().join("")
+
+    let inDSA = ""
+    for (let i = str.length; i > 0; i--) {
+        // console.log(i)
+        inDSA += str[i - 1]
+    }
+
+    console.log(result)
+    console.log(inDSA)
+}
+
+
+// stringReverse("string")
+
+
+function palindromeCheckerInDSA(str) {
+    let inDSA = ""
+    for (let i = str.length; i > 0; i--) {
+        // console.log(i)
+        inDSA += str[i - 1]
+    } 
+    if (inDSA == str) {
+        return `${str} is palindrome`
+    } else {
+        return `${str} is not a palindrome`
+    }
+
+
+}
+
+// console.log(palindromeCheckerInDSA("dam"))
+
+
+
+function swapTwoNum (num1,num2) {
+let a =num1; //20
+let b = num2; //10
+// let c = b
+// b =a ;
+// a=c;
+
+a = a+b //30
+b = a-b  //20
+a = a-b  //10
+
+
+return `a${a},b${b},`
+}
+
+// console.log(swapTwoNum(20,10))
+
+
+
+function largestNumber(array){
+    let max =array[0];
+
+    for(let i =1;i<arr.length;i++){
+        if(array[i]>max){
+            max = array[i]
+        }
+    }
+
+    console.log(`largets number is ${max}`)
+
+}
+
+// largestNumber([10,2,1,20,12,13,4])
+
+
+
+function countingVowelsAndConsonants (str){
+    let string = str.toLowerCase()
+    let vowels = 0;
+    let consonants = 0;
+    for(let i = 0; i<str.length ; i++){
+        if(string[i] == "a" || string[i] == "e" ||string[i] == "i" ||string[i] == "o" ||string[i] == "u" ){
+    vowels ++       
+        }else{
+            consonants++
+        }
+    }
+
+    console.log(`vowels : ${vowels} consonants : ${consonants}`)
+
+}
+
+countingVowelsAndConsonants("checking how many vowels and consonants this letter have")
