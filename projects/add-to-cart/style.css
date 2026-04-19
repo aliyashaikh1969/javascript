@@ -18,7 +18,11 @@ body{
     font-family: sans-serif;
 }
 header{
-    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
     background-color: #F1F0E8;
 }
 
@@ -29,7 +33,7 @@ nav{
     align-items: center;
     justify-content: space-between;
     /* background-color: rebeccapurple; */
-    padding: 0 20px;
+    padding: 20px 20px;
 }
 nav h4{
     padding: 15px 0;
@@ -40,9 +44,27 @@ nav h4{
 nav span i{
     font-size: 16px;
 }
+header .cart-btn{
+    position: relative;
+}
 .cart-btn{
     cursor: pointer;
     transition: all .6s ease;
+}
+header .cart-btn .cart-count{
+    position: absolute;
+    left: -10px;
+    top: -15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    padding: 5px;
+    height: 25px;
+    width: 25px;
+    color: #fff;
+    font-size: 1.3rem;
+    border-radius: 50%;
 }
 .container{
     display: flex;
@@ -54,16 +76,20 @@ nav span i{
 }
 
 .cart-page{
-    position: absolute;
+    position: fixed;
     top: 0;
-    display: none;
+    right: -100%;
+    opacity: 0;
+    display: block;
     background-color: #fff;
     transition: all .6s ease;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
+    z-index: 1000;
 }
 .cart-page.show { 
-    display: block;
+    right: 0;
+    opacity: 1;
 }
 
 .cart-close { 
@@ -111,18 +137,23 @@ nav span i{
     font-weight: 600;
 }
 .product-details .prize{
-    font-size: 24px;
+    font-size: 25px;
 }
 
 .product-details .product .img-det{
     padding: 10px;
+    margin-left: 10px;
 }
 .product-details .product .img-det p{
     font-weight: 600;
+    font-size: 1.2rem;
 }
 .product-details .product .img-det span{
     font-size: 12px;
     color: #888;
+}
+.product-details .actions i{
+    font-size: 20px;
 }
 
 .quen{
@@ -196,27 +227,65 @@ nav span i{
 
 
 main .container{
-    background: url( "/images/watch-3.jpg") top no-repeat;
+    background: url( "/images/watch-3.jpg") center no-repeat;
     background-size: cover;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
 }
 
+.product-container{
+    padding: 20px 20%;
+
+}
 .product-list{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 35px;
+    display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 20px;
 }
 .product-item{
-    margin: 25px;
+   display: flex;
+   overflow: hidden;
+    cursor: pointer;
 }
 .product-item img{  
     width: 320px;
     height: 400px;
     object-fit: cover;
 }
-.product-item:nth-child(odd){
-    transform: scale(.8);
+
+
+.product-item {
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.product-item .cart-card{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .6s ease-in
+}
+.product-item:hover .cart-card{
+    opacity: 1;
+    pointer-events: auto;
+}
+.product-item .cart-card .cart-btn i{
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+
+
+@media (max-width:676px) {
+    .product-item img{  
+    width: 100%;
+    height: 100%;
+
+}
 }

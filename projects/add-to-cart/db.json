@@ -1,0 +1,172 @@
+{
+  "posts": [
+    
+  {
+    "id": 1,
+    "name": "Classic Leather Watch",
+    "image": "/images/p-watch1.png",
+    "price": 120,
+    "quantity": 1,
+    "keyPoints": ["Premium leather strap", "Water resistant", "Minimal design"]
+  },
+  {
+    "id": 2,
+    "name": "Modern Silver Watch",
+    "image": "/images/p-watch2.png",
+    "price": 150,
+    "quantity": 1,
+    "keyPoints": ["Stainless steel", "Scratch resistant glass", "Slim profile"]
+  },
+  {
+    "id": 3,
+    "name": "Black Edition Watch",
+    "image": "/images/p-watch3.png",
+    "price": 180,
+    "quantity": 1,
+    "keyPoints": ["Matte black finish", "Chronograph", "Luxury feel"]
+  },
+  {
+    "id": 4,
+    "name": "Rose Gold Watch",
+    "image": "/images/p-watch4.png",
+    "price": 200,
+    "quantity": 1,
+    "keyPoints": ["Rose gold plating", "Elegant design", "Lightweight"]
+  },
+  {
+    "id": 5,
+    "name": "Minimal White Dial Watch",
+    "image": "/images/p-watch5.png",
+    "price": 110,
+    "quantity": 1,
+    "keyPoints": ["Clean dial", "Comfort strap", "Daily wear"]
+  },
+  {
+    "id": 6,
+    "name": "Luxury Chrono Watch",
+    "image": "/images/p-watch1.png",
+    "price": 250,
+    "quantity": 1,
+    "keyPoints": ["Chronograph", "Premium build", "Bold design"]
+  },
+  {
+    "id": 7,
+    "name": "Sport Edition Watch",
+    "image": "/images/p-watch2.png",
+    "price": 130,
+    "quantity": 1,
+    "keyPoints": ["Shock resistant", "Sporty look", "Durable"]
+  },
+  {
+    "id": 8,
+    "name": "Classic Brown Strap Watch",
+    "image": "/images/p-watch3.png",
+    "price": 140,
+    "quantity": 1,
+    "keyPoints": ["Brown leather", "Timeless style", "Comfort fit"]
+  },
+  {
+    "id": 9,
+    "name": "Digital Smart Watch",
+    "image": "/images/p-watch4.png",
+    "price": 220,
+    "quantity": 1,
+    "keyPoints": ["Smart features", "Fitness tracking", "Touch display"]
+  },
+  {
+    "id": 10,
+    "name": "Minimal Black Dial",
+    "image": "/images/p-watch5.png",
+    "price": 115,
+    "quantity": 1,
+    "keyPoints": ["Black dial", "Simple design", "Affordable"]
+  },
+  {
+    "id": 11,
+    "name": "Luxury Gold Watch",
+    "image": "/images/p-watch1.png",
+    "price": 300,
+    "quantity": 1,
+    "keyPoints": ["Gold finish", "Premium feel", "Exclusive look"]
+  },
+  {
+    "id": 12,
+    "name": "Slim Silver Watch",
+    "image": "/images/p-watch2.png",
+    "price": 135,
+    "quantity": 1,
+    "keyPoints": ["Ultra slim", "Elegant", "Lightweight"]
+  },
+  {
+    "id": 13,
+    "name": "Classic Office Watch",
+    "image": "/images/p-watch3.png",
+    "price": 125,
+    "quantity": 1,
+    "keyPoints": ["Formal style", "Clean design", "Comfort strap"]
+  },
+  {
+    "id": 14,
+    "name": "Dark Steel Watch",
+    "image": "/images/p-watch4.png",
+    "price": 190,
+    "quantity": 1,
+    "keyPoints": ["Dark steel body", "Modern look", "Durable"]
+  },
+  {
+    "id": 15,
+    "name": "Elegant White Watch",
+    "image": "/images/p-watch5.png",
+    "price": 145,
+    "quantity": 1,
+    "keyPoints": ["White dial", "Stylish", "Everyday wear"]
+  },
+  {
+    "id": 16,
+    "name": "Sport Black Watch",
+    "image": "/images/p-watch1.png",
+    "price": 155,
+    "quantity": 1,
+    "keyPoints": ["Sport design", "Waterproof", "Rugged"]
+  },
+  {
+    "id": 17,
+    "name": "Classic Metal Strap",
+    "image": "/images/p-watch2.png",
+    "price": 175,
+    "quantity": 1,
+    "keyPoints": ["Metal strap", "Strong build", "Premium look"]
+  },
+  {
+    "id": 18,
+    "name": "Modern Blue Dial",
+    "image": "/images/p-watch3.png",
+    "price": 165,
+    "quantity": 1,
+    "keyPoints": ["Blue dial", "Trendy", "Stylish"]
+  },
+  {
+    "id": 19,
+    "name": "Minimal Grey Watch",
+    "image": "/images/p-watch4.png",
+    "price": 105,
+    "quantity": 1,
+    "keyPoints": ["Grey finish", "Minimal design", "Budget friendly"]
+  },
+  {
+    "id": 20,
+    "name": "Premium Designer Watch",
+    "image": "/images/p-watch5.png",
+    "price": 350,
+    "quantity": 1,
+    "keyPoints": ["Designer model", "Luxury build", "High-end finish"]
+  }
+]
+,
+  "comments": [
+    { "id": "1", "text": "a comment about post 1", "postId": "1" },
+    { "id": "2", "text": "another comment about post 1", "postId": "1" }
+  ],
+  "profile": {
+    "name": "typicode"
+  }}
