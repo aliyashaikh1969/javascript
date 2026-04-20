@@ -76,7 +76,7 @@ header .cart-btn .cart-count{
 }
 
 .cart-page{
-    position: fixed;
+    position: absolute;
     top: 0;
     right: -100%;
     opacity: 0;
@@ -84,7 +84,7 @@ header .cart-btn .cart-count{
     background-color: #fff;
     transition: all .6s ease;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     z-index: 1000;
 }
 .cart-page.show { 
@@ -164,6 +164,7 @@ header .cart-btn .cart-count{
 }
 
 .order-summary {
+    height: 445px;
     width: 560px;
 }
 
