@@ -12,6 +12,10 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=stars_2"
+    />
   </head>
   <body>
     <header>
@@ -19,9 +23,13 @@
         <h4>cart page</h4>
         <span class="cart-btn">
           <i class="fa-solid fa-cart-shopping icons"></i>
-        <span class="cart-count">0</span></span>
+          <span class="cart-count">0</span></span
+        >
       </nav>
     </header>
+
+    <div id="toast-container"></div>
+
 
     <div class="cart-page">
       <h1 class="heading">Shopping cart</h1>
@@ -30,7 +38,6 @@
         <div class="product-details">
           <table>
             <thead>
-
               <tr>
                 <th>Product Code</th>
                 <th>Quantity</th>
@@ -39,8 +46,7 @@
               </tr>
             </thead>
             <tbody>
-              
-<!--            
+              <!--            
             <tr>
               <td>
                 <div class="product">
@@ -131,7 +137,7 @@
                 </button>
               </td>
             </tr> -->
-             </tbody>
+            </tbody>
           </table>
         </div>
         <div class="order-summary">
@@ -139,25 +145,60 @@
             <p class="sum-head">Order summary</p>
             <div class="discount-form">
               <input type="text" placeholder="Discount Voucher" />
-              <button>Apply</button>
+              <button class="btn">Apply</button>
+            </div>
+            <div class="offers">
+              <div class="available-offers">
+                <div class="offers-heading">
+                  <span class="material-symbols-outlined icon"> stars_2 </span>
+                  <p class="offer-title">Availabe Offers</p>
+                </div>
+                <div class="offer-list">
+                  <div class="offer-item">
+                    <div class="">
+                      <span>SAVE10 -</span>
+                      <span class="green">10% OFF</span>
+                    </div>
+                    <button class="btn">Apply</button>
+                  </div>
+                  <div class="offer-item">
+                    <div>
+                      <span>SAVE20 -</span>
+                      <span class="green">20% OFF</span>
+                    </div>
+                    <button class="btn">Apply</button>
+                  </div>
+                </div>
+              </div>
+              <div class="applied-offer-list">
+                <!-- <div class="applied-offer">
+                  <div class="offer-text">
+                    <i class="fa-solid fa-circle-check check-icon"></i>
+                    <p>
+                      SAVE10 applied <span class="green">(You saved$60)</span>
+                    </p>
+                  </div>
+                  <button class="remove">Remove</button>
+                </div> -->
+              </div>
             </div>
             <div class="prize-details">
               <div class="p-item">
                 <p>Sub Total</p>
-                <span>2000 USD</span>
+                <span class="s-total">2000 USD</span>
               </div>
               <div class="p-item">
-                <p>Discount (10%)</p>
-                <span>-1000USD</span>
+                <p>Discount <span class="dis-text"></span></p>
+                <span class="discount green">-1000USD</span>
               </div>
               <div class="p-item">
                 <p>Delivery free</p>
-                <span>50.00 USD</span>
+                <span class="delivery">50.00 USD</span>
               </div>
             </div>
             <div class="p-total">
               <p>Total</p>
-              <span>$1850 USD</span>
+              <span class="total">$1850 USD</span>
             </div>
             <button class="check-out btn">Checkout Now</button>
           </div>
