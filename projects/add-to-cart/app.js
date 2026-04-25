@@ -23,11 +23,14 @@ updateCartCount()
 
 cartBtn.addEventListener("click", () => {
     cartPage.classList.toggle("show")
+    document.body.style.overflow = "hidden";
     cartPageUpdate()
 })
 cartClose.addEventListener("click", () => {
     cartPage.classList.remove("show")
+     document.body.style.overflow = "auto";
 })
+
 
 
 async function getProduct() {
