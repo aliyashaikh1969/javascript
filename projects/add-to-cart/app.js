@@ -8,7 +8,7 @@ const productList = document.querySelector(".product-list");
 const cartCount = document.querySelector(".cart-count")
 
 const productDetails = document.querySelector(".product-details table tbody")
-const emptyContainer = document.querySelector(".cart-page .container")
+const cartItems = document.querySelector(".cart-page .cart-items")
 const subTotal = document.querySelector(".s-total");
 const discount = document.querySelector(".discount");
 const delivery = document.querySelector(".delivery");
@@ -44,6 +44,7 @@ async function getProduct() {
 function addProducts(data) {
     if (data) {
         productList.innerHTML = ""
+       
         data.forEach(item => {
 
             let card = document.createElement("div")
@@ -57,7 +58,7 @@ function addProducts(data) {
             productList.appendChild(card)
             card.querySelector(".cart-card").addEventListener("click", () => {
                 addToCart(item);
-                showToast("product added" ,"success")
+                showToast("product added", "success")
             });
         });
     }
@@ -91,14 +92,11 @@ function cartPageUpdate() {
     let price = []
 
     if(!cart.length){
-        emptyContainer.innerHTML = ""
-        let div = document.createElement("div")
-        div.classList.add("empty-cart")
-        div.innerHTML = `<div >Your Cart is Empty</div>
-        <div>Looks like you haven’t added anything yet</div>`
-        emptyContainer.appendChild(div)
- return;
-    }
+        console.log("cart emty")
+         cartItems.classList.remove("show")
+    }else{
+         cartItems.classList.add("show")
+    
 
     cart.forEach(item => {
         let tr = document.createElement("tr");
@@ -134,16 +132,16 @@ function cartPageUpdate() {
 
         tr.querySelector(".actions").addEventListener('click', () => {
             deleteItem(item);
-            showToast("product removed" ,"error")
+            showToast("product removed", "error")
         })
         tr.querySelector(".add").addEventListener('click', () => increasedQuantity(item))
         tr.querySelector(".min").addEventListener('click', () => decreasedQuantity(item))
-        // let amt =tr.querySelector(".prize").innerHTML
         price.push(item.quantity * item.price)
 
         productDetails.appendChild(tr)
 
     })
+}
 
 
     displayOrderSummary(price)
@@ -180,6 +178,7 @@ function decreasedQuantity(item) {
     localStorage.setItem("cart", JSON.stringify(cart))
 
     cartPageUpdate()
+    updateCartCount()
 }
 
 function deleteItem(item) {
@@ -188,6 +187,7 @@ function deleteItem(item) {
 
     localStorage.setItem('cart', JSON.stringify(cart));
     cartPageUpdate()
+    updateCartCount()
 }
 
 function updateCartCount() {
@@ -239,7 +239,7 @@ function renderOfferList() {
 
             div.querySelector(".btn").addEventListener("click", () => {
                 applyOffer(offer.id)
-                  
+
             });
 
             availabeOffers.appendChild(div);
@@ -285,13 +285,13 @@ function renderAppliedOffer() {
 
         div.querySelector(".remove").addEventListener("click", () => {
             removeOffer(applied.id)
-            showToast("coupon removed" , "error")
-            
+            showToast("coupon removed", "error")
+
         })
 
         appliedOfferList.appendChild(div)
         discountText.innerHTML = `${applied.discount}%`
-        showToast("coupon applied" ,"success")
+        showToast("coupon applied", "success")
 
     } else {
         discount.innerHTML = ""
@@ -323,15 +323,15 @@ applyBtn.addEventListener("click", () => {
         return;
     }
 
-    let offer = offers.find(o=>o.code == code);
+    let offer = offers.find(o => o.code == code);
 
-    if(!offer){
-         showToast("Invalid coupon ", "error");
+    if (!offer) {
+        showToast("Invalid coupon ", "error");
         return;
     }
 
     applyOffer(offer.id)
-    couponInput.value =""
+    couponInput.value = ""
 })
 
 

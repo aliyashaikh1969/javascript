@@ -30,23 +30,23 @@
 
     <div id="toast-container"></div>
 
-
     <div class="cart-page">
       <h1 class="heading">Shopping cart</h1>
       <span class="cart-close"><i class="fas fa-close"></i></span>
-      <div class="container">
-        <div class="product-details">
-          <table>
-            <thead>
-              <tr>
-                <th>Product Code</th>
-                <th>Quantity</th>
-                <th>Total</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              <!--            
+      <div class="cart-items">
+        <div class="container">
+          <div class="product-details">
+            <table>
+              <thead>
+                <tr>
+                  <th>Product Code</th>
+                  <th>Quantity</th>
+                  <th>Total</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!--            
             <tr>
               <td>
                 <div class="product">
@@ -137,41 +137,43 @@
                 </button>
               </td>
             </tr> -->
-            </tbody>
-          </table>
-        </div>
-        <div class="order-summary">
-          <div class="summary">
-            <p class="sum-head">Order summary</p>
-            <div class="discount-form">
-              <input type="text" placeholder="Discount Voucher" />
-              <button class="btn">Apply</button>
-            </div>
-            <div class="offers">
-              <div class="available-offers">
-                <div class="offers-heading">
-                  <span class="material-symbols-outlined icon"> stars_2 </span>
-                  <p class="offer-title">Availabe Offers</p>
-                </div>
-                <div class="offer-list">
-                  <div class="offer-item">
-                    <div class="">
-                      <span>SAVE10 -</span>
-                      <span class="green">10% OFF</span>
-                    </div>
-                    <button class="btn">Apply</button>
-                  </div>
-                  <div class="offer-item">
-                    <div>
-                      <span>SAVE20 -</span>
-                      <span class="green">20% OFF</span>
-                    </div>
-                    <button class="btn">Apply</button>
-                  </div>
-                </div>
+              </tbody>
+            </table>
+          </div>
+          <div class="order-summary">
+            <div class="summary">
+              <p class="sum-head">Order summary</p>
+              <div class="discount-form">
+                <input type="text" placeholder="Discount Voucher" />
+                <button class="btn">Apply</button>
               </div>
-              <div class="applied-offer-list">
-                <!-- <div class="applied-offer">
+              <div class="offers">
+                <div class="available-offers">
+                  <div class="offers-heading">
+                    <span class="material-symbols-outlined icon">
+                      stars_2
+                    </span>
+                    <p class="offer-title">Availabe Offers</p>
+                  </div>
+                  <div class="offer-list">
+                    <div class="offer-item">
+                      <div class="">
+                        <span>SAVE10 -</span>
+                        <span class="green">10% OFF</span>
+                      </div>
+                      <button class="btn">Apply</button>
+                    </div>
+                    <div class="offer-item">
+                      <div>
+                        <span>SAVE20 -</span>
+                        <span class="green">20% OFF</span>
+                      </div>
+                      <button class="btn">Apply</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="applied-offer-list">
+                  <!-- <div class="applied-offer">
                   <div class="offer-text">
                     <i class="fa-solid fa-circle-check check-icon"></i>
                     <p>
@@ -180,27 +182,34 @@
                   </div>
                   <button class="remove">Remove</button>
                 </div> -->
+                </div>
               </div>
+              <div class="prize-details">
+                <div class="p-item">
+                  <p>Sub Total</p>
+                  <span class="s-total">2000 USD</span>
+                </div>
+                <div class="p-item">
+                  <p>Discount <span class="dis-text"></span></p>
+                  <span class="discount green">-1000USD</span>
+                </div>
+                <div class="p-item">
+                  <p>Delivery free</p>
+                  <span class="delivery">50.00 USD</span>
+                </div>
+              </div>
+              <div class="p-total">
+                <p>Total</p>
+                <span class="total">$1850 USD</span>
+              </div>
+              <button class="check-out btn">Checkout Now</button>
             </div>
-            <div class="prize-details">
-              <div class="p-item">
-                <p>Sub Total</p>
-                <span class="s-total">2000 USD</span>
-              </div>
-              <div class="p-item">
-                <p>Discount <span class="dis-text"></span></p>
-                <span class="discount green">-1000USD</span>
-              </div>
-              <div class="p-item">
-                <p>Delivery free</p>
-                <span class="delivery">50.00 USD</span>
-              </div>
-            </div>
-            <div class="p-total">
-              <p>Total</p>
-              <span class="total">$1850 USD</span>
-            </div>
-            <button class="check-out btn">Checkout Now</button>
+          </div>
+        </div>
+        <div class="empty-container">
+          <div class="empty-cart">
+            <div>🛒 Your Cart is Empty</div>
+            <div>Looks like you haven’t added anything yet</div>
           </div>
         </div>
       </div>
