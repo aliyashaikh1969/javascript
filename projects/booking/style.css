@@ -14,7 +14,8 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-color: #E3F0AF;
-    width: 1024px;
+    width: 70%;
+    place-items: center;
 }
 .box{
     padding: 20px;
@@ -22,6 +23,9 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+.seat-map{
+    width: 100%;
 }
 .row{
     display: flex;
@@ -39,7 +43,7 @@ body{
     line-height: 40px;
     background-color: #FBF6E9;
 }
-.seats .row .col.booked {
+.seat-map .row .col.booked {
     background-color: #118B50;
     color: #E3F0AF;
 }
@@ -82,7 +86,8 @@ form input::-webkit-inner-spin-button {
 
 @media (max-width:768px) {
     .container{
-        width: 760px;
+        grid-template-columns: 1fr;
+
     }
     .box{
         padding: 5px;
@@ -96,7 +101,6 @@ form input::-webkit-inner-spin-button {
 @media (max-width:676px) {
     .container{
         width: 100%;
-        grid-template-columns: 1fr;
 
     }
     .box{
