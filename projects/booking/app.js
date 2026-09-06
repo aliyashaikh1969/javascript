@@ -9,52 +9,67 @@ const TotalRow = 10
 let currentRow = 1
 let selectedSeat = [];
 let skippSeats = [];
+let availableSets = 50
 
+
+
+const showPreview=(rowSeats)=>{
+console.log(rowSeats)
+// for (let i = 0; i <= rowSeats; i++) {
+//         const rowDiv = document.createElement("div");
+//         rowDiv.classList.add("row");
+//         let seat = seats.filter(seat => seat.row === i)
+//         seat.forEach(seat => {
+//             const div = document.createElement('div');
+//             div.classList.add("col");
+//             div.textContent = seat.id
+//             if (seat.booked) {
+//                 div.classList.add("booked")
+//             }
+//             rowDiv.appendChild(div)
+//         })
+//         seatMap.appendChild(rowDiv)
+//     }
+}
 
 const bookingSeat = (count) => {
 
-    let seatBook = count;
-
-    while (seatBook > 0 && currentRow <= TotalRow) {
-        seatBook = bookingSeatRow(seatBook)
+    let seatToBook = count
+    while (seatToBook > 0 && currentRow <= TotalRow) {
+        console.log(seatToBook);
+        seatToBook = bookingCurrentRow(seatToBook)
         currentRow++
     }
 
-    while(seatBook>0&&skippSeats.length>0){
-        
-
-        // console.log(skippSeats,skippSeats.length);
-
-
-        let seat = skippSeats.shift();
-        seat.booked = true;
+    while(seatToBook>0 && skippSeats.length>0){
+        const seat =skippSeats.shift()
+        seat.booked=true
         selectedSeat.push(seat);
-        seatBook--
+        seatToBook--
     }
 
     renderUi()
 }
 
+const bookingCurrentRow = (seatToBook) => {
 
-const bookingSeatRow = (seatBook) => {
+    let rowSeats = seats.filter(seat => seat.row == currentRow)
+    let bookingCount = Math.min(seatToBook, rowSeats.length)
 
-    const rowsSeat = seats.filter(seat => seat.row === currentRow);
-    let bookingCount = Math.min(seatBook , rowsSeat.length)
+    showPreview(rowSeats)
+    for (let i = 0; i < bookingCount; i++) {
+        rowSeats[i].booked = true
 
-
-    for(let i =0 ; i<bookingCount ; i++){
-        rowsSeat[i].booked = true;
-        selectedSeat.push(rowsSeat[i])
+        selectedSeat.push(rowSeats[i])
     }
 
-    for(let i =bookingCount ; i<rowsSeat.length ; i++){
-        skippSeats.push(rowsSeat[i]);
-    }    
+    for(let i =bookingCount ;i<rowSeats.length ; i++){
+        skippSeats.push(rowSeats[i])
+    }
 
-    return seatBook -= bookingCount
 
+    return seatToBook -= bookingCount
 }
-
 const renderUi = () => {
     seatMap.innerHTML = ""
     for (let i = 0; i <= TotalRow; i++) {
@@ -80,7 +95,12 @@ submit.addEventListener("click", (e) => {
     let count = Number(input.value)
     if (!count || count < 0) return;
 
-    bookingSeat(count)
+    if(count<=availableSets){
+        availableSets = availableSets-count
+        bookingSeat(count)
+    }else{
+        alert(`only ${availableSets} is available` )
+        console.log("hhh")
+    }
     input.value = ""
-
 })

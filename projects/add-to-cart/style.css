@@ -3,75 +3,195 @@
     margin: 0;
     box-sizing: border-box;
 }
-button{
-    border: none;
-    background:none;
-    font-size: 16px;
-    padding: 5px 10px;
-    text-align: center;
-    cursor: pointer;
+
+:root {
+  /* Background */
+  --bg-primary: #F7F7F5;
+  --bg-secondary: #FFFFFF;
+  --bg-tertiary: #F1F2F4;
+
+  /* Text */
+  --text-primary: #171717;
+  --text-secondary: #6B6B6B;
+  --text-muted: #9A9A9A;
+
+  /* Borders */
+  --border-color: #E2E2E2;
+  --border-light: #EEEEEE;
+
+  /* Brand */
+  --accent: #D89B2B;
+  --accent-light: #F0B94E;
+  --accent-hover: #B97816;
+
+  /* Buttons */
+  --button-primary: #121212;
+  --button-primary-hover: #292929;
+  --button-text: #FFFFFF;
+
+  /* Cards */
+  --card-bg: #e6e0d7;
+  --input-bg: #F8F8F8;
+
+  /* Status */
+  --success: #4CAF78;
+  --danger: #E04F4F;
 }
+
+body.dark {
+  /* Main backgrounds */
+  --bg-primary: #080909;
+  --bg-secondary: #101112;
+  --bg-tertiary: #181A1D;
+  --bg-elevated: #1E2023;
+
+  /* Text */
+  --text-primary: #F5F5F5;
+  --text-secondary: #B7B7B7;
+  --text-muted: #777777;
+
+  /* Borders */
+  --border-color: #2A2D30;
+  --border-light: #35383B;
+
+  /* Gold accent */
+  --accent: #D89B2B;
+  --accent-light: #F0B94E;
+  --accent-dark: #9E6915;
+
+  /* Buttons */
+  --button-primary: #D89B2B;
+  --button-primary-hover: #F0B94E;
+  --button-dark: #151617;
+
+  /* Cards */
+  --card-bg: #121314;
+  --card-hover: #1B1D20;
+  --input-bg: #151617;
+
+  /* Status */
+  --success: #4CAF78;
+  --danger: #E04F4F;
+}
+
 body{
     font-family: sans-serif;
-    background-color: #E5E1DA;
-    font-family: sans-serif;
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
     position: relative;
     overflow-x: hidden;
+    transition: background-color 0.3s ease,
+        color 0.3s ease;
 }
+
+a{
+    text-decoration: none;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    width: min(1200px,92%);
+    margin: auto;
+
+}
+
 header{
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
     width: 100vw;
-    background-color: #F1F0E8;
+    background-color: var(--bg-primary);
+    padding: 5px 20px;
 }
 
 nav{
-    margin: auto;
-    max-width: 92%;
+    gap: 3rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* background-color: rebeccapurple; */
-    padding: 20px 20px;
+    margin: auto;
+    max-width: 95%;
+    /* padding: 15px 0; */
+    
 }
-nav h4{
-    padding: 15px 0;
-    font-weight: 400;
-    text-transform: uppercase;
-    font-size: 18px;
+nav .nav-heading{
+    font-size: 1.5rem;
+    font-weight: bold;
 }
-nav span i{
-    font-size: 16px;
+ nav .nav-heading .logo{
+    font-size: 2.5rem;
+    font-weight: 200;
+ } 
+nav .nav-search{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:#f0f0f0;
+    padding: 10px 25px;
+    border-radius: 25px;
+    border:1px solid #d5d5d5;
 }
-header .cart-btn{
+
+nav .nav-search input{
+    background: none;
+    border: none;
+    outline: none;
+}
+
+nav .nav-search .nav-search-icon{
+    color: #666;
+}
+nav .nav-list{
+    flex:1;
+    justify-content: space-between;
+    list-style: none;
+}
+.nav-link{
+    color: var(--text-primary);
+    font-weight: bold;
+    font-size: 14px;
+}
+nav .actions{
+    gap :1.2rem;
+}
+nav .actions .cart-btn , nav .actions .whish-btn{
+    padding: 15px 20px;
+    gap :10px;
     position: relative;
-}
-.cart-btn{
     cursor: pointer;
-    transition: all .6s ease;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease
+
 }
-header .cart-btn .cart-count{
+nav .actions .cart-btn:hover , nav .actions .whish-btn:hover{
+    background-color: var(--card-bg);
+}
+
+.actions .cart-btn .cart-count, .actions .whish-btn .whish-count{
     position: absolute;
-    left: -10px;
-    top: -15px;
+    top: 5px;
+    right: 0;
+
+    background-color: #000;
+    width: 20px;    
+    height: 20px;
+    color: #fff;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: red;
-    padding: 5px;
-    height: 25px;
-    width: 25px;
-    color: #fff;
-    font-size: 1.3rem;
-    border-radius: 50%;
+
 }
-.container{
-    display: flex;
-    gap: 20px;
-    padding: 20px;
-}
+
+
 .icons{
     font-size: 25px;
 }
@@ -129,6 +249,18 @@ header .cart-btn .cart-count{
     top: 40px;
     right: 40px;
     font-size: 24px;
+    cursor: pointer;
+}
+
+
+
+
+button{
+    border: none;
+    background:none;
+    font-size: 16px;
+    padding: 5px 10px;
+    text-align: center;
     cursor: pointer;
 }
 .heading{
@@ -321,7 +453,7 @@ header .cart-btn .cart-count{
 
 
 main .container{
-    background: url( "/images/watch-3.jpg") center no-repeat;
+    background: url( "./assets/hero.png") center no-repeat;
     background-size: cover;
     width: 100%;
     height: 100vh;

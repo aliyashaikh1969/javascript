@@ -13,7 +13,7 @@ const subTotal = document.querySelector(".s-total");
 const discount = document.querySelector(".discount");
 const delivery = document.querySelector(".delivery");
 const total = document.querySelector(".total");
-const availabeOffers = document.querySelector(".available-offers .offer-list")
+const availableOffers = document.querySelector(".available-offers .offer-list")
 const appliedOfferList = document.querySelector(".applied-offer-list");
 const discountText = document.querySelector('.dis-text');
 const couponInput = document.querySelector(".discount-form input")
@@ -35,7 +35,7 @@ cartClose.addEventListener("click", () => {
 
 async function getProduct() {
     try {
-        let response = await fetch("http://localhost:3000/posts");
+        let response = await fetch("http://localhost:3000/products");
         let data = await response.json();
 
         addProducts(data)
@@ -47,12 +47,11 @@ async function getProduct() {
 function addProducts(data) {
     if (data) {
         productList.innerHTML = ""
-       
         data.forEach(item => {
 
             let card = document.createElement("div")
             card.classList.add("product-item")
-            card.innerHTML = ` <img src="${item.image}" alt="" />
+            card.innerHTML = ` <img src="${item.image}" alt="${item.name}" />
                                 <div class="cart-card">
                                     <span class="cart-btn">
                                         <i class="fa-solid fa-cart-shopping icons"></i>
@@ -95,7 +94,6 @@ function cartPageUpdate() {
     let price = []
 
     if(!cart.length){
-        console.log("cart emty")
          cartItems.classList.remove("show")
     }else{
          cartItems.classList.add("show")
@@ -103,14 +101,14 @@ function cartPageUpdate() {
 
     cart.forEach(item => {
         let tr = document.createElement("tr");
-        tr.innerHTML = ` <tr>
+        tr.innerHTML = ` 
               <td>
                 <div class="product">
                   <img src="${item.image}" class="pImage" alt="" />
 
                   <div class="img-det">
                     <p>${item.name}</p>
-                    <span>${item.keyPoints}</span>
+                    <span>${item.keyPoints.join(",")}</span>
                   </div>
                 </div>
               </td>
@@ -131,7 +129,7 @@ function cartPageUpdate() {
                   <i class="fas fa solid fa-trash"></i>
                 </button>
               </td>
-            </tr>`
+            `
 
         tr.querySelector(".actions").addEventListener('click', () => {
             deleteItem(item);
@@ -164,18 +162,13 @@ function increasedQuantity(item) {
 }
 
 function decreasedQuantity(item) {
-    console.log("decreased")
     let cart = JSON.parse(localStorage.getItem("cart"));
     let product = cart.find(p => item.id == p.id)
-    console.log(product)
     if (product) {
         if (product.quantity > 1) {
             product.quantity--;
-            console.log(product.quantity)
         } else {
             cart = cart.filter(cart => product.id != cart.id);
-
-            console.log("dele")
         }
     }
     localStorage.setItem("cart", JSON.stringify(cart))
@@ -218,7 +211,7 @@ function displayOrderSummary(price) {
 
 
     subTotal.innerHTML = `${subTotalValue} USD`;
-    discount.innerHTML = `${diScountValue} USD`;
+    discount.textContent = `-${diScountValue.toFixed(2)} USD`;
     delivery.innerHTML = `${deliveryCharges} USD`;
     total.innerHTML = `${totalValue} USD`
 }
@@ -229,7 +222,7 @@ function getAppliedDiscount() {
 }
 
 function renderOfferList() {
-    availabeOffers.innerHTML = ""
+    availableOffers.innerHTML = ""
     offers.forEach((offer) => {
         if (!offer.applied) {
             let div = document.createElement("div");
@@ -245,7 +238,7 @@ function renderOfferList() {
 
             });
 
-            availabeOffers.appendChild(div);
+            availableOffers.appendChild(div);
         }
     })
 }
@@ -303,7 +296,7 @@ function renderAppliedOffer() {
 
 
 function removeOffer(id) {
-    console.log(id)
+
     const offer = offers.find(O => O.id == id);
 
 
