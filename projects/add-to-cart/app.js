@@ -28,7 +28,7 @@ cartBtn.addEventListener("click", () => {
 })
 cartClose.addEventListener("click", () => {
     cartPage.classList.remove("show")
-     document.body.style.overflow = "auto";
+    document.body.style.overflow = "auto";
 })
 
 
@@ -51,11 +51,27 @@ function addProducts(data) {
 
             let card = document.createElement("div")
             card.classList.add("product-item")
-            card.innerHTML = ` <img src="${item.image}" alt="${item.name}" />
-                                <div class="cart-card">
-                                    <span class="cart-btn">
-                                        <i class="fa-solid fa-cart-shopping icons"></i>
-                                    </span>
+            card.innerHTML = `  <div class="pro-image">
+                                    <img src="../images/p-watch3.png" alt="" />
+            <                       span class="material-symbols-outlined icons">favorite </>
+                                </div>
+                                <div class="cart-card pro-details">
+                                    <p class="pro-title">Classic Leather Watch</p>
+                                     <div class="pro-rating">
+                                        <div class="stars">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                            <p class="rates">4.5(120)</p>
+                                    </div>
+                                    <p class="price">$120</p>
+                                    <button class="btn">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                    Add to cart
+                                    </button>
                                 </div>`
             productList.appendChild(card)
             card.querySelector(".cart-card").addEventListener("click", () => {
@@ -93,15 +109,15 @@ function cartPageUpdate() {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
     let price = []
 
-    if(!cart.length){
-         cartItems.classList.remove("show")
-    }else{
-         cartItems.classList.add("show")
-    
+    if (!cart.length) {
+        cartItems.classList.remove("show")
+    } else {
+        cartItems.classList.add("show")
 
-    cart.forEach(item => {
-        let tr = document.createElement("tr");
-        tr.innerHTML = ` 
+
+        cart.forEach(item => {
+            let tr = document.createElement("tr");
+            tr.innerHTML = ` 
               <td>
                 <div class="product">
                   <img src="${item.image}" class="pImage" alt="" />
@@ -131,18 +147,18 @@ function cartPageUpdate() {
               </td>
             `
 
-        tr.querySelector(".actions").addEventListener('click', () => {
-            deleteItem(item);
-            showToast("product removed", "error")
+            tr.querySelector(".actions").addEventListener('click', () => {
+                deleteItem(item);
+                showToast("product removed", "error")
+            })
+            tr.querySelector(".add").addEventListener('click', () => increasedQuantity(item))
+            tr.querySelector(".min").addEventListener('click', () => decreasedQuantity(item))
+            price.push(item.quantity * item.price)
+
+            productDetails.appendChild(tr)
+
         })
-        tr.querySelector(".add").addEventListener('click', () => increasedQuantity(item))
-        tr.querySelector(".min").addEventListener('click', () => decreasedQuantity(item))
-        price.push(item.quantity * item.price)
-
-        productDetails.appendChild(tr)
-
-    })
-}
+    }
 
 
     displayOrderSummary(price)
