@@ -1,5 +1,10 @@
 console.log("cart page")
 
+
+const menuBtn = document.querySelector(".menu-btn");
+const mobileMenu = document.querySelector("#mobileMenu");
+const menuIcon = menuBtn.querySelector(".material-symbols-outlined");
+
 const cartBtn = document.querySelector("header .cart-btn");
 const cartPage = document.querySelector(".cart-page");
 const cartClose = document.querySelector(".cart-close")
@@ -20,6 +25,20 @@ const couponInput = document.querySelector(".discount-form input")
 const applyBtn = document.querySelector(".discount-form .btn")
 
 updateCartCount()
+
+
+
+menuBtn.addEventListener("click", () => {
+
+    mobileMenu.classList.toggle("active");
+
+    if (mobileMenu.classList.contains("active")) {
+        menuIcon.textContent = "close";
+    } else {
+        menuIcon.textContent = "menu";
+    }
+
+});
 
 cartBtn.addEventListener("click", () => {
     cartPage.classList.toggle("show")
@@ -53,7 +72,7 @@ function addProducts(data) {
             card.classList.add("product-item")
             card.innerHTML = `  <div class="pro-image">
                                     <img src="../images/p-watch3.png" alt="" />
-            <                       span class="material-symbols-outlined icons">favorite </>
+            <span                       span class="material-symbols-outlined icons">favorite </span>
                                 </div>
                                 <div class="cart-card pro-details">
                                     <p class="pro-title">Classic Leather Watch</p>
