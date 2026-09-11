@@ -4,12 +4,16 @@ console.log("cart page")
 const menuBtn = document.querySelector(".menu-btn");
 const mobileMenu = document.querySelector("#mobileMenu");
 const menuIcon = menuBtn.querySelector(".material-symbols-outlined");
+const productList = document.querySelector(".product-list");
+const previousBtn = document.querySelector("#previousBtn");
+const nextBtn = document.querySelector("#nextBtn");
+const pageNumbers = document.querySelector("#pageNumbers");
+
 
 const cartBtn = document.querySelector("header .cart-btn");
 const cartPage = document.querySelector(".cart-page");
 const cartClose = document.querySelector(".cart-close")
 
-const productList = document.querySelector(".product-list");
 const cartCount = document.querySelector(".cart-count")
 
 const productDetails = document.querySelector(".product-details table tbody")
@@ -26,8 +30,14 @@ const applyBtn = document.querySelector(".discount-form .btn")
 
 updateCartCount()
 
+// -------------------pagination -------------------
+
+let products = []
+let currentPage = 1;
+const productsPerPage = 8;
 
 
+// -------------------------------menu bar --------------------------
 menuBtn.addEventListener("click", () => {
 
     mobileMenu.classList.toggle("active");
@@ -39,6 +49,9 @@ menuBtn.addEventListener("click", () => {
     }
 
 });
+
+
+
 
 cartBtn.addEventListener("click", () => {
     cartPage.classList.toggle("show")
@@ -65,18 +78,20 @@ async function getProduct() {
 
 function addProducts(data) {
     if (data) {
-        productList.innerHTML = ""
+        console.log(data)
+        productList.innerHTML = "";
         data.forEach(item => {
-
-            let card = document.createElement("div")
+            let card = document.createElement("div");
             card.classList.add("product-item")
             card.innerHTML = `  <div class="pro-image">
-                                    <img src="../images/p-watch3.png" alt="" />
-            <span                       span class="material-symbols-outlined icons">favorite </span>
+           ${item.isNew ? `<span class="new-badge">NEW</span>` : ""}                       
+                                    <img src="${item.image}" alt="${item.name}" />
+                                    <span class="material-symbols-outlined icons">favorite </span>
                                 </div>
                                 <div class="cart-card pro-details">
-                                    <p class="pro-title">Classic Leather Watch</p>
-                                     <div class="pro-rating">
+                                    <span class="category">${item.category}</span>
+                                    <p class="pro-title">${item.name}</p>
+                                    <div class="pro-rating">
                                         <div class="stars">
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
@@ -84,24 +99,31 @@ function addProducts(data) {
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
                                         </div>
-                                            <p class="rates">4.5(120)</p>
+                                            <p class="rates">${item.rating} (${item.reviews})</p>
                                     </div>
-                                    <p class="price">$120</p>
+                                    <div class="price-container ">
+                                    <p class="price">$${item.price}</p>
+                                    <span class="original-price">$${item.originalPrice}</span>
+                                    </div> 
                                     <button class="btn">
                                     <i class="fa-solid fa-cart-shopping"></i>
                                     Add to cart
                                     </button>
                                 </div>`
             productList.appendChild(card)
+           
             card.querySelector(".cart-card").addEventListener("click", () => {
                 addToCart(item);
                 showToast("product added", "success")
             });
+
         });
     }
 }
 
 getProduct()
+
+
 
 function addToCart(item) {
 
