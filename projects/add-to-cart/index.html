@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -12,33 +12,124 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
   </head>
-  <body>
+  <body class="dark">
     <header>
       <nav>
-        <h4>cart page</h4>
-        <span class="cart-btn"
-          ><i class="fa-solid fa-cart-shopping icons"></i
-        ></span>
+        <div class="nav-heading flex">
+          <span class="material-symbols-outlined logo"> watch </span>
+          <p>WatchStore</p>
+        </div>
+        <div class="nav-search">
+          <input type="text" placeholder="Search watches..." name="" id="" />
+          <span class="material-symbols-outlined nav-search-icon">
+            search
+          </span>
+        </div>
+        <ul class="nav-list flex">
+          <li class="nav-item flex">
+            <a href="#" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item flex">
+            <a href="#" class="nav-link">Shop</a>
+          </li>
+          <li class="nav-item flex">
+            <a href="#" class="nav-link">Categories</a>
+          </li>
+          <li class="nav-item flex">
+            <a href="#" class="nav-link">About</a>
+          </li>
+        </ul>
+        <div class="actions flex">
+          <button class="whish-btn flex">
+            <span class="material-symbols-outlined icons">favorite </span>
+            <p>WhishList</p>
+            <span class="whish-count">0</span>
+          </button>
+          <button class="cart-btn flex">
+            <span>
+              <i class="fa-solid fa-cart-shopping icons"></i>
+            </span>
+            <p>Cart</p>
+            <span class="cart-count">0</span>
+          </button>
+        </div>
+        <div class="theme flex">
+          <button>
+            <span class="material-symbols-outlined"> light_mode </span>
+          </button>
+          <!-- <button>
+            <span class="material-symbols-outlined"> dark_mode </span>
+          </button> -->
+        </div>
+        <button class="menu-btn">
+          <span class="material-symbols-outlined"> menu </span>
+        </button>
       </nav>
+      <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-nav-list">
+          <li>
+            <a href="#" class="mobile-nav-link active"> Home </a>
+          </li>
+
+          <li>
+            <a href="#" class="mobile-nav-link"> Shop </a>
+          </li>
+
+          <li>
+            <a href="#" class="mobile-nav-link"> Categories </a>
+          </li>
+
+          <li>
+            <a href="#" class="mobile-nav-link"> About </a>
+          </li>
+
+          <li>
+            <a href="#" class="mobile-nav-link"> Contact </a>
+          </li>
+
+          <li>
+            <a href="#" class="mobile-nav-link">
+              <span class="material-symbols-outlined">favorite</span>
+              Wishlist
+              <span class="mobile-count">0</span>
+            </a>
+          </li>
+        </ul>
+      </div>
     </header>
+
+    <div id="toast-container"></div>
 
     <div class="cart-page">
       <h1 class="heading">Shopping cart</h1>
       <span class="cart-close"><i class="fas fa-close"></i></span>
-      <div class="container">
-        <div class="product-details">
-          <table>
-            <tr>
-              <th>Product Code</th>
-              <th>Quantity</th>
-              <th>Total</th>
-              <th>Action</th>
-            </tr>
+      <div class="cart-items">
+        <div class="container">
+          <div class="product-details">
+            <table>
+              <thead>
+                <tr>
+                  <th>Product Code</th>
+                  <th>Quantity</th>
+                  <th>Total</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!--            
             <tr>
               <td>
                 <div class="product">
-                  <img src="/projects/images/watch-2.jpg " class="pImage" alt="" />
+                  <img
+                    src="/images/watch-2.jpg "
+                    class="pImage"
+                    alt=""
+                  />
                   <div class="img-det">
                     <p>Product name</p>
                     <span>st:colors os product</span>
@@ -66,15 +157,8 @@
             <tr>
               <td>
                 <div class="product">
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-                  <img src="/projects/images/watch-2.jpg " class="pImage" alt="" />
-=======
                   <img src="/images/watch-2.jpg " class="pImage" alt="" />
->>>>>>> Stashed changes
-=======
-                  <img src="/projects/images/watch-2.jpg " class="pImage" alt="" />
->>>>>>> projects
+
                   <div class="img-det">
                     <p>Product name</p>
                     <span>st:colors os product</span>
@@ -102,15 +186,8 @@
             <tr>
               <td>
                 <div class="product">
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-                  <img src="/projects/images/watch-2.jpg " class="pImage" alt="" />
-=======
                   <img src="/images/watch-2.jpg " class="pImage" alt="" />
->>>>>>> Stashed changes
-=======
-                  <img src="/projects/images/watch-2.jpg " class="pImage" alt="" />
->>>>>>> projects
+
                   <div class="img-det">
                     <p>Product name</p>
                     <span>st:colors os product</span>
@@ -134,117 +211,157 @@
                   <i class="fas fa solid fa-trash"></i>
                 </button>
               </td>
-            </tr>
-            <tr>
-              <td>
-                <div class="product">
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-                  <img src="/projects/images/watch-2.jpg " class="pImage" alt="" />
-            
-=======
-                  <img src="/images/watch-2.jpg " class="pImage" alt="" />
->>>>>>> Stashed changes
-=======
-                  <img src="/projects/images/watch-2.jpg " class="pImage" alt="" />
->>>>>>> projects
-                  <div class="img-det">
-                    <p>Product name</p>
-                    <span>st:colors os product</span>
+            </tr> -->
+              </tbody>
+            </table>
+          </div>
+          <div class="order-summary">
+            <div class="summary">
+              <p class="sum-head">Order summary</p>
+              <div class="discount-form">
+                <input type="text" placeholder="Discount Voucher" />
+                <button class="btn">Apply</button>
+              </div>
+              <div class="offers">
+                <div class="available-offers">
+                  <div class="offers-heading">
+                    <span class="material-symbols-outlined icon">
+                      stars_2
+                    </span>
+                    <p class="offer-title">Availabe Offers</p>
+                  </div>
+                  <div class="offer-list">
+                    <div class="offer-item">
+                      <div class="">
+                        <span>SAVE10 -</span>
+                        <span class="green">10% OFF</span>
+                      </div>
+                      <button class="btn">Apply</button>
+                    </div>
+                    <div class="offer-item">
+                      <div>
+                        <span>SAVE20 -</span>
+                        <span class="green">20% OFF</span>
+                      </div>
+                      <button class="btn">Apply</button>
+                    </div>
                   </div>
                 </div>
-              </td>
-
-              <td>
-                <div class="quen">
-                  <button class="add">+</button>
-                  <span>1</span>
-                  <button class="min">-</button>
+                <div class="applied-offer-list">
+                  <!-- <div class="applied-offer">
+                  <div class="offer-text">
+                    <i class="fa-solid fa-circle-check check-icon"></i>
+                    <p>
+                      SAVE10 applied <span class="green">(You saved$60)</span>
+                    </p>
+                  </div>
+                  <button class="remove">Remove</button>
+                </div> -->
                 </div>
-              </td>
-              <td>
-                <p class="prize">$23</p>
-              </td>
-
-              <td>
-                <button class="actions">
-                  <i class="fas fa solid fa-trash"></i>
-                </button>
-              </td>
-            </tr>
-          </table>
+              </div>
+              <div class="prize-details">
+                <div class="p-item">
+                  <p>Sub Total</p>
+                  <span class="s-total">2000 USD</span>
+                </div>
+                <div class="p-item">
+                  <p>Discount <span class="dis-text"></span></p>
+                  <span class="discount green">-1000USD</span>
+                </div>
+                <div class="p-item">
+                  <p>Delivery free</p>
+                  <span class="delivery">50.00 USD</span>
+                </div>
+              </div>
+              <div class="p-total">
+                <p>Total</p>
+                <span class="total">$1850 USD</span>
+              </div>
+              <button class="check-out btn">Checkout Now</button>
+            </div>
+          </div>
         </div>
-        <div class="order-summary">
-          <div class="summary">
-            <p class="sum-head">Order summary</p>
-            <div class="discount-form">
-              <input type="text" placeholder="Discount Voucher" />
-              <button>Apply</button>
-            </div>
-            <div class="prize-details">
-              <div class="p-item">
-                <p>Sub Total</p>
-                <span>2000 USD</span>
-              </div>
-              <div class="p-item">
-                <p>Discount (10%)</p>
-                <span>-1000USD</span>
-              </div>
-              <div class="p-item">
-                <p>Delivery free</p>
-                <span>50.00 USD</span>
-              </div>
-            </div>
-            <div class="p-total">
-              <p>Total</p>
-              <span>$1850 USD</span>
-            </div>
-            <button class="check-out btn">Checkout Now</button>
+        <div class="empty-container">
+          <div class="empty-cart">
+            <div>🛒 Your Cart is Empty</div>
+            <div>Looks like you haven’t added anything yet</div>
           </div>
         </div>
       </div>
     </div>
 
+    <!-- ---------------------main--------------------- -->
     <main>
-      <div class="container"></div>
+      <div class="container">
+        <div class="main-heading">
+          <h4 class="main-text">New collection</h4>
+          <div>
+            <h2 class="main-text-primary">Timeless Style,</h2>
+            <h2 class="main-text-primary">Perfect Every Moment</h2>
+          </div>
+          <div>
+            <p class="main-text-secondry">
+              Discover premium watches crafted for
+            </p>
+            <p class="main-text-secondry">elegance, precision & style.</p>
+          </div>
+          <button class="btn main-btn">Shop Now</button>
+        </div>
+      </div>
     </main>
+
+    <!-- ---------------------------------------filter----------------------- -->
+    <div class="collection">
+      <h4>Our Collection</h4>
+    </div>
+
+    <!-- -----------product list --------------------- -->
+
     <div class="product-container">
-      <div class="product-list">
-        <div class="product-item">
-          <img src="/images/watch-5.jpg" alt="" />
+      <div class="container">
+        <div class="product-list">
+          <div class="product-item">
+            <div class="pro-image">
+              <img src="../images/p-watch3.png" alt="" />
+              <span class="material-symbols-outlined icons">favorite </span>
+            </div>
+            <div class="pro-details">
+              <p class="pro-title">Classic Leather Watch</p>
+              <div class="pro-rating">
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="rates">4.5(120)</p>
+              </div>
+              <p class="price">$120</p>
+              <button class="btn">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add to cart
+              </button>
+            </div>
+          </div>
         </div>
-        <div class="product-item">
-          <img src="/images/watch-5.jpg" alt="" />
-        </div>
-        <div class="product-item">
-          <img src="/images/watch-5.jpg" alt="" />
-        </div>
-        <div class="product-item">
-          <img src="/images/watch-5.jpg" alt="" />
-        </div>
-        <div class="product-item">
-          <img src="/images/watch-5.jpg" alt="" />
-        </div>
-        <div class="product-item">
-          <img src="/images/watch-5.jpg" alt="" />
-        </div>
-        <div class="product-item">
-          <img src="/images/watch-5.jpg" alt="" />
-        </div>
-        <div class="product-item">
-          <img src="/images/watch-5.jpg" alt="" />
-        </div>
-        <div class="product-item">
-          <img src="/images/watch-5.jpg" alt="" />
-        </div>
-        <div class="product-item">
-          <img src="/images/watch-5.jpg" alt="" />
-        </div>
-        <div class="product-item">
-          <img src="/images/watch-5.jpg" alt="" />
-        </div>
-        <div class="product-item">
-          <img src="/images/watch-5.jpg" alt="" />
+        <div class="pagination" id="pagination">
+          <button
+            class="pagination-btn previous"
+            id="previousBtn"
+            aria-label="Previous page"
+          >
+            <span class="material-symbols-outlined">chevron_left</span>
+          </button>
+          <div class="page-numbers" id="pageNumbers"></div>
+
+          <button
+            class="pagination-btn next"
+            id="nextBtn"
+            aria-label="Next page"
+          >
+            <span class="material-symbols-outlined">chevron_right</span>
+          </button>
         </div>
       </div>
     </div>
