@@ -1,3 +1,6 @@
+
+
+Index · HTML
 <!doctype html>
 <html lang="en">
   <head>
@@ -25,7 +28,12 @@
           <p>WatchStore</p>
         </div>
         <div class="nav-search">
-          <input type="text" placeholder="Search watches..." name="" id="" />
+          <input
+            type="text"
+            placeholder="Search watches..."
+            name=""
+            id="SearchInput"
+          />
           <span class="material-symbols-outlined nav-search-icon">
             search
           </span>
@@ -60,11 +68,10 @@
         </div>
         <div class="theme flex">
           <button>
-            <span class="material-symbols-outlined"> light_mode </span>
+            <span class="material-symbols-outlined theme-btn">
+              light_mode
+            </span>
           </button>
-          <!-- <button>
-            <span class="material-symbols-outlined"> dark_mode </span>
-          </button> -->
         </div>
         <button class="menu-btn">
           <span class="material-symbols-outlined"> menu </span>
@@ -75,23 +82,23 @@
           <li>
             <a href="#" class="mobile-nav-link active"> Home </a>
           </li>
-
+ 
           <li>
             <a href="#" class="mobile-nav-link"> Shop </a>
           </li>
-
+ 
           <li>
             <a href="#" class="mobile-nav-link"> Categories </a>
           </li>
-
+ 
           <li>
             <a href="#" class="mobile-nav-link"> About </a>
           </li>
-
+ 
           <li>
             <a href="#" class="mobile-nav-link"> Contact </a>
           </li>
-
+ 
           <li>
             <a href="#" class="mobile-nav-link">
               <span class="material-symbols-outlined">favorite</span>
@@ -102,9 +109,9 @@
         </ul>
       </div>
     </header>
-
+ 
     <div id="toast-container"></div>
-
+ 
     <div class="cart-page">
       <h1 class="heading">Shopping cart</h1>
       <span class="cart-close"><i class="fas fa-close"></i></span>
@@ -121,97 +128,6 @@
                 </tr>
               </thead>
               <tbody>
-                <!--            
-            <tr>
-              <td>
-                <div class="product">
-                  <img
-                    src="/images/watch-2.jpg "
-                    class="pImage"
-                    alt=""
-                  />
-                  <div class="img-det">
-                    <p>Product name</p>
-                    <span>st:colors os product</span>
-                  </div>
-                </div>
-              </td>
-
-              <td>
-                <div class="quen">
-                  <button class="add">+</button>
-                  <span>1</span>
-                  <button class="min">-</button>
-                </div>
-              </td>
-              <td>
-                <p class="prize">$23</p>
-              </td>
-
-              <td>
-                <button class="actions">
-                  <i class="fas fa solid fa-trash"></i>
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <div class="product">
-                  <img src="/images/watch-2.jpg " class="pImage" alt="" />
-
-                  <div class="img-det">
-                    <p>Product name</p>
-                    <span>st:colors os product</span>
-                  </div>
-                </div>
-              </td>
-
-              <td>
-                <div class="quen">
-                  <button class="add">+</button>
-                  <span>1</span>
-                  <button class="min">-</button>
-                </div>
-              </td>
-              <td>
-                <p class="prize">$23</p>
-              </td>
-
-              <td>
-                <button class="actions">
-                  <i class="fas fa solid fa-trash"></i>
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <div class="product">
-                  <img src="/images/watch-2.jpg " class="pImage" alt="" />
-
-                  <div class="img-det">
-                    <p>Product name</p>
-                    <span>st:colors os product</span>
-                  </div>
-                </div>
-              </td>
-
-              <td>
-                <div class="quen">
-                  <button class="add">+</button>
-                  <span>1</span>
-                  <button class="min">-</button>
-                </div>
-              </td>
-              <td>
-                <p class="prize">$23</p>
-              </td>
-
-              <td>
-                <button class="actions">
-                  <i class="fas fa solid fa-trash"></i>
-                </button>
-              </td>
-            </tr> -->
               </tbody>
             </table>
           </div>
@@ -247,17 +163,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="applied-offer-list">
-                  <!-- <div class="applied-offer">
-                  <div class="offer-text">
-                    <i class="fa-solid fa-circle-check check-icon"></i>
-                    <p>
-                      SAVE10 applied <span class="green">(You saved$60)</span>
-                    </p>
-                  </div>
-                  <button class="remove">Remove</button>
-                </div> -->
-                </div>
+                <div class="applied-offer-list"></div>
               </div>
               <div class="prize-details">
                 <div class="p-item">
@@ -289,7 +195,7 @@
         </div>
       </div>
     </div>
-
+ 
     <!-- ---------------------main--------------------- -->
     <main>
       <div class="container">
@@ -309,63 +215,245 @@
         </div>
       </div>
     </main>
-
-    <!-- ---------------------------------------filter----------------------- -->
-    <div class="collection">
-      <h4>Our Collection</h4>
-    </div>
-
-    <!-- -----------product list --------------------- -->
-
-    <div class="product-container">
-      <div class="container">
-        <div class="product-list">
-          <div class="product-item">
-            <div class="pro-image">
-              <img src="../images/p-watch3.png" alt="" />
-              <span class="material-symbols-outlined icons">favorite </span>
+ 
+    <!-- ================= COLLECTION / FILTER SECTION ================= -->
+ 
+    <section class="shop-section" id="shopSection">
+      <!-- LEFT FILTER SIDEBAR -->
+      <aside class="filter-sidebar" id="filterSidebar">
+        <div class="filter-header">
+          <h2>Filters</h2>
+          <button id="clearFilters" class="clear-filter">Clear All</button>
+          <button class="filter-close" id="filterClose">
+            <span class="material-symbols-outlined">close</span>
+          </button>
+        </div>
+ 
+        <!-- COLOR -->
+        <div class="filter-block show">
+          <div class="filter-title">
+            <span>Color</span>
+            <span class="material-symbols-outlined filter-arrow">
+              expand_less
+            </span>
+          </div>
+ 
+          <div class="color-options">
+            <button
+              class="color-option active"
+              data-color=""
+              aria-label="All colors"
+            ></button>
+ 
+            <button
+              class="color-option white"
+              data-color="White"
+              aria-label="White"
+            ></button>
+ 
+            <button
+              class="color-option brown"
+              data-color="Brown"
+              aria-label="Brown"
+            ></button>
+ 
+            <button
+              class="color-option blue"
+              data-color="Blue"
+              aria-label="Blue"
+            ></button>
+ 
+            <button
+              class="color-option green"
+              data-color="Green"
+              aria-label="Green"
+            ></button>
+ 
+            <button
+              class="color-option red"
+              data-color="Red"
+              aria-label="Red"
+            ></button>
+ 
+            <button
+              class="color-option gray"
+              data-color="Gray"
+              aria-label="Gray"
+            ></button>
+ 
+            <button
+              class="color-option gold"
+              data-color="Gold"
+              aria-label="Gold"
+            ></button>
+ 
+            <button
+              class="color-option pink"
+              data-color="Pink"
+              aria-label="Pink"
+            ></button>
+ 
+            <button
+              class="color-option purple"
+              data-color="Purple"
+              aria-label="Purple"
+            ></button>
+          </div>
+        </div>
+ 
+        <!-- PRICE -->
+        <div class="filter-block price-block">
+          <div class="filter-title">
+            <span>Price Range</span>
+ 
+            <span class="material-symbols-outlined filter-arrow">
+              expand_less
+            </span>
+          </div>
+ 
+          <div class="price-label">
+            <span>$50</span>
+            <span>-</span>
+            <span>$500</span>
+          </div>
+ 
+          <!-- PRICE SLIDER -->
+          <div class="price-slider">
+            <div class="slider-track"></div>
+ 
+            <input
+              type="range"
+              id="minPriceRange"
+              min="50"
+              max="500"
+              value="50"
+            />
+ 
+            <input
+              type="range"
+              id="maxPriceRange"
+              min="50"
+              max="500"
+              value="500"
+            />
+          </div>
+ 
+          <!-- PRICE INPUT -->
+          <div class="price-inputs">
+            <div class="price-input">
+              <span>$</span>
+ 
+              <input
+                type="number"
+                id="minPrice"
+                value="50"
+                min="50"
+                max="500"
+              />
             </div>
-            <div class="pro-details">
-              <p class="pro-title">Classic Leather Watch</p>
-              <div class="pro-rating">
-                <div class="stars">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                </div>
-                <p class="rates">4.5(120)</p>
-              </div>
-              <p class="price">$120</p>
-              <button class="btn">
-                <i class="fa-solid fa-cart-shopping"></i>
-                Add to cart
-              </button>
+ 
+            <div class="price-input">
+              <span>$</span>
+ 
+              <input
+                type="number"
+                id="maxPrice"
+                value="500"
+                min="50"
+                max="500"
+              />
             </div>
           </div>
         </div>
-        <div class="pagination" id="pagination">
-          <button
-            class="pagination-btn previous"
-            id="previousBtn"
-            aria-label="Previous page"
-          >
-            <span class="material-symbols-outlined">chevron_left</span>
-          </button>
-          <div class="page-numbers" id="pageNumbers"></div>
+ 
+        <!-- APPLY -->
+        <button id="applyFilters" class="apply-filter-btn">
+          <span class="material-symbols-outlined"> filter_alt </span>
+ 
+          Apply Filters
+        </button>
+      </aside>
 
-          <button
-            class="pagination-btn next"
-            id="nextBtn"
-            aria-label="Next page"
-          >
-            <span class="material-symbols-outlined">chevron_right</span>
+      <!-- OVERLAY FOR MOBILE/TABLET FILTER DRAWER -->
+      <div class="filter-overlay" id="filterOverlay"></div>
+
+      <!-- ================= PRODUCTS AREA ================= -->
+ 
+      <div class="products-area">
+        <!-- COLLECTION HEADER -->
+        <div class="collection-header">
+          <div>
+            <p class="collection-small">PREMIUM WATCHES</p>
+ 
+            <h2>Our Collection</h2>
+          </div>
+ 
+          <!-- SORT -->
+          <div class="sort-wrapper">
+            <label for="sortSelect"> Sort by: </label>
+ 
+            <select id="sortSelect">
+              <option value="popular">Popular</option>
+ 
+              <option value="price-low">Price: Low to High</option>
+ 
+              <option value="price-high">Price: High to Low</option>
+ 
+              <option value="rating">Highest Rated</option>
+ 
+              <option value="newest">Newest First</option>
+            </select>
+ 
+            <span class="material-symbols-outlined"> expand_more </span>
+          </div>
+        </div>
+ 
+        <!-- MOBILE FILTER BUTTON -->
+        <button class="mobile-filter-btn" id="mobileFilterBtn">
+          <span class="material-symbols-outlined"> filter_alt </span>
+
+          Filters
+        </button>
+ 
+        <!-- CATEGORY PILLS -->
+ 
+        <div class="category-bar">
+          <button class="category-pill active" data-category="All">All</button>
+ 
+          <button class="category-pill" data-category="Classic">Classic</button>
+ 
+          <button class="category-pill" data-category="Luxury">Luxury</button>
+ 
+          <button class="category-pill" data-category="Sport">Sport</button>
+ 
+          <button class="category-pill" data-category="Smart">Smart</button>
+ 
+          <button class="category-pill" data-category="Minimal">Minimal</button>
+        </div>
+ 
+        <!-- PRODUCT GRID -->
+ 
+        <div class="product-list">
+          <!-- JS PRODUCTS WILL COME HERE -->
+        </div>
+ 
+        <!-- PAGINATION -->
+ 
+        <div class="pagination" id="pagination">
+          <button class="pagination-btn previous" id="previousBtn">
+            <span class="material-symbols-outlined"> chevron_left </span>
+          </button>
+ 
+          <div class="page-numbers" id="pageNumbers"></div>
+ 
+          <button class="pagination-btn next" id="nextBtn">
+            <span class="material-symbols-outlined"> chevron_right </span>
           </button>
         </div>
       </div>
-    </div>
-
+    </section>
+ 
     <script src="app.js"></script>
   </body>
 </html>
+ 
