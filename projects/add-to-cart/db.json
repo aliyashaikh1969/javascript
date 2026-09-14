@@ -1,0 +1,448 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Classic Leather Watch",
+      "slug": "classic-leather-watch",
+      "category": "Classic",
+      "brand": "Chronos",
+      "price": 120,
+      "originalPrice": 150,
+      "currency": "USD",
+      "image": "/images/p-watch1.png",
+      "images": [
+        "/images/p-watch1.png",
+        "/images/p-watch1.png"
+      ],
+      "color": "Brown",
+      "colors": ["Brown", "Black"],
+      "material": "Genuine Leather",
+      "rating": 4.5,
+      "reviews": 120,
+      "stock": 15,
+      "featured": true,
+      "isNew": false,
+      "description": "A timeless classic watch designed for everyday elegance. The premium leather strap and minimal dial make it suitable for office and casual wear.",
+      "keyPoints": [
+        "Premium leather strap",
+        "Water resistant",
+        "Minimal design"
+      ],
+      "specifications": {
+        "caseMaterial": "Stainless Steel",
+        "strapMaterial": "Genuine Leather",
+        "dialColor": "Black",
+        "waterResistance": "30 meters",
+        "movement": "Quartz"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Modern Silver Watch",
+      "slug": "modern-silver-watch",
+      "category": "Luxury",
+      "brand": "Chronos",
+      "price": 150,
+      "originalPrice": 180,
+      "currency": "USD",
+      "image": "/images/p-watch2.png",
+      "images": [
+        "/images/p-watch2.png"
+      ],
+      "color": "Silver",
+      "colors": ["Silver"],
+      "material": "Stainless Steel",
+      "rating": 4.6,
+      "reviews": 88,
+      "stock": 10,
+      "featured": true,
+      "isNew": true,
+      "description": "A modern silver watch with a slim profile and durable stainless steel construction.",
+      "keyPoints": [
+        "Stainless steel",
+        "Scratch resistant glass",
+        "Slim profile"
+      ],
+      "specifications": {
+        "caseMaterial": "Stainless Steel",
+        "strapMaterial": "Stainless Steel",
+        "dialColor": "Black",
+        "waterResistance": "50 meters",
+        "movement": "Quartz"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Black Edition Watch",
+      "slug": "black-edition-watch",
+      "category": "Luxury",
+      "brand": "Chronos",
+      "price": 180,
+      "originalPrice": 220,
+      "currency": "USD",
+      "image": "/images/p-watch3.png",
+      "images": [
+        "/images/p-watch3.png"
+      ],
+      "color": "Black",
+      "colors": ["Black"],
+      "material": "Stainless Steel",
+      "rating": 4.7,
+      "reviews": 150,
+      "stock": 8,
+      "featured": true,
+      "isNew": false,
+      "description": "A bold luxury watch featuring a matte black finish and premium chronograph design.",
+      "keyPoints": [
+        "Matte black finish",
+        "Chronograph",
+        "Luxury feel"
+      ],
+      "specifications": {
+        "caseMaterial": "Black Stainless Steel",
+        "strapMaterial": "Stainless Steel",
+        "dialColor": "Black",
+        "waterResistance": "50 meters",
+        "movement": "Chronograph Quartz"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Rose Gold Watch",
+      "slug": "rose-gold-watch",
+      "category": "Luxury",
+      "brand": "Chronos",
+      "price": 200,
+      "originalPrice": 240,
+      "currency": "USD",
+      "image": "/images/p-watch4.png",
+      "images": [
+        "/images/p-watch4.png"
+      ],
+      "color": "Rose Gold",
+      "colors": ["Rose Gold", "Brown"],
+      "material": "Rose Gold Plated Steel",
+      "rating": 4.8,
+      "reviews": 110,
+      "stock": 12,
+      "featured": true,
+      "isNew": true,
+      "description": "An elegant rose gold watch designed with a lightweight body and sophisticated leather strap.",
+      "keyPoints": [
+        "Rose gold plating",
+        "Elegant design",
+        "Lightweight"
+      ],
+      "specifications": {
+        "caseMaterial": "Rose Gold Plated Steel",
+        "strapMaterial": "Leather",
+        "dialColor": "White",
+        "waterResistance": "30 meters",
+        "movement": "Quartz"
+      }
+    },
+    {
+      "id": 5,
+      "name": "Minimal White Dial Watch",
+      "slug": "minimal-white-dial-watch",
+      "category": "Minimal",
+      "brand": "Chronos",
+      "price": 110,
+      "originalPrice": 130,
+      "currency": "USD",
+      "image": "/images/p-watch5.png",
+      "images": [
+        "/images/p-watch5.png"
+      ],
+      "color": "White",
+      "colors": ["White", "Brown"],
+      "material": "Leather",
+      "rating": 4.6,
+      "reviews": 80,
+      "stock": 20,
+      "featured": false,
+      "isNew": false,
+      "description": "A clean and minimal watch with a bright white dial for comfortable everyday use.",
+      "keyPoints": [
+        "Clean dial",
+        "Comfort strap",
+        "Daily wear"
+      ],
+      "specifications": {
+        "caseMaterial": "Stainless Steel",
+        "strapMaterial": "Leather",
+        "dialColor": "White",
+        "waterResistance": "30 meters",
+        "movement": "Quartz"
+      }
+    },
+    {
+      "id": 6,
+      "name": "Luxury Chrono Watch",
+      "slug": "luxury-chrono-watch",
+      "category": "Luxury",
+      "brand": "Chronos",
+      "price": 250,
+      "originalPrice": 290,
+      "currency": "USD",
+      "image": "/images/p-watch1.png",
+      "images": [
+        "/images/p-watch1.png"
+      ],
+      "color": "Black",
+      "colors": ["Black", "Gold"],
+      "material": "Stainless Steel",
+      "rating": 4.9,
+      "reviews": 95,
+      "stock": 5,
+      "featured": true,
+      "isNew": false,
+      "description": "A premium chronograph watch built for people who prefer bold luxury styling.",
+      "keyPoints": [
+        "Chronograph",
+        "Premium build",
+        "Bold design"
+      ],
+      "specifications": {
+        "caseMaterial": "Stainless Steel",
+        "strapMaterial": "Leather",
+        "dialColor": "Black",
+        "waterResistance": "100 meters",
+        "movement": "Chronograph"
+      }
+    },
+    {
+      "id": 7,
+      "name": "Sport Edition Watch",
+      "slug": "sport-edition-watch",
+      "category": "Sport",
+      "brand": "Chronos",
+      "price": 130,
+      "originalPrice": 160,
+      "currency": "USD",
+      "image": "/images/p-watch2.png",
+      "images": [
+        "/images/p-watch2.png"
+      ],
+      "color": "Black",
+      "colors": ["Black", "Red"],
+      "material": "Rubber",
+      "rating": 4.6,
+      "reviews": 70,
+      "stock": 18,
+      "featured": false,
+      "isNew": false,
+      "description": "A durable sport watch created for active lifestyles and everyday adventures.",
+      "keyPoints": [
+        "Shock resistant",
+        "Sporty look",
+        "Durable"
+      ],
+      "specifications": {
+        "caseMaterial": "Stainless Steel",
+        "strapMaterial": "Rubber",
+        "dialColor": "Black",
+        "waterResistance": "100 meters",
+        "movement": "Quartz"
+      }
+    },
+    {
+      "id": 8,
+      "name": "Classic Brown Strap Watch",
+      "slug": "classic-brown-strap-watch",
+      "category": "Classic",
+      "brand": "Chronos",
+      "price": 140,
+      "originalPrice": 170,
+      "currency": "USD",
+      "image": "/images/p-watch3.png",
+      "images": [
+        "/images/p-watch3.png"
+      ],
+      "color": "Brown",
+      "colors": ["Brown"],
+      "material": "Leather",
+      "rating": 4.5,
+      "reviews": 60,
+      "stock": 16,
+      "featured": false,
+      "isNew": false,
+      "description": "A timeless brown leather watch that combines classic styling with modern comfort.",
+      "keyPoints": [
+        "Brown leather",
+        "Timeless style",
+        "Comfort fit"
+      ],
+      "specifications": {
+        "caseMaterial": "Stainless Steel",
+        "strapMaterial": "Leather",
+        "dialColor": "White",
+        "waterResistance": "30 meters",
+        "movement": "Quartz"
+      }
+    },
+    {
+      "id": 9,
+      "name": "Digital Smart Watch",
+      "slug": "digital-smart-watch",
+      "category": "Smart",
+      "brand": "Chronos",
+      "price": 220,
+      "originalPrice": 260,
+      "currency": "USD",
+      "image": "/images/p-watch4.png",
+      "images": [
+        "/images/p-watch4.png"
+      ],
+      "color": "Black",
+      "colors": ["Black", "Blue"],
+      "material": "Aluminum",
+      "rating": 4.6,
+      "reviews": 140,
+      "stock": 9,
+      "featured": true,
+      "isNew": true,
+      "description": "A modern smartwatch with fitness tracking and smart everyday features.",
+      "keyPoints": [
+        "Smart features",
+        "Fitness tracking",
+        "Touch display"
+      ],
+      "specifications": {
+        "caseMaterial": "Aluminum",
+        "strapMaterial": "Silicone",
+        "display": "Touch Display",
+        "battery": "Up to 2 days",
+        "waterResistance": "50 meters"
+      }
+    },
+    {
+      "id": 10,
+      "name": "Minimal Black Dial",
+      "slug": "minimal-black-dial",
+      "category": "Minimal",
+      "brand": "Chronos",
+      "price": 115,
+      "originalPrice": 140,
+      "currency": "USD",
+      "image": "/images/p-watch5.png",
+      "images": [
+        "/images/p-watch5.png"
+      ],
+      "color": "Black",
+      "colors": ["Black"],
+      "material": "Leather",
+      "rating": 4.6,
+      "reviews": 90,
+      "stock": 25,
+      "featured": false,
+      "isNew": false,
+      "description": "A simple and affordable black dial watch with a clean minimalist appearance.",
+      "keyPoints": [
+        "Black dial",
+        "Simple design",
+        "Affordable"
+      ],
+      "specifications": {
+        "caseMaterial": "Stainless Steel",
+        "strapMaterial": "Leather",
+        "dialColor": "Black",
+        "waterResistance": "30 meters",
+        "movement": "Quartz"
+      }
+    },
+    {
+      "id": 11,
+      "name": "Luxury Gold Watch",
+      "slug": "luxury-gold-watch",
+      "category": "Luxury",
+      "brand": "Chronos",
+      "price": 300,
+      "originalPrice": 350,
+      "currency": "USD",
+      "image": "/images/p-watch1.png",
+      "images": [
+        "/images/p-watch1.png"
+      ],
+      "color": "Gold",
+      "colors": ["Gold"],
+      "material": "Gold Plated Steel",
+      "rating": 4.9,
+      "reviews": 75,
+      "stock": 4,
+      "featured": true,
+      "isNew": false,
+      "description": "A premium gold finish watch created for a luxurious and exclusive appearance.",
+      "keyPoints": [
+        "Gold finish",
+        "Premium feel",
+        "Exclusive look"
+      ],
+      "specifications": {
+        "caseMaterial": "Gold Plated Steel",
+        "strapMaterial": "Metal",
+        "dialColor": "Gold",
+        "waterResistance": "50 meters",
+        "movement": "Quartz"
+      }
+    },
+    {
+      "id": 12,
+      "name": "Slim Silver Watch",
+      "slug": "slim-silver-watch",
+      "category": "Minimal",
+      "brand": "Chronos",
+      "price": 135,
+      "originalPrice": 160,
+      "currency": "USD",
+      "image": "/images/p-watch2.png",
+      "images": [
+        "/images/p-watch2.png"
+      ],
+      "color": "Silver",
+      "colors": ["Silver"],
+      "material": "Stainless Steel",
+      "rating": 4.7,
+      "reviews": 100,
+      "stock": 13,
+      "featured": false,
+      "isNew": true,
+      "description": "An ultra-slim silver watch designed for a lightweight and elegant appearance.",
+      "keyPoints": [
+        "Ultra slim",
+        "Elegant",
+        "Lightweight"
+      ],
+      "specifications": {
+        "caseMaterial": "Stainless Steel",
+        "strapMaterial": "Stainless Steel",
+        "dialColor": "Silver",
+        "waterResistance": "30 meters",
+        "movement": "Quartz"
+      }
+    }
+  ],
+
+  
+
+  "coupons": [
+    {
+      "id": 1,
+      "code": "SAVE10",
+      "discount": 10,
+      "minOrder": 100
+    },
+    {
+      "id": 2,
+      "code": "SAVE20",
+      "discount": 20,
+      "minOrder": 200
+    },
+    {
+      "id": 3,
+      "code": "SAVE30",
+      "discount": 30,
+      "minOrder": 300
+    }
+  ]
+}

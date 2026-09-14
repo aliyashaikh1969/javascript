@@ -61,3 +61,7 @@ body{
 .tem-col{
     text-align: center;
 }
+
+.container{
+    padding: 0 300px;
+}

@@ -15,8 +15,8 @@ fetchingdata("mumbai");
 
 async function fetchingdata(city) {
   try {
-    const api_key = "7d5e74e7b112e34001dc87b79a2fc7c3";
-    const url = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=${city}&appid=${api_key}`;
+const API_KEY = "YOUR_GEMINI_API_KEY";
+    const url = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=${city}&appid=${API_KEY}`;
 
     const weather_data = await fetch(url);
     if (weather_data.status === 200) {
