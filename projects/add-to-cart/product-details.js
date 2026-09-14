@@ -11,6 +11,14 @@ const cartClose = document.querySelector(".cart-close")
 
 const cartCount = document.querySelector(".cart-count")
 
+const whishBtn = document.querySelector("header .whish-btn");
+const whishCount = document.querySelector(".whish-count");
+const mobileCount = document.querySelector(".mobile-count");
+const wishlistPage = document.querySelector(".wishlist-page");
+const wishlistClose = document.querySelector(".wishlist-close");
+const wishlistGrid = document.querySelector("#wishlistGrid");
+const wishlistItems = document.querySelector(".wishlist-page .wishlist-items")
+
 const productDetails = document.querySelector(".product-details table tbody")
 const cartItems = document.querySelector(".cart-page .cart-items")
 const subTotal = document.querySelector(".s-total");
@@ -81,6 +89,7 @@ async function getProduct() {
 
 getProduct()
 updateCartCount()
+updateWishlistCount()
 
 // ---------------------------- render product --------------------------
 
@@ -89,7 +98,7 @@ function renderProduct(item) {
     breadcrumbName.textContent = item.name;
     document.title = `${item.name} · WatchStore`;
 
-    const images = item.images && item.images.length ? item.images : [item.image];
+    const images = [generateWatchImage(item)];
     const discountPercent = item.originalPrice
         ? Math.round(((item.originalPrice - item.price) / item.originalPrice) * 100)
         : 0;
@@ -168,7 +177,7 @@ function renderProduct(item) {
                     <i class="fa-solid fa-cart-shopping"></i>
                     Add to cart
                 </button>
-                <button class="wishlist-btn" id="wishlistBtn">
+                <button class="wishlist-btn ${isWishlisted(item.id) ? "active" : ""}" id="wishlistBtn">
                     <span class="material-symbols-outlined">favorite</span>
                 </button>
             </div>
@@ -240,7 +249,9 @@ function wireProductInteractions(item) {
     });
 
     document.querySelector("#wishlistBtn").addEventListener("click", (e) => {
-        e.currentTarget.classList.toggle("active");
+        const nowWishlisted = toggleWishlist(item);
+        e.currentTarget.classList.toggle("active", nowWishlisted);
+        showToast(nowWishlisted ? "added to wishlist" : "removed from wishlist", nowWishlisted ? "success" : "error");
     });
 }
 
@@ -267,9 +278,9 @@ function renderRelatedProducts(items) {
     items.forEach(item => {
         let card = document.createElement("div");
         card.classList.add("product-item")
-        card.innerHTML = `  <div class="pro-image">
+        card.innerHTML = `  <div class="pro-image ${isWishlisted(item.id) ? "whish-list" : ""}">
                                     ${item.isNew ? `<span class="new-badge">NEW</span>` : ""}
-                                    <img src="${item.image}" alt="${item.name}" />
+                                    <img src="${generateWatchImage(item)}" alt="${item.name}" />
                                     <span class="material-symbols-outlined icons">favorite </span>
                                 </div>
                                 <div class="cart-card pro-details">
@@ -309,6 +320,13 @@ function renderRelatedProducts(items) {
         card.querySelector(".cart-card").addEventListener("click", () => {
             addToCart(item);
             showToast("product added", "success")
+        });
+
+        card.querySelector(".pro-image .icons").addEventListener("click", (e) => {
+            e.stopPropagation();
+            const nowWishlisted = toggleWishlist(item);
+            card.querySelector(".pro-image").classList.toggle("whish-list", nowWishlisted);
+            showToast(nowWishlisted ? "added to wishlist" : "removed from wishlist", nowWishlisted ? "success" : "error");
         });
     });
 }
@@ -358,7 +376,7 @@ function cartPageUpdate() {
             tr.innerHTML = `
               <td>
                 <div class="product">
-                  <img src="${item.image}" class="pImage" alt="" />
+                  <img src="${generateWatchImage(item)}" class="pImage" alt="" />
 
                   <div class="img-det">
                     <p>${item.name}</p>
@@ -441,6 +459,117 @@ function updateCartCount() {
     let count = cart.reduce((sum, item) => sum + item.quantity, 0);
     cartCount.textContent = count
 }
+
+// ------------------------------- wishlist ---------------------------------
+
+function getWishlist() {
+    return JSON.parse(localStorage.getItem("wishlist")) || [];
+}
+
+function isWishlisted(id) {
+    return getWishlist().some(item => item.id === id);
+}
+
+function toggleWishlist(item) {
+    let wishlist = getWishlist();
+    const alreadyWishlisted = wishlist.some(p => p.id === item.id);
+
+    wishlist = alreadyWishlisted
+        ? wishlist.filter(p => p.id !== item.id)
+        : [...wishlist, item];
+
+    localStorage.setItem("wishlist", JSON.stringify(wishlist));
+    updateWishlistCount();
+
+    if (wishlistPage.classList.contains("show")) {
+        renderWishlistPage();
+    }
+
+    return !alreadyWishlisted;
+}
+
+function updateWishlistCount() {
+    const count = getWishlist().length;
+    whishCount.textContent = count;
+    mobileCount.textContent = count;
+}
+
+function renderWishlistPage() {
+    const wishlist = getWishlist();
+
+    wishlistGrid.innerHTML = "";
+
+    if (!wishlist.length) {
+        wishlistItems.classList.remove("show");
+        return;
+    }
+
+    wishlistItems.classList.add("show");
+
+    wishlist.forEach(item => {
+        let card = document.createElement("div");
+        card.classList.add("product-item")
+        card.innerHTML = `  <div class="pro-image whish-list">
+                                    ${item.isNew ? `<span class="new-badge">NEW</span>` : ""}
+                                    <img src="${generateWatchImage(item)}" alt="${item.name}" />
+                                    <span class="material-symbols-outlined icons">favorite </span>
+                                </div>
+                                <div class="cart-card pro-details">
+                                    <span class="category">${item.category}</span>
+                                    <p class="pro-title">${item.name}</p>
+                                    <div class="pro-rating">
+                                        <div class="stars">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                            <p class="rates">${item.rating} (${item.reviews})</p>
+                                    </div>
+                                    <div class="price-container ">
+                                    <p class="price">$${item.price}</p>
+                                    <span class="original-price">$${item.originalPrice}</span>
+                                    </div>
+                                    <button class="btn">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                    Add to cart
+                                    </button>
+                                </div>`
+        wishlistGrid.appendChild(card)
+
+        card.querySelector(".pro-image").addEventListener("click", (e) => {
+            if (e.target.closest(".icons")) return;
+            window.location.href = `product-details.html?id=${item.id}`;
+        });
+
+        card.querySelector(".pro-title").addEventListener("click", (e) => {
+            e.stopPropagation();
+            window.location.href = `product-details.html?id=${item.id}`;
+        });
+
+        card.querySelector(".cart-card").addEventListener("click", () => {
+            addToCart(item);
+            showToast("product added", "success")
+        });
+
+        card.querySelector(".pro-image .icons").addEventListener("click", (e) => {
+            e.stopPropagation();
+            toggleWishlist(item);
+            showToast("removed from wishlist", "error");
+        });
+    });
+}
+
+whishBtn.addEventListener("click", () => {
+    wishlistPage.classList.add("show")
+    document.body.style.overflow = "hidden";
+    renderWishlistPage()
+})
+wishlistClose.addEventListener("click", () => {
+    wishlistPage.classList.remove("show")
+    document.body.style.overflow = "auto";
+})
 
 let offers = [
     { id: 1, code: "SAVE10", discount: 10, applied: false },

@@ -420,7 +420,8 @@ main .main-text-secondry{
 /* ---------------------------product list --------------- */
 
 
-.product-list{
+.product-list,
+.wishlist-grid{
     display: grid;
     grid-template-columns: repeat(4,1fr);
     gap: 24px;
@@ -600,7 +601,8 @@ main .main-text-secondry{
    CART PAGE
 ========================= */
 
-.cart-page {
+.cart-page,
+.wishlist-page {
     position: fixed;
     top: 0;
     right: 0;
@@ -614,7 +616,8 @@ main .main-text-secondry{
     -webkit-overflow-scrolling: touch;
 }
 
-.cart-page.show {
+.cart-page.show,
+.wishlist-page.show {
     transform: translateX(0);
 }
 
@@ -623,13 +626,15 @@ main .main-text-secondry{
    CART HEADER
 ========================= */
 
-.cart-page > .heading {
+.cart-page > .heading,
+.wishlist-page > .heading {
     margin: 30px 40px;
     color: var(--text-primary);
     font-size: 1.75rem;
 }
 
-.cart-close {
+.cart-close,
+.wishlist-close {
     position: absolute;
     top: 30px;
     right: 40px;
@@ -647,7 +652,8 @@ main .main-text-secondry{
         color 0.2s ease;
 }
 
-.cart-close:hover {
+.cart-close:hover,
+.wishlist-close:hover {
     background-color: var(--danger);
     color: white;
 }
@@ -674,6 +680,29 @@ main .main-text-secondry{
 }
 
 .cart-items.show .empty-container {
+    display: none;
+}
+
+
+/* =========================
+   WISHLIST PAGE
+========================= */
+
+.wishlist-items {
+    width: 100%;
+}
+
+.wishlist-items > .container {
+    width: min(1200px, 92%);
+    margin: 0 auto 60px;
+    display: none;
+}
+
+.wishlist-items.show > .container {
+    display: block;
+}
+
+.wishlist-items.show .empty-container {
     display: none;
 }
 
@@ -1051,7 +1080,8 @@ main .main-text-secondry{
         display: flex;
     }
 
-    .product-list {
+    .product-list,
+    .wishlist-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 16px;
     }
@@ -1113,7 +1143,8 @@ main .main-text-secondry{
         height: 36px;
     }
 
-    .product-list {
+    .product-list,
+    .wishlist-grid {
         grid-template-columns: 1fr;
     }
 
@@ -1246,11 +1277,15 @@ main .main-text-secondry{
 }
 
 .color-option.white{ background-color: #fff; }
-.color-option.brown{ background-color: #6b3e26; }
 .color-option.gold{ background-color: #d4af37; }
 .color-option.black{ background-color: #1a1a1a; }
 .color-option.silver{ background-color: #c0c0c0; }
-.color-option.rose-gold{ background-color: #b76e79; }
+.color-option.tan{ background-color: #d2b48c; }
+.color-option.blue{ background-color: #2e4a7a; }
+.color-option.green{ background-color: #3f6b52; }
+.color-option.graphite{ background-color: #4a4e55; }
+.color-option.slate{ background-color: #5c636b; }
+.color-option.red{ background-color: #c23b3b; }
 
 /* ---- price range ---- */
 
@@ -1882,7 +1917,8 @@ main .main-text-secondry{
 
 @media (max-width: 1000px) {
 
-    .product-list {
+    .product-list,
+    .wishlist-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 

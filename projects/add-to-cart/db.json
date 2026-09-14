@@ -2,276 +2,400 @@
   "products": [
     {
       "id": 1,
-      "name": "Classic Leather Watch",
-      "slug": "classic-leather-watch",
+      "name": "Seiko 5 Sports SRPD",
+      "slug": "seiko-5-sports-srpd",
       "category": "Classic",
-      "brand": "Chronos",
+      "brand": "Seiko",
       "price": 120,
-      "originalPrice": 150,
+      "originalPrice": 140,
       "currency": "USD",
-      "image": "/images/p-watch1.png",
-      "images": [
-        "/images/p-watch1.png",
-        "/images/p-watch1.png"
+      "color": "Black",
+      "colors": [
+        "Black",
+        "Silver"
       ],
-      "color": "Brown",
-      "colors": ["Brown", "Black"],
-      "material": "Genuine Leather",
-      "rating": 4.5,
-      "reviews": 120,
-      "stock": 15,
+      "material": "Stainless Steel",
+      "rating": 4.6,
+      "reviews": 320,
+      "stock": 25,
       "featured": true,
       "isNew": false,
-      "description": "A timeless classic watch designed for everyday elegance. The premium leather strap and minimal dial make it suitable for office and casual wear.",
+      "description": "An automatic Seiko 5 Sports model with a durable stainless steel case and bracelet, prized for reliability and everyday toughness.",
       "keyPoints": [
-        "Premium leather strap",
-        "Water resistant",
-        "Minimal design"
+        "Automatic movement",
+        "Durable steel case",
+        "Everyday reliability"
       ],
       "specifications": {
         "caseMaterial": "Stainless Steel",
-        "strapMaterial": "Genuine Leather",
+        "strapMaterial": "Stainless Steel",
         "dialColor": "Black",
-        "waterResistance": "30 meters",
-        "movement": "Quartz"
+        "waterResistance": "100 meters",
+        "movement": "Automatic"
       }
     },
     {
       "id": 2,
-      "name": "Modern Silver Watch",
-      "slug": "modern-silver-watch",
-      "category": "Luxury",
-      "brand": "Chronos",
-      "price": 150,
-      "originalPrice": 180,
+      "name": "Tissot PRX Powermatic 80",
+      "slug": "tissot-prx-powermatic-80",
+      "category": "Classic",
+      "brand": "Tissot",
+      "price": 695,
+      "originalPrice": 750,
       "currency": "USD",
-      "image": "/images/p-watch2.png",
-      "images": [
-        "/images/p-watch2.png"
+      "color": "Blue",
+      "colors": [
+        "Blue",
+        "Silver"
       ],
-      "color": "Silver",
-      "colors": ["Silver"],
       "material": "Stainless Steel",
-      "rating": 4.6,
-      "reviews": 88,
+      "rating": 4.8,
+      "reviews": 180,
       "stock": 10,
       "featured": true,
       "isNew": true,
-      "description": "A modern silver watch with a slim profile and durable stainless steel construction.",
+      "description": "The Tissot PRX pairs a 1970s-inspired integrated steel bracelet with an 80-hour Powermatic 80 automatic movement.",
       "keyPoints": [
-        "Stainless steel",
-        "Scratch resistant glass",
-        "Slim profile"
+        "80-hour power reserve",
+        "Integrated steel bracelet",
+        "Retro-inspired design"
       ],
       "specifications": {
         "caseMaterial": "Stainless Steel",
         "strapMaterial": "Stainless Steel",
-        "dialColor": "Black",
-        "waterResistance": "50 meters",
-        "movement": "Quartz"
+        "dialColor": "Blue",
+        "waterResistance": "100 meters",
+        "movement": "Automatic Powermatic 80"
       }
     },
     {
       "id": 3,
-      "name": "Black Edition Watch",
-      "slug": "black-edition-watch",
-      "category": "Luxury",
-      "brand": "Chronos",
-      "price": 180,
-      "originalPrice": 220,
+      "name": "Citizen Tsuyosa",
+      "slug": "citizen-tsuyosa",
+      "category": "Classic",
+      "brand": "Citizen",
+      "price": 395,
+      "originalPrice": 425,
       "currency": "USD",
-      "image": "/images/p-watch3.png",
-      "images": [
-        "/images/p-watch3.png"
+      "color": "Green",
+      "colors": [
+        "Green",
+        "Silver"
       ],
-      "color": "Black",
-      "colors": ["Black"],
       "material": "Stainless Steel",
       "rating": 4.7,
-      "reviews": 150,
-      "stock": 8,
-      "featured": true,
-      "isNew": false,
-      "description": "A bold luxury watch featuring a matte black finish and premium chronograph design.",
+      "reviews": 95,
+      "stock": 14,
+      "featured": false,
+      "isNew": true,
+      "description": "A modern automatic dress watch from Citizen with a sunburst dial and integrated bracelet design.",
       "keyPoints": [
-        "Matte black finish",
-        "Chronograph",
-        "Luxury feel"
+        "Mechanical automatic movement",
+        "Sunburst dial",
+        "Integrated bracelet"
       ],
       "specifications": {
-        "caseMaterial": "Black Stainless Steel",
+        "caseMaterial": "Stainless Steel",
         "strapMaterial": "Stainless Steel",
-        "dialColor": "Black",
+        "dialColor": "Green",
         "waterResistance": "50 meters",
-        "movement": "Chronograph Quartz"
+        "movement": "Automatic"
       }
     },
     {
       "id": 4,
-      "name": "Rose Gold Watch",
-      "slug": "rose-gold-watch",
+      "name": "Rolex Submariner Date",
+      "slug": "rolex-submariner-date",
       "category": "Luxury",
-      "brand": "Chronos",
-      "price": 200,
-      "originalPrice": 240,
+      "brand": "Rolex",
+      "price": 9150,
+      "originalPrice": 9500,
       "currency": "USD",
-      "image": "/images/p-watch4.png",
-      "images": [
-        "/images/p-watch4.png"
+      "color": "Black",
+      "colors": [
+        "Black"
       ],
-      "color": "Rose Gold",
-      "colors": ["Rose Gold", "Brown"],
-      "material": "Rose Gold Plated Steel",
-      "rating": 4.8,
-      "reviews": 110,
-      "stock": 12,
+      "material": "Stainless Steel",
+      "rating": 5,
+      "reviews": 210,
+      "stock": 3,
       "featured": true,
-      "isNew": true,
-      "description": "An elegant rose gold watch designed with a lightweight body and sophisticated leather strap.",
+      "isNew": false,
+      "description": "The archetypal dive watch: a Rolex Submariner Date with a unidirectional rotatable bezel and Oyster steel bracelet.",
       "keyPoints": [
-        "Rose gold plating",
-        "Elegant design",
-        "Lightweight"
+        "Unidirectional rotating bezel",
+        "300m water resistance",
+        "Oyster steel bracelet"
       ],
       "specifications": {
-        "caseMaterial": "Rose Gold Plated Steel",
-        "strapMaterial": "Leather",
-        "dialColor": "White",
-        "waterResistance": "30 meters",
-        "movement": "Quartz"
+        "caseMaterial": "Oystersteel",
+        "strapMaterial": "Oystersteel",
+        "dialColor": "Black",
+        "waterResistance": "300 meters",
+        "movement": "Automatic Chronometer"
       }
     },
     {
       "id": 5,
-      "name": "Minimal White Dial Watch",
-      "slug": "minimal-white-dial-watch",
-      "category": "Minimal",
-      "brand": "Chronos",
-      "price": 110,
-      "originalPrice": 130,
+      "name": "Omega Speedmaster Moonwatch",
+      "slug": "omega-speedmaster-moonwatch",
+      "category": "Luxury",
+      "brand": "Omega",
+      "price": 6400,
+      "originalPrice": 6900,
       "currency": "USD",
-      "image": "/images/p-watch5.png",
-      "images": [
-        "/images/p-watch5.png"
+      "color": "Black",
+      "colors": [
+        "Black",
+        "Silver"
       ],
-      "color": "White",
-      "colors": ["White", "Brown"],
-      "material": "Leather",
-      "rating": 4.6,
-      "reviews": 80,
-      "stock": 20,
-      "featured": false,
+      "material": "Stainless Steel",
+      "rating": 4.9,
+      "reviews": 150,
+      "stock": 4,
+      "featured": true,
       "isNew": false,
-      "description": "A clean and minimal watch with a bright white dial for comfortable everyday use.",
+      "description": "The legendary Moonwatch chronograph, manually wound and famous for its role in NASA space missions.",
       "keyPoints": [
-        "Clean dial",
-        "Comfort strap",
-        "Daily wear"
+        "Manual-wind chronograph",
+        "Hesalite crystal",
+        "Flight-proven heritage"
       ],
       "specifications": {
         "caseMaterial": "Stainless Steel",
-        "strapMaterial": "Leather",
-        "dialColor": "White",
-        "waterResistance": "30 meters",
-        "movement": "Quartz"
+        "strapMaterial": "Stainless Steel",
+        "dialColor": "Black",
+        "waterResistance": "50 meters",
+        "movement": "Manual Chronograph"
       }
     },
     {
       "id": 6,
-      "name": "Luxury Chrono Watch",
-      "slug": "luxury-chrono-watch",
+      "name": "TAG Heuer Carrera Calibre 16",
+      "slug": "tag-heuer-carrera-calibre-16",
       "category": "Luxury",
-      "brand": "Chronos",
-      "price": 250,
-      "originalPrice": 290,
+      "brand": "TAG Heuer",
+      "price": 5750,
+      "originalPrice": 6200,
       "currency": "USD",
-      "image": "/images/p-watch1.png",
-      "images": [
-        "/images/p-watch1.png"
-      ],
       "color": "Black",
-      "colors": ["Black", "Gold"],
+      "colors": [
+        "Black"
+      ],
       "material": "Stainless Steel",
-      "rating": 4.9,
-      "reviews": 95,
+      "rating": 4.7,
+      "reviews": 88,
       "stock": 5,
-      "featured": true,
-      "isNew": false,
-      "description": "A premium chronograph watch built for people who prefer bold luxury styling.",
+      "featured": false,
+      "isNew": true,
+      "description": "A racing-inspired automatic chronograph with a clean tachymeter bezel and black leather strap.",
       "keyPoints": [
-        "Chronograph",
-        "Premium build",
-        "Bold design"
+        "Automatic chronograph",
+        "Tachymeter scale",
+        "Racing heritage"
       ],
       "specifications": {
         "caseMaterial": "Stainless Steel",
         "strapMaterial": "Leather",
         "dialColor": "Black",
         "waterResistance": "100 meters",
-        "movement": "Chronograph"
+        "movement": "Automatic Chronograph"
       }
     },
     {
       "id": 7,
-      "name": "Sport Edition Watch",
-      "slug": "sport-edition-watch",
-      "category": "Sport",
-      "brand": "Chronos",
-      "price": 130,
-      "originalPrice": 160,
+      "name": "Cartier Tank Must",
+      "slug": "cartier-tank-must",
+      "category": "Luxury",
+      "brand": "Cartier",
+      "price": 2900,
+      "originalPrice": 3150,
       "currency": "USD",
-      "image": "/images/p-watch2.png",
-      "images": [
-        "/images/p-watch2.png"
+      "color": "Gold",
+      "colors": [
+        "Gold",
+        "White"
       ],
-      "color": "Black",
-      "colors": ["Black", "Red"],
-      "material": "Rubber",
-      "rating": 4.6,
-      "reviews": 70,
-      "stock": 18,
-      "featured": false,
+      "material": "Leather",
+      "rating": 4.8,
+      "reviews": 62,
+      "stock": 6,
+      "featured": true,
       "isNew": false,
-      "description": "A durable sport watch created for active lifestyles and everyday adventures.",
+      "description": "The iconic rectangular Tank silhouette in a gold-toned case with a clean dial and leather strap.",
       "keyPoints": [
-        "Shock resistant",
-        "Sporty look",
-        "Durable"
+        "Iconic rectangular case",
+        "Quartz movement",
+        "Interchangeable leather strap"
       ],
       "specifications": {
-        "caseMaterial": "Stainless Steel",
-        "strapMaterial": "Rubber",
-        "dialColor": "Black",
-        "waterResistance": "100 meters",
+        "caseMaterial": "Gold Plated Steel",
+        "strapMaterial": "Leather",
+        "dialColor": "White",
+        "waterResistance": "30 meters",
         "movement": "Quartz"
       }
     },
     {
       "id": 8,
-      "name": "Classic Brown Strap Watch",
-      "slug": "classic-brown-strap-watch",
-      "category": "Classic",
-      "brand": "Chronos",
-      "price": 140,
-      "originalPrice": 170,
+      "name": "Casio G-Shock GA-2100",
+      "slug": "casio-gshock-ga2100",
+      "category": "Sport",
+      "brand": "Casio",
+      "price": 99,
+      "originalPrice": 120,
       "currency": "USD",
-      "image": "/images/p-watch3.png",
-      "images": [
-        "/images/p-watch3.png"
+      "color": "Black",
+      "colors": [
+        "Black"
       ],
-      "color": "Brown",
-      "colors": ["Brown"],
-      "material": "Leather",
-      "rating": 4.5,
-      "reviews": 60,
-      "stock": 16,
+      "material": "Resin",
+      "rating": 4.8,
+      "reviews": 540,
+      "stock": 40,
+      "featured": true,
+      "isNew": true,
+      "description": "The 'CasiOak' — a slim octagonal G-Shock combining analog-digital display with legendary shock resistance.",
+      "keyPoints": [
+        "Analog-digital hybrid display",
+        "Shock resistant",
+        "Slim carbon core guard structure"
+      ],
+      "specifications": {
+        "caseMaterial": "Carbon Core Resin",
+        "strapMaterial": "Resin",
+        "display": "Analog-Digital",
+        "battery": "Up to 2 years",
+        "waterResistance": "200 meters"
+      }
+    },
+    {
+      "id": 9,
+      "name": "Garmin Instinct 2",
+      "slug": "garmin-instinct-2",
+      "category": "Sport",
+      "brand": "Garmin",
+      "price": 299,
+      "originalPrice": 349,
+      "currency": "USD",
+      "color": "Graphite",
+      "colors": [
+        "Graphite",
+        "Black"
+      ],
+      "material": "Fiber-reinforced Polymer",
+      "rating": 4.6,
+      "reviews": 210,
+      "stock": 18,
+      "featured": false,
+      "isNew": true,
+      "description": "A rugged GPS smartwatch built to military standard, with multi-sport tracking and weeks of battery life.",
+      "keyPoints": [
+        "Military-grade durability",
+        "Multi-GNSS GPS tracking",
+        "Long battery life"
+      ],
+      "specifications": {
+        "caseMaterial": "Fiber-reinforced Polymer",
+        "strapMaterial": "Silicone",
+        "display": "Sunlight-readable MIP",
+        "battery": "Up to 28 days",
+        "waterResistance": "100 meters"
+      }
+    },
+    {
+      "id": 10,
+      "name": "Citizen Promaster Diver",
+      "slug": "citizen-promaster-diver",
+      "category": "Sport",
+      "brand": "Citizen",
+      "price": 395,
+      "originalPrice": 450,
+      "currency": "USD",
+      "color": "Blue",
+      "colors": [
+        "Blue",
+        "Black"
+      ],
+      "material": "Stainless Steel",
+      "rating": 4.7,
+      "reviews": 130,
+      "stock": 12,
       "featured": false,
       "isNew": false,
-      "description": "A timeless brown leather watch that combines classic styling with modern comfort.",
+      "description": "An ISO-certified dive watch powered by Eco-Drive light technology, built for serious underwater use.",
       "keyPoints": [
-        "Brown leather",
-        "Timeless style",
-        "Comfort fit"
+        "Eco-Drive solar movement",
+        "ISO 200m dive certified",
+        "Unidirectional bezel"
+      ],
+      "specifications": {
+        "caseMaterial": "Stainless Steel",
+        "strapMaterial": "Rubber",
+        "dialColor": "Blue",
+        "waterResistance": "200 meters",
+        "movement": "Eco-Drive Solar"
+      }
+    },
+    {
+      "id": 11,
+      "name": "Invicta Pro Diver",
+      "slug": "invicta-pro-diver",
+      "category": "Sport",
+      "brand": "Invicta",
+      "price": 95,
+      "originalPrice": 130,
+      "currency": "USD",
+      "color": "Blue",
+      "colors": [
+        "Blue",
+        "Gold"
+      ],
+      "material": "Stainless Steel",
+      "rating": 4.5,
+      "reviews": 610,
+      "stock": 30,
+      "featured": false,
+      "isNew": false,
+      "description": "A bold, affordable automatic dive watch with a gold-tone case and vivid blue dial.",
+      "keyPoints": [
+        "Automatic movement",
+        "Gold-tone case accents",
+        "200m water resistance"
+      ],
+      "specifications": {
+        "caseMaterial": "Gold Plated Steel",
+        "strapMaterial": "Stainless Steel",
+        "dialColor": "Blue",
+        "waterResistance": "200 meters",
+        "movement": "Automatic"
+      }
+    },
+    {
+      "id": 12,
+      "name": "Daniel Wellington Classic Petite",
+      "slug": "daniel-wellington-classic-petite",
+      "category": "Minimal",
+      "brand": "Daniel Wellington",
+      "price": 149,
+      "originalPrice": 179,
+      "currency": "USD",
+      "color": "Tan",
+      "colors": [
+        "Tan",
+        "White"
+      ],
+      "material": "Leather",
+      "rating": 4.4,
+      "reviews": 275,
+      "stock": 22,
+      "featured": false,
+      "isNew": false,
+      "description": "A slim, minimalist quartz watch with a clean white dial and soft tan leather strap.",
+      "keyPoints": [
+        "Ultra-slim case",
+        "Minimalist white dial",
+        "Interchangeable leather strap"
       ],
       "specifications": {
         "caseMaterial": "Stainless Steel",
@@ -282,66 +406,29 @@
       }
     },
     {
-      "id": 9,
-      "name": "Digital Smart Watch",
-      "slug": "digital-smart-watch",
-      "category": "Smart",
-      "brand": "Chronos",
-      "price": 220,
-      "originalPrice": 260,
-      "currency": "USD",
-      "image": "/images/p-watch4.png",
-      "images": [
-        "/images/p-watch4.png"
-      ],
-      "color": "Black",
-      "colors": ["Black", "Blue"],
-      "material": "Aluminum",
-      "rating": 4.6,
-      "reviews": 140,
-      "stock": 9,
-      "featured": true,
-      "isNew": true,
-      "description": "A modern smartwatch with fitness tracking and smart everyday features.",
-      "keyPoints": [
-        "Smart features",
-        "Fitness tracking",
-        "Touch display"
-      ],
-      "specifications": {
-        "caseMaterial": "Aluminum",
-        "strapMaterial": "Silicone",
-        "display": "Touch Display",
-        "battery": "Up to 2 days",
-        "waterResistance": "50 meters"
-      }
-    },
-    {
-      "id": 10,
-      "name": "Minimal Black Dial",
-      "slug": "minimal-black-dial",
+      "id": 13,
+      "name": "MVMT Classic Blacktop",
+      "slug": "mvmt-classic-blacktop",
       "category": "Minimal",
-      "brand": "Chronos",
-      "price": 115,
-      "originalPrice": 140,
+      "brand": "MVMT",
+      "price": 128,
+      "originalPrice": 155,
       "currency": "USD",
-      "image": "/images/p-watch5.png",
-      "images": [
-        "/images/p-watch5.png"
-      ],
       "color": "Black",
-      "colors": ["Black"],
+      "colors": [
+        "Black"
+      ],
       "material": "Leather",
-      "rating": 4.6,
-      "reviews": 90,
-      "stock": 25,
+      "rating": 4.4,
+      "reviews": 190,
+      "stock": 20,
       "featured": false,
       "isNew": false,
-      "description": "A simple and affordable black dial watch with a clean minimalist appearance.",
+      "description": "An all-black minimalist watch with a matte dial, designed for a clean, modern everyday look.",
       "keyPoints": [
-        "Black dial",
-        "Simple design",
-        "Affordable"
+        "Matte black dial",
+        "Minimalist design",
+        "Japanese quartz movement"
       ],
       "specifications": {
         "caseMaterial": "Stainless Steel",
@@ -352,79 +439,311 @@
       }
     },
     {
-      "id": 11,
-      "name": "Luxury Gold Watch",
-      "slug": "luxury-gold-watch",
-      "category": "Luxury",
-      "brand": "Chronos",
-      "price": 300,
-      "originalPrice": 350,
+      "id": 14,
+      "name": "Skagen Signatur",
+      "slug": "skagen-signatur",
+      "category": "Minimal",
+      "brand": "Skagen",
+      "price": 145,
+      "originalPrice": 175,
       "currency": "USD",
-      "image": "/images/p-watch1.png",
-      "images": [
-        "/images/p-watch1.png"
+      "color": "Silver",
+      "colors": [
+        "Silver",
+        "White"
       ],
-      "color": "Gold",
-      "colors": ["Gold"],
-      "material": "Gold Plated Steel",
-      "rating": 4.9,
-      "reviews": 75,
-      "stock": 4,
-      "featured": true,
-      "isNew": false,
-      "description": "A premium gold finish watch created for a luxurious and exclusive appearance.",
+      "material": "Stainless Steel Mesh",
+      "rating": 4.5,
+      "reviews": 110,
+      "stock": 16,
+      "featured": false,
+      "isNew": true,
+      "description": "An ultra-thin Danish-designed watch with a fine steel mesh band and understated white dial.",
       "keyPoints": [
-        "Gold finish",
-        "Premium feel",
-        "Exclusive look"
+        "Ultra-thin case",
+        "Steel mesh band",
+        "Scandinavian minimalism"
       ],
       "specifications": {
-        "caseMaterial": "Gold Plated Steel",
-        "strapMaterial": "Metal",
-        "dialColor": "Gold",
+        "caseMaterial": "Stainless Steel",
+        "strapMaterial": "Stainless Steel Mesh",
+        "dialColor": "White",
         "waterResistance": "50 meters",
         "movement": "Quartz"
       }
     },
     {
-      "id": 12,
-      "name": "Slim Silver Watch",
-      "slug": "slim-silver-watch",
+      "id": 15,
+      "name": "Nomos Glashütte Tangente",
+      "slug": "nomos-glashutte-tangente",
       "category": "Minimal",
-      "brand": "Chronos",
-      "price": 135,
-      "originalPrice": 160,
+      "brand": "Nomos Glashütte",
+      "price": 2020,
+      "originalPrice": 2150,
       "currency": "USD",
-      "image": "/images/p-watch2.png",
-      "images": [
-        "/images/p-watch2.png"
+      "color": "White",
+      "colors": [
+        "White",
+        "Black"
       ],
-      "color": "Silver",
-      "colors": ["Silver"],
-      "material": "Stainless Steel",
-      "rating": 4.7,
-      "reviews": 100,
-      "stock": 13,
-      "featured": false,
-      "isNew": true,
-      "description": "An ultra-slim silver watch designed for a lightweight and elegant appearance.",
+      "material": "Leather",
+      "rating": 4.9,
+      "reviews": 48,
+      "stock": 5,
+      "featured": true,
+      "isNew": false,
+      "description": "A Bauhaus-inspired hand-wound dress watch, prized by collectors for its restrained German design.",
       "keyPoints": [
-        "Ultra slim",
-        "Elegant",
-        "Lightweight"
+        "Hand-wound in-house movement",
+        "Bauhaus-inspired dial",
+        "Thin, lightweight case"
       ],
       "specifications": {
         "caseMaterial": "Stainless Steel",
-        "strapMaterial": "Stainless Steel",
-        "dialColor": "Silver",
+        "strapMaterial": "Leather",
+        "dialColor": "White",
+        "waterResistance": "30 meters",
+        "movement": "Manual Wind"
+      }
+    },
+    {
+      "id": 16,
+      "name": "Apple Watch Series 9",
+      "slug": "apple-watch-series-9",
+      "category": "Smart",
+      "brand": "Apple",
+      "price": 399,
+      "originalPrice": 429,
+      "currency": "USD",
+      "color": "Black",
+      "colors": [
+        "Black",
+        "Silver"
+      ],
+      "material": "Aluminum",
+      "rating": 4.8,
+      "reviews": 980,
+      "stock": 35,
+      "featured": true,
+      "isNew": true,
+      "description": "Apple's flagship smartwatch with an always-on Retina display, health tracking, and deep iPhone integration.",
+      "keyPoints": [
+        "Always-on Retina display",
+        "Advanced health sensors",
+        "Seamless iPhone integration"
+      ],
+      "specifications": {
+        "caseMaterial": "Aluminum",
+        "strapMaterial": "Silicone",
+        "display": "Always-On Retina",
+        "battery": "Up to 18 hours",
+        "waterResistance": "50 meters"
+      }
+    },
+    {
+      "id": 17,
+      "name": "Samsung Galaxy Watch6",
+      "slug": "samsung-galaxy-watch6",
+      "category": "Smart",
+      "brand": "Samsung",
+      "price": 299,
+      "originalPrice": 330,
+      "currency": "USD",
+      "color": "Graphite",
+      "colors": [
+        "Graphite",
+        "Silver"
+      ],
+      "material": "Aluminum",
+      "rating": 4.6,
+      "reviews": 410,
+      "stock": 24,
+      "featured": false,
+      "isNew": true,
+      "description": "A round AMOLED smartwatch with detailed sleep and body composition tracking for Android users.",
+      "keyPoints": [
+        "Bright AMOLED display",
+        "Body composition tracking",
+        "Sapphire crystal glass"
+      ],
+      "specifications": {
+        "caseMaterial": "Aluminum",
+        "strapMaterial": "Silicone",
+        "display": "Super AMOLED",
+        "battery": "Up to 40 hours",
+        "waterResistance": "50 meters"
+      }
+    },
+    {
+      "id": 18,
+      "name": "Fossil Gen 6",
+      "slug": "fossil-gen-6",
+      "category": "Smart",
+      "brand": "Fossil",
+      "price": 299,
+      "originalPrice": 329,
+      "currency": "USD",
+      "color": "Black",
+      "colors": [
+        "Black",
+        "Brown"
+      ],
+      "material": "Stainless Steel",
+      "rating": 4.3,
+      "reviews": 160,
+      "stock": 15,
+      "featured": false,
+      "isNew": false,
+      "description": "A Wear OS smartwatch from Fossil with fast charging and a classic round watch silhouette.",
+      "keyPoints": [
+        "Wear OS by Google",
+        "Fast charging battery",
+        "Classic round case"
+      ],
+      "specifications": {
+        "caseMaterial": "Stainless Steel",
+        "strapMaterial": "Silicone",
+        "display": "AMOLED Touch",
+        "battery": "Up to 24 hours",
+        "waterResistance": "30 meters"
+      }
+    },
+    {
+      "id": 19,
+      "name": "Garmin Venu 3",
+      "slug": "garmin-venu-3",
+      "category": "Smart",
+      "brand": "Garmin",
+      "price": 449,
+      "originalPrice": 480,
+      "currency": "USD",
+      "color": "Slate",
+      "colors": [
+        "Slate",
+        "Black"
+      ],
+      "material": "Fiber-reinforced Polymer",
+      "rating": 4.7,
+      "reviews": 205,
+      "stock": 17,
+      "featured": true,
+      "isNew": true,
+      "description": "A wellness-focused smartwatch with built-in workouts, sleep coaching, and up to two weeks of battery life.",
+      "keyPoints": [
+        "Up to 14 days battery",
+        "Sleep coaching",
+        "Built-in workout animations"
+      ],
+      "specifications": {
+        "caseMaterial": "Fiber-reinforced Polymer",
+        "strapMaterial": "Silicone",
+        "display": "AMOLED Touch",
+        "battery": "Up to 14 days",
+        "waterResistance": "50 meters"
+      }
+    },
+    {
+      "id": 20,
+      "name": "Timex Weekender",
+      "slug": "timex-weekender",
+      "category": "Vintage",
+      "brand": "Timex",
+      "price": 45,
+      "originalPrice": 60,
+      "currency": "USD",
+      "color": "Tan",
+      "colors": [
+        "Tan",
+        "Olive"
+      ],
+      "material": "Nylon",
+      "rating": 4.4,
+      "reviews": 720,
+      "stock": 45,
+      "featured": false,
+      "isNew": false,
+      "description": "An affordable, easy-to-wear field watch with a classic NATO-style nylon strap.",
+      "keyPoints": [
+        "NATO-style nylon strap",
+        "Indiglo backlight",
+        "Budget-friendly classic"
+      ],
+      "specifications": {
+        "caseMaterial": "Brass",
+        "strapMaterial": "Nylon",
+        "dialColor": "Cream",
+        "waterResistance": "30 meters",
+        "movement": "Quartz"
+      }
+    },
+    {
+      "id": 21,
+      "name": "Casio F-91W",
+      "slug": "casio-f91w",
+      "category": "Vintage",
+      "brand": "Casio",
+      "price": 20,
+      "originalPrice": 25,
+      "currency": "USD",
+      "color": "Black",
+      "colors": [
+        "Black"
+      ],
+      "material": "Resin",
+      "rating": 4.6,
+      "reviews": 1200,
+      "stock": 60,
+      "featured": false,
+      "isNew": false,
+      "description": "The original everyday digital watch since 1991 — simple, reliable, and instantly recognizable.",
+      "keyPoints": [
+        "Daily alarm and stopwatch",
+        "7-year battery life",
+        "Timeless minimal design"
+      ],
+      "specifications": {
+        "caseMaterial": "Resin",
+        "strapMaterial": "Resin",
+        "display": "LCD Digital",
+        "battery": "Up to 7 years",
+        "waterResistance": "30 meters"
+      }
+    },
+    {
+      "id": 22,
+      "name": "Swatch Originals 1984",
+      "slug": "swatch-originals-1984",
+      "category": "Vintage",
+      "brand": "Swatch",
+      "price": 85,
+      "originalPrice": 100,
+      "currency": "USD",
+      "color": "Red",
+      "colors": [
+        "Red",
+        "White"
+      ],
+      "material": "Plastic",
+      "rating": 4.3,
+      "reviews": 340,
+      "stock": 28,
+      "featured": false,
+      "isNew": true,
+      "description": "A playful, colorful reissue of the original 1984 Swatch that kicked off the brand's plastic watch revolution.",
+      "keyPoints": [
+        "Lightweight plastic case",
+        "Bold retro color",
+        "Swiss quartz movement"
+      ],
+      "specifications": {
+        "caseMaterial": "Plastic",
+        "strapMaterial": "Plastic",
+        "dialColor": "White",
         "waterResistance": "30 meters",
         "movement": "Quartz"
       }
     }
   ],
-
-  
-
   "coupons": [
     {
       "id": 1,
