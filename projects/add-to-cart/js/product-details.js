@@ -631,7 +631,7 @@ function cartPageUpdate() {
 
                   <div class="img-det">
                     <p>${item.name}</p>
-                    <span>${item.keyPoints.join(",")}</span>
+                    <span>${(item.keyPoints || []).join(", ")}</span>
                   </div>
                 </div>
               </td>
