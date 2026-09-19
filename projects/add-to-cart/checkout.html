@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+  </head>
+  <body class="dark">
+    <header class="checkout-header">
+      <nav>
+        <a href="index.html" class="nav-heading flex">
+          <span class="material-symbols-outlined logo"> watch </span>
+          <p>WatchStore</p>
+        </a>
+        <div class="checkout-steps">
+          <span class="checkout-step done">Cart</span>
+          <span class="material-symbols-outlined">chevron_right</span>
+          <span class="checkout-step active">Checkout</span>
+          <span class="material-symbols-outlined">chevron_right</span>
+          <span class="checkout-step">Confirmation</span>
+        </div>
+        <div class="theme flex">
+          <button><span class="material-symbols-outlined theme-btn">light_mode</span></button>
+        </div>
+      </nav>
+    </header>
+
+    <div id="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+    <main class="checkout-page">
+      <div class="container">
+        <h1 class="checkout-title">Checkout</h1>
+
+        <div id="checkoutEmpty" class="checkout-empty" hidden>
+          <p>Your cart is empty.</p>
+          <a href="index.html#shopSection" class="btn">Continue Shopping</a>
+        </div>
+
+        <div class="checkout-grid" id="checkoutGrid">
+          <div class="checkout-form-section">
+            <form id="checkoutForm" novalidate>
+              <h2>Contact Information</h2>
+
+              <div class="form-group">
+                <label for="custName">Full Name</label>
+                <input type="text" id="custName" placeholder="John Doe" />
+                <span class="field-error" id="custNameError"></span>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="custEmail">Email</label>
+                  <input type="email" id="custEmail" placeholder="john@example.com" />
+                  <span class="field-error" id="custEmailError"></span>
+                </div>
+                <div class="form-group">
+                  <label for="custPhone">Phone</label>
+                  <input type="tel" id="custPhone" placeholder="+1 234 567 8900" />
+                  <span class="field-error" id="custPhoneError"></span>
+                </div>
+              </div>
+
+              <h2>Shipping Address</h2>
+
+              <div class="form-group">
+                <label for="custAddress">Street Address</label>
+                <input type="text" id="custAddress" placeholder="123 Main Street" />
+                <span class="field-error" id="custAddressError"></span>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="custCity">City</label>
+                  <input type="text" id="custCity" placeholder="New York" />
+                  <span class="field-error" id="custCityError"></span>
+                </div>
+                <div class="form-group">
+                  <label for="custState">State / Province</label>
+                  <input type="text" id="custState" placeholder="NY" />
+                  <span class="field-error" id="custStateError"></span>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="custZip">ZIP / Postal Code</label>
+                  <input type="text" id="custZip" placeholder="10001" />
+                  <span class="field-error" id="custZipError"></span>
+                </div>
+                <div class="form-group">
+                  <label for="custCountry">Country</label>
+                  <input type="text" id="custCountry" placeholder="United States" />
+                  <span class="field-error" id="custCountryError"></span>
+                </div>
+              </div>
+
+              <button type="submit" class="btn place-order-btn" id="placeOrderBtn">
+                <i class="fa-solid fa-lock"></i>
+                Place Order
+              </button>
+            </form>
+          </div>
+
+          <div class="checkout-summary-section">
+            <div class="summary order-summary">
+              <p class="sum-head">Order Summary</p>
+              <div class="checkout-items" id="checkoutItems"></div>
+              <div class="prize-details">
+                <div class="p-item">
+                  <p>Sub Total</p>
+                  <span class="s-total" id="checkoutSubtotal">0 USD</span>
+                </div>
+                <div class="p-item">
+                  <p>Discount <span class="dis-text" id="checkoutDiscountText"></span></p>
+                  <span class="discount green" id="checkoutDiscount">-0.00 USD</span>
+                </div>
+                <div class="p-item">
+                  <p>Delivery</p>
+                  <span class="delivery" id="checkoutDelivery">0 USD</span>
+                </div>
+              </div>
+              <div class="p-total">
+                <p>Total</p>
+                <span class="total" id="checkoutTotal">$0 USD</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="js/checkout.js"></script>
+  </body>
+</html>

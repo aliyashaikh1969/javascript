@@ -1,0 +1,10 @@
+{
+  "name": "add-to-cart-watch-store",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Watch store add-to-cart demo (vanilla HTML/CSS/JS)",
+  "scripts": {
+    "start:api": "npx json-server --watch db.json --port 3000",
+    "start:web": "npx http-server -p 8080 -c-1"
+  }
+}

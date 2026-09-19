@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Confirmed</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+  </head>
+  <body class="dark">
+    <header class="checkout-header">
+      <nav>
+        <a href="index.html" class="nav-heading flex">
+          <span class="material-symbols-outlined logo"> watch </span>
+          <p>WatchStore</p>
+        </a>
+        <div class="checkout-steps">
+          <span class="checkout-step done">Cart</span>
+          <span class="material-symbols-outlined">chevron_right</span>
+          <span class="checkout-step done">Checkout</span>
+          <span class="material-symbols-outlined">chevron_right</span>
+          <span class="checkout-step active">Confirmation</span>
+        </div>
+        <div class="theme flex">
+          <button><span class="material-symbols-outlined theme-btn">light_mode</span></button>
+        </div>
+      </nav>
+    </header>
+
+    <div id="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+    <main class="confirmation-page">
+      <div class="container">
+        <div id="confirmationContent"></div>
+      </div>
+    </main>
+
+    <script src="js/order-confirmation.js"></script>
+  </body>
+</html>

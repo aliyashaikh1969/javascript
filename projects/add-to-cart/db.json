@@ -1,7 +1,7 @@
 {
   "products": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Seiko 5 Sports SRPD",
       "slug": "seiko-5-sports-srpd",
       "category": "Classic",
@@ -32,10 +32,16 @@
         "dialColor": "Black",
         "waterResistance": "100 meters",
         "movement": "Automatic"
+      },
+      "images": {
+        "front": "images/watches/seiko-5-sports-srpd/front.png",
+        "threeQuarter": "images/watches/seiko-5-sports-srpd/3quarter.png",
+        "side": "images/watches/seiko-5-sports-srpd/side.png",
+        "back": "images/watches/seiko-5-sports-srpd/back.png"
       }
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Tissot PRX Powermatic 80",
       "slug": "tissot-prx-powermatic-80",
       "category": "Classic",
@@ -66,10 +72,16 @@
         "dialColor": "Blue",
         "waterResistance": "100 meters",
         "movement": "Automatic Powermatic 80"
+      },
+      "images": {
+        "front": "images/watches/tissot-prx-powermatic-80/front.png",
+        "threeQuarter": "images/watches/tissot-prx-powermatic-80/3quarter.png",
+        "side": "images/watches/tissot-prx-powermatic-80/side.png",
+        "back": "images/watches/tissot-prx-powermatic-80/back.png"
       }
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Citizen Tsuyosa",
       "slug": "citizen-tsuyosa",
       "category": "Classic",
@@ -100,10 +112,16 @@
         "dialColor": "Green",
         "waterResistance": "50 meters",
         "movement": "Automatic"
+      },
+      "images": {
+        "front": "images/watches/citizen-tsuyosa/front.png",
+        "threeQuarter": "images/watches/citizen-tsuyosa/3quarter.png",
+        "side": "images/watches/citizen-tsuyosa/side.png",
+        "back": "images/watches/citizen-tsuyosa/back.png"
       }
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Rolex Submariner Date",
       "slug": "rolex-submariner-date",
       "category": "Luxury",
@@ -133,10 +151,16 @@
         "dialColor": "Black",
         "waterResistance": "300 meters",
         "movement": "Automatic Chronometer"
+      },
+      "images": {
+        "front": "images/watches/rolex-submariner-date/front.png",
+        "threeQuarter": "images/watches/rolex-submariner-date/3quarter.png",
+        "side": "images/watches/rolex-submariner-date/side.png",
+        "back": "images/watches/rolex-submariner-date/back.png"
       }
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Omega Speedmaster Moonwatch",
       "slug": "omega-speedmaster-moonwatch",
       "category": "Luxury",
@@ -167,10 +191,16 @@
         "dialColor": "Black",
         "waterResistance": "50 meters",
         "movement": "Manual Chronograph"
+      },
+      "images": {
+        "front": "images/watches/omega-speedmaster-moonwatch/front.png",
+        "threeQuarter": "images/watches/omega-speedmaster-moonwatch/3quarter.png",
+        "side": "images/watches/omega-speedmaster-moonwatch/side.png",
+        "back": "images/watches/omega-speedmaster-moonwatch/back.png"
       }
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "TAG Heuer Carrera Calibre 16",
       "slug": "tag-heuer-carrera-calibre-16",
       "category": "Luxury",
@@ -200,10 +230,16 @@
         "dialColor": "Black",
         "waterResistance": "100 meters",
         "movement": "Automatic Chronograph"
+      },
+      "images": {
+        "front": "images/watches/tag-heuer-carrera-calibre-16/front.png",
+        "threeQuarter": "images/watches/tag-heuer-carrera-calibre-16/3quarter.png",
+        "side": "images/watches/tag-heuer-carrera-calibre-16/side.png",
+        "back": "images/watches/tag-heuer-carrera-calibre-16/back.png"
       }
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "Cartier Tank Must",
       "slug": "cartier-tank-must",
       "category": "Luxury",
@@ -234,10 +270,16 @@
         "dialColor": "White",
         "waterResistance": "30 meters",
         "movement": "Quartz"
+      },
+      "images": {
+        "front": "images/watches/cartier-tank-must/front.png",
+        "threeQuarter": "images/watches/cartier-tank-must/3quarter.png",
+        "side": "images/watches/cartier-tank-must/side.png",
+        "back": "images/watches/cartier-tank-must/back.png"
       }
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "Casio G-Shock GA-2100",
       "slug": "casio-gshock-ga2100",
       "category": "Sport",
@@ -267,10 +309,16 @@
         "display": "Analog-Digital",
         "battery": "Up to 2 years",
         "waterResistance": "200 meters"
+      },
+      "images": {
+        "front": "images/watches/casio-gshock-ga2100/front.png",
+        "threeQuarter": "images/watches/casio-gshock-ga2100/3quarter.png",
+        "side": "images/watches/casio-gshock-ga2100/side.png",
+        "back": "images/watches/casio-gshock-ga2100/back.png"
       }
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "Garmin Instinct 2",
       "slug": "garmin-instinct-2",
       "category": "Sport",
@@ -301,10 +349,16 @@
         "display": "Sunlight-readable MIP",
         "battery": "Up to 28 days",
         "waterResistance": "100 meters"
+      },
+      "images": {
+        "front": "images/watches/garmin-instinct-2/front.png",
+        "threeQuarter": "images/watches/garmin-instinct-2/3quarter.png",
+        "side": "images/watches/garmin-instinct-2/side.png",
+        "back": "images/watches/garmin-instinct-2/back.png"
       }
     },
     {
-      "id": 10,
+      "id": "10",
       "name": "Citizen Promaster Diver",
       "slug": "citizen-promaster-diver",
       "category": "Sport",
@@ -335,10 +389,16 @@
         "dialColor": "Blue",
         "waterResistance": "200 meters",
         "movement": "Eco-Drive Solar"
+      },
+      "images": {
+        "front": "images/watches/citizen-promaster-diver/front.png",
+        "threeQuarter": "images/watches/citizen-promaster-diver/3quarter.png",
+        "side": "images/watches/citizen-promaster-diver/side.png",
+        "back": "images/watches/citizen-promaster-diver/back.png"
       }
     },
     {
-      "id": 11,
+      "id": "11",
       "name": "Invicta Pro Diver",
       "slug": "invicta-pro-diver",
       "category": "Sport",
@@ -369,10 +429,16 @@
         "dialColor": "Blue",
         "waterResistance": "200 meters",
         "movement": "Automatic"
+      },
+      "images": {
+        "front": "images/watches/invicta-pro-diver/front.png",
+        "threeQuarter": "images/watches/invicta-pro-diver/3quarter.png",
+        "side": "images/watches/invicta-pro-diver/side.png",
+        "back": "images/watches/invicta-pro-diver/back.png"
       }
     },
     {
-      "id": 12,
+      "id": "12",
       "name": "Daniel Wellington Classic Petite",
       "slug": "daniel-wellington-classic-petite",
       "category": "Minimal",
@@ -403,10 +469,16 @@
         "dialColor": "White",
         "waterResistance": "30 meters",
         "movement": "Quartz"
+      },
+      "images": {
+        "front": "images/watches/daniel-wellington-classic-petite/front.png",
+        "threeQuarter": "images/watches/daniel-wellington-classic-petite/3quarter.png",
+        "side": "images/watches/daniel-wellington-classic-petite/side.png",
+        "back": "images/watches/daniel-wellington-classic-petite/back.png"
       }
     },
     {
-      "id": 13,
+      "id": "13",
       "name": "MVMT Classic Blacktop",
       "slug": "mvmt-classic-blacktop",
       "category": "Minimal",
@@ -436,10 +508,16 @@
         "dialColor": "Black",
         "waterResistance": "30 meters",
         "movement": "Quartz"
+      },
+      "images": {
+        "front": "images/watches/mvmt-classic-blacktop/front.png",
+        "threeQuarter": "images/watches/mvmt-classic-blacktop/3quarter.png",
+        "side": "images/watches/mvmt-classic-blacktop/side.png",
+        "back": "images/watches/mvmt-classic-blacktop/back.png"
       }
     },
     {
-      "id": 14,
+      "id": "14",
       "name": "Skagen Signatur",
       "slug": "skagen-signatur",
       "category": "Minimal",
@@ -470,10 +548,16 @@
         "dialColor": "White",
         "waterResistance": "50 meters",
         "movement": "Quartz"
+      },
+      "images": {
+        "front": "images/watches/skagen-signatur/front.png",
+        "threeQuarter": "images/watches/skagen-signatur/3quarter.png",
+        "side": "images/watches/skagen-signatur/side.png",
+        "back": "images/watches/skagen-signatur/back.png"
       }
     },
     {
-      "id": 15,
+      "id": "15",
       "name": "Nomos Glashütte Tangente",
       "slug": "nomos-glashutte-tangente",
       "category": "Minimal",
@@ -504,10 +588,16 @@
         "dialColor": "White",
         "waterResistance": "30 meters",
         "movement": "Manual Wind"
+      },
+      "images": {
+        "front": "images/watches/nomos-glashutte-tangente/front.png",
+        "threeQuarter": "images/watches/nomos-glashutte-tangente/3quarter.png",
+        "side": "images/watches/nomos-glashutte-tangente/side.png",
+        "back": "images/watches/nomos-glashutte-tangente/back.png"
       }
     },
     {
-      "id": 16,
+      "id": "16",
       "name": "Apple Watch Series 9",
       "slug": "apple-watch-series-9",
       "category": "Smart",
@@ -538,10 +628,16 @@
         "display": "Always-On Retina",
         "battery": "Up to 18 hours",
         "waterResistance": "50 meters"
+      },
+      "images": {
+        "front": "images/watches/apple-watch-series-9/front.png",
+        "threeQuarter": "images/watches/apple-watch-series-9/3quarter.png",
+        "side": "images/watches/apple-watch-series-9/side.png",
+        "back": "images/watches/apple-watch-series-9/back.png"
       }
     },
     {
-      "id": 17,
+      "id": "17",
       "name": "Samsung Galaxy Watch6",
       "slug": "samsung-galaxy-watch6",
       "category": "Smart",
@@ -572,10 +668,16 @@
         "display": "Super AMOLED",
         "battery": "Up to 40 hours",
         "waterResistance": "50 meters"
+      },
+      "images": {
+        "front": "images/watches/samsung-galaxy-watch6/front.png",
+        "threeQuarter": "images/watches/samsung-galaxy-watch6/3quarter.png",
+        "side": "images/watches/samsung-galaxy-watch6/side.png",
+        "back": "images/watches/samsung-galaxy-watch6/back.png"
       }
     },
     {
-      "id": 18,
+      "id": "18",
       "name": "Fossil Gen 6",
       "slug": "fossil-gen-6",
       "category": "Smart",
@@ -606,10 +708,16 @@
         "display": "AMOLED Touch",
         "battery": "Up to 24 hours",
         "waterResistance": "30 meters"
+      },
+      "images": {
+        "front": "images/watches/fossil-gen-6/front.png",
+        "threeQuarter": "images/watches/fossil-gen-6/3quarter.png",
+        "side": "images/watches/fossil-gen-6/side.png",
+        "back": "images/watches/fossil-gen-6/back.png"
       }
     },
     {
-      "id": 19,
+      "id": "19",
       "name": "Garmin Venu 3",
       "slug": "garmin-venu-3",
       "category": "Smart",
@@ -640,10 +748,16 @@
         "display": "AMOLED Touch",
         "battery": "Up to 14 days",
         "waterResistance": "50 meters"
+      },
+      "images": {
+        "front": "images/watches/garmin-venu-3/front.png",
+        "threeQuarter": "images/watches/garmin-venu-3/3quarter.png",
+        "side": "images/watches/garmin-venu-3/side.png",
+        "back": "images/watches/garmin-venu-3/back.png"
       }
     },
     {
-      "id": 20,
+      "id": "20",
       "name": "Timex Weekender",
       "slug": "timex-weekender",
       "category": "Vintage",
@@ -674,10 +788,16 @@
         "dialColor": "Cream",
         "waterResistance": "30 meters",
         "movement": "Quartz"
+      },
+      "images": {
+        "front": "images/watches/timex-weekender/front.png",
+        "threeQuarter": "images/watches/timex-weekender/3quarter.png",
+        "side": "images/watches/timex-weekender/side.png",
+        "back": "images/watches/timex-weekender/back.png"
       }
     },
     {
-      "id": 21,
+      "id": "21",
       "name": "Casio F-91W",
       "slug": "casio-f91w",
       "category": "Vintage",
@@ -707,10 +827,16 @@
         "display": "LCD Digital",
         "battery": "Up to 7 years",
         "waterResistance": "30 meters"
+      },
+      "images": {
+        "front": "images/watches/casio-f91w/front.png",
+        "threeQuarter": "images/watches/casio-f91w/3quarter.png",
+        "side": "images/watches/casio-f91w/side.png",
+        "back": "images/watches/casio-f91w/back.png"
       }
     },
     {
-      "id": 22,
+      "id": "22",
       "name": "Swatch Originals 1984",
       "slug": "swatch-originals-1984",
       "category": "Vintage",
@@ -741,27 +867,131 @@
         "dialColor": "White",
         "waterResistance": "30 meters",
         "movement": "Quartz"
+      },
+      "images": {
+        "front": "images/watches/swatch-originals-1984/front.png",
+        "threeQuarter": "images/watches/swatch-originals-1984/3quarter.png",
+        "side": "images/watches/swatch-originals-1984/side.png",
+        "back": "images/watches/swatch-originals-1984/back.png"
       }
+    }
+  ],
+  "reviews": [
+    {
+      "id": "1",
+      "productId": "1",
+      "name": "Marcus H.",
+      "rating": 5,
+      "comment": "Fantastic build quality for the price. The bracelet feels solid and the automatic movement keeps great time.",
+      "date": "2026-06-12T10:00:00.000Z"
+    },
+    {
+      "id": "2",
+      "productId": "1",
+      "name": "Priya S.",
+      "rating": 4,
+      "comment": "Great everyday watch, a bit heavy on the wrist at first but you get used to it.",
+      "date": "2026-07-03T14:30:00.000Z"
+    },
+    {
+      "id": "3",
+      "productId": "4",
+      "name": "James O.",
+      "rating": 5,
+      "comment": "Exactly as described, an iconic piece. Worth every penny.",
+      "date": "2026-05-20T09:15:00.000Z"
+    },
+    {
+      "id": "4",
+      "productId": "2",
+      "name": "Elena R.",
+      "rating": 5,
+      "comment": "The Powermatic 80 movement is impressive and the case is thinner than I expected. Love it.",
+      "date": "2026-08-01T11:45:00.000Z"
     }
   ],
   "coupons": [
     {
-      "id": 1,
+      "id": "1",
       "code": "SAVE10",
       "discount": 10,
       "minOrder": 100
     },
     {
-      "id": 2,
+      "id": "2",
       "code": "SAVE20",
       "discount": 20,
       "minOrder": 200
     },
     {
-      "id": 3,
+      "id": "3",
       "code": "SAVE30",
       "discount": 30,
       "minOrder": 300
     }
-  ]
+  ],
+  "orders": [
+    {
+      "items": [
+        {
+          "id": "2",
+          "name": "Modern Silver Watch",
+          "slug": "modern-silver-watch",
+          "category": "Luxury",
+          "brand": "Chronos",
+          "price": 150,
+          "originalPrice": 180,
+          "currency": "USD",
+          "image": "/images/p-watch2.png",
+          "images": [
+            "/images/p-watch2.png"
+          ],
+          "color": "Silver",
+          "colors": [
+            "Silver"
+          ],
+          "material": "Stainless Steel",
+          "rating": 4.6,
+          "reviews": 88,
+          "stock": 10,
+          "featured": true,
+          "isNew": true,
+          "description": "A modern silver watch with a slim profile and durable stainless steel construction.",
+          "keyPoints": [
+            "Stainless steel",
+            "Scratch resistant glass",
+            "Slim profile"
+          ],
+          "specifications": {
+            "caseMaterial": "Stainless Steel",
+            "strapMaterial": "Stainless Steel",
+            "dialColor": "Black",
+            "waterResistance": "50 meters",
+            "movement": "Quartz"
+          },
+          "quantity": 1
+        }
+      ],
+      "customer": {
+        "name": "test",
+        "email": "test@gamil.com",
+        "phone": "1212121212121",
+        "address": {
+          "street": "1223",
+          "city": "new",
+          "state": "ny",
+          "zip": "111111",
+          "country": "us"
+        }
+      },
+      "couponCode": null,
+      "subtotal": 150,
+      "discount": 0,
+      "delivery": 50,
+      "total": 200,
+      "date": "2026-09-19T10:51:10.414Z",
+      "id": "5bpgRq5Z-w8"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
