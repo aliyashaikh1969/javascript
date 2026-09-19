@@ -1,5 +1,9 @@
 console.log("product details page")
 
+// local dev keeps using json-server on :3000 (npm run start:api); any other
+// host (e.g. the Vercel deployment) uses the bundled /api serverless functions
+const API_BASE = ["localhost", "127.0.0.1"].includes(location.hostname) ? "http://localhost:3000" : "/api";
+
 function getProductImage(product, view = "front") {
     return product?.images?.[view] || product?.images?.front || "images/watches/placeholder.svg"
 }
@@ -157,7 +161,7 @@ async function getProduct() {
     try {
         if (!productId) throw new Error("no product id in url");
 
-        const response = await fetch(`http://localhost:3000/products/${productId}`);
+        const response = await fetch(`${API_BASE}/products/${productId}`);
         if (!response.ok) throw new Error("failed to fetch product");
 
         currentProduct = await response.json();
@@ -196,7 +200,7 @@ async function renderRecentlyViewed() {
     }
 
     try {
-        const response = await fetch("http://localhost:3000/products");
+        const response = await fetch(`${API_BASE}/products`);
         if (!response.ok) throw new Error("failed to fetch products");
         const allProducts = await response.json();
 
@@ -502,7 +506,7 @@ function renderRelatedProducts(items) {
 
 async function getRelatedProducts(item) {
     try {
-        const response = await fetch(`http://localhost:3000/products?category=${item.category}`);
+        const response = await fetch(`${API_BASE}/products?category=${item.category}`);
         if (!response.ok) throw new Error("failed to fetch related products");
 
         let related = await response.json();
@@ -798,7 +802,7 @@ function getCartSubtotal() {
 
 async function getCoupons() {
     try {
-        const response = await fetch("http://localhost:3000/coupons")
+        const response = await fetch(`${API_BASE}/coupons`)
         if (!response.ok) throw new Error("failed to fetch coupons")
         const coupons = await response.json()
         offers = coupons.map(c => ({ ...c, applied: false }))
@@ -931,7 +935,7 @@ function renderStars(rating) {
 
 async function getReviews(productId) {
     try {
-        const response = await fetch(`http://localhost:3000/reviews`);
+        const response = await fetch(`${API_BASE}/reviews`);
         if (!response.ok) throw new Error("failed to fetch reviews");
 
         const allReviews = await response.json();
@@ -1000,7 +1004,7 @@ reviewForm?.addEventListener("submit", async (e) => {
     }
 
     try {
-        const response = await fetch("http://localhost:3000/reviews", {
+        const response = await fetch(`${API_BASE}/reviews`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
@@ -1037,7 +1041,7 @@ reviewForm?.addEventListener("submit", async (e) => {
 async function ensureAllProductsForSearch() {
     if (allProductsForSearch.length) return allProductsForSearch
     try {
-        const response = await fetch("http://localhost:3000/products");
+        const response = await fetch(`${API_BASE}/products`);
         if (!response.ok) throw new Error("failed to fetch products");
         allProductsForSearch = await response.json();
     } catch (error) {

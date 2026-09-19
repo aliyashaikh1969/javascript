@@ -1,5 +1,9 @@
 console.log("checkout page")
 
+// local dev keeps using json-server on :3000 (npm run start:api); any other
+// host (e.g. the Vercel deployment) uses the bundled /api serverless functions
+const API_BASE = ["localhost", "127.0.0.1"].includes(location.hostname) ? "http://localhost:3000" : "/api";
+
 function getProductImage(product, view = "front") {
     return product?.images?.[view] || product?.images?.front || "images/watches/placeholder.svg"
 }
@@ -49,7 +53,7 @@ function getCartSubtotal() {
 
 async function loadAllProducts() {
     try {
-        const response = await fetch("http://localhost:3000/products")
+        const response = await fetch(`${API_BASE}/products`)
         if (!response.ok) throw new Error("failed to fetch products")
         allProducts = await response.json()
     } catch (error) {
@@ -62,7 +66,7 @@ async function loadAppliedCoupon() {
     if (!code) return
 
     try {
-        const response = await fetch("http://localhost:3000/coupons")
+        const response = await fetch(`${API_BASE}/coupons`)
         if (!response.ok) throw new Error("failed to fetch coupons")
         const coupons = await response.json()
         appliedCoupon = coupons.find(c => c.code === code) || null
@@ -218,7 +222,7 @@ checkoutForm.addEventListener("submit", async (e) => {
     placeOrderBtn.textContent = "Placing order..."
 
     try {
-        const response = await fetch("http://localhost:3000/orders", {
+        const response = await fetch(`${API_BASE}/orders`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(order),
