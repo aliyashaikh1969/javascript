@@ -154,11 +154,13 @@
             </div>
           </div>
         </div>
-        <div class="empty-container">
-          <div class="empty-cart">
-            <div>🛒 Your Cart is Empty</div>
-            <div>Looks like you haven't added anything yet</div>
-          </div>
+      </div>
+      <div class="empty-container">
+        <div class="empty-cart">
+          <span class="material-symbols-outlined empty-cart-icon">shopping_cart</span>
+          <div class="empty-cart-title">Your Cart is Empty</div>
+          <div class="empty-cart-subtext">Looks like you haven't added anything yet</div>
+          <button type="button" class="btn empty-cart-cta" id="cartEmptyCta">Continue Shopping</button>
         </div>
       </div>
     </div>
@@ -170,11 +172,13 @@
         <div class="container">
           <div class="wishlist-grid" id="wishlistGrid"></div>
         </div>
-        <div class="empty-container">
-          <div class="empty-cart">
-            <div>🤍 Your Wishlist is Empty</div>
-            <div>Save items you love to find them here later</div>
-          </div>
+      </div>
+      <div class="empty-container">
+        <div class="empty-cart">
+          <span class="material-symbols-outlined empty-cart-icon">favorite</span>
+          <div class="empty-cart-title">Your Wishlist is Empty</div>
+          <div class="empty-cart-subtext">Save items you love to find them here later</div>
+          <button type="button" class="btn empty-cart-cta" id="wishlistEmptyCta">Browse Products</button>
         </div>
       </div>
     </div>
@@ -394,6 +398,63 @@
         </div>
       </div>
     </section>
+
+    <footer class="site-footer">
+      <div class="footer-top container">
+        <div class="footer-brand">
+          <div class="nav-heading flex">
+            <span class="material-symbols-outlined logo">watch</span>
+            <p>WatchStore</p>
+          </div>
+          <p class="footer-tagline">
+            Premium watches combining timeless design with modern precision, for every wrist and every occasion.
+          </p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#shopSection">Shop</a></li>
+            <li><a href="#categoriesSection">Categories</a></li>
+            <li><a href="#aboutSection">About</a></li>
+            <li><a href="#contactSection">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Get in Touch</h4>
+          <ul class="footer-contact-list">
+            <li><span class="material-symbols-outlined">mail</span> support@watchstore.com</li>
+            <li><span class="material-symbols-outlined">call</span> +1 (555) 123-4567</li>
+            <li><span class="material-symbols-outlined">schedule</span> Mon&ndash;Fri, 9am&ndash;6pm</li>
+          </ul>
+        </div>
+
+        <div class="footer-col footer-newsletter">
+          <h4>Newsletter</h4>
+          <p>Get updates on new arrivals and exclusive offers.</p>
+          <form id="newsletterForm" class="footer-newsletter-form">
+            <input type="email" id="newsletterEmail" placeholder="Your email" required />
+            <button type="submit" class="btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom container">
+        <p>&copy; <span id="footerYear"></span> WatchStore. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#aboutSection">About</a>
+          <a href="#contactSection">Support</a>
+        </div>
+      </div>
+    </footer>
 
     <button type="button" class="back-to-top-btn" id="backToTopBtn" aria-label="Back to top">
       <span class="material-symbols-outlined">arrow_upward</span>

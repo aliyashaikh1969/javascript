@@ -301,6 +301,13 @@ function showToast(message, type = "success", duration = 3500) {
 }
 
 //==============================================
+// footer
+//==============================================
+
+const footerYear = document.querySelector("#footerYear");
+if (footerYear) footerYear.textContent = new Date().getFullYear();
+
+//==============================================
 // init
 //==============================================
 

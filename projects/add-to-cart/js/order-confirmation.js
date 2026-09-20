@@ -107,6 +107,13 @@ function renderOrder(order) {
 }
 
 //==============================================
+// footer
+//==============================================
+
+const footerYear = document.querySelector("#footerYear");
+if (footerYear) footerYear.textContent = new Date().getFullYear()
+
+//==============================================
 // init
 //==============================================
 

@@ -122,7 +122,7 @@ const applyBtn = document.querySelector(".discount-form .btn")
 let allProducts = []
 let products = []
 let currentPage = 1;
-const productsPerPage = 8;
+const productsPerPage = 6;
 
 const filters = {
     search: "",
@@ -846,6 +846,17 @@ cartClose.addEventListener("click", () => {
     document.body.style.overflow = "auto";
 })
 
+document.querySelector("#cartEmptyCta")?.addEventListener("click", () => {
+    cartPage.classList.remove("show")
+    document.body.style.overflow = "auto";
+    const shopSection = document.querySelector("#shopSection")
+    if (shopSection) {
+        shopSection.scrollIntoView({ behavior: "smooth", block: "start" })
+    } else {
+        window.location.href = "index.html#shopSection"
+    }
+})
+
 checkoutBtn?.addEventListener("click", () => {
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
     if (!cart.length) {
@@ -994,7 +1005,14 @@ function cartPageUpdate() {
 
     displayOrderSummary(price)
     updateCartCount()
-    if (offers.length) renderAppliedOffer(true)
+    if (offers.length) {
+        // the subtotal just changed (item added/removed, qty +/-), so the
+        // available-offers list's eligibility (minOrder) has to be recalculated
+        // too - otherwise an offer that just became eligible stays greyed out
+        // until something else (apply/remove/clear) happens to re-render it
+        renderOfferList()
+        renderAppliedOffer(true)
+    }
 
 }
 
@@ -1162,6 +1180,17 @@ whishBtn.addEventListener("click", () => {
 wishlistClose.addEventListener("click", () => {
     wishlistPage.classList.remove("show")
     document.body.style.overflow = "auto";
+})
+
+document.querySelector("#wishlistEmptyCta")?.addEventListener("click", () => {
+    wishlistPage.classList.remove("show")
+    document.body.style.overflow = "auto";
+    const shopSection = document.querySelector("#shopSection")
+    if (shopSection) {
+        shopSection.scrollIntoView({ behavior: "smooth", block: "start" })
+    } else {
+        window.location.href = "index.html#shopSection"
+    }
 })
 
 //==============================================
@@ -1532,6 +1561,18 @@ function showToast(message, type = "success", duration = 3500) {
     toast.querySelector(".toast-progress").addEventListener("animationend", () => dismissToast(toast))
 }
 
+//==============================================
+// footer
+//==============================================
+
+const footerYear = document.querySelector("#footerYear");
+if (footerYear) footerYear.textContent = new Date().getFullYear()
+
+document.querySelector("#newsletterForm")?.addEventListener("submit", (e) => {
+    e.preventDefault()
+    showToast("Subscribed! Watch for updates in your inbox.", "success")
+    e.target.reset()
+})
 
 //==============================================
 // init
