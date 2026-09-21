@@ -191,6 +191,13 @@ const initApp = () => {
     let selectedSeats = []
     let bookingHistory = []
     let bookingCounter = 0
+    let lastReceiptBookingId = null
+
+    const hideReceipt = () => {
+        receipt.hidden = true
+        receipt.innerHTML = ""
+        lastReceiptBookingId = null
+    }
 
     const showToast = (message, type = "success") => {
         const toast = document.createElement("div")
@@ -351,7 +358,15 @@ const initApp = () => {
     }
 
     const cancelSeat = (seat) => {
+        // If the receipt on screen is for the booking this seat belongs to,
+        // it needs to disappear too — otherwise a cancelled seat would still
+        // show a "Booking Confirmed" card.
+        const affectsShownReceipt = lastReceiptBookingId !== null &&
+            bookingHistory.some(record => record.id === lastReceiptBookingId && record.seatIds.includes(seat.id))
+
         bookingHistory = cancelSeatEverywhere(seats, bookingHistory, seat.id)
+        if (affectsShownReceipt) hideReceipt()
+
         persistAndRefresh()
         showToast(`Seat ${seat.id} cancelled.`, "success")
     }
@@ -360,6 +375,8 @@ const initApp = () => {
         const historyCountBefore = bookingHistory.length
         bookingHistory = cancelBookingById(seats, bookingHistory, bookingId)
         if (bookingHistory.length === historyCountBefore) return
+
+        if (bookingId === lastReceiptBookingId) hideReceipt()
 
         persistAndRefresh()
         showToast(`Booking ${bookingId} cancelled.`, "success")
@@ -382,8 +399,7 @@ const initApp = () => {
         bookingHistory = []
         seatCountInput.value = ""
         passengerNameInput.value = ""
-        receipt.hidden = true
-        receipt.innerHTML = ""
+        hideReceipt()
         persistAndRefresh()
     }
 
@@ -438,6 +454,7 @@ const initApp = () => {
             timestamp: new Date().toISOString(),
         }
         bookingHistory.unshift(record)
+        lastReceiptBookingId = bookingId
 
         showToast(`Booking confirmed! ${pendingSeats.length} seat${pendingSeats.length === 1 ? "" : "s"} booked — $${total}`, "success")
 
